@@ -3,20 +3,19 @@ const isCJS = BABEL_ENV !== undefined && BABEL_ENV === 'cjs';
 const isESM = BABEL_ENV !== undefined && BABEL_ENV === 'esm';
 
 module.exports = function (api) {
-  api.cache(true);
+  const isDev = api.env('development');
 
   const presets = [
     [
-      '@babel/env',
+      '@younho9/babel-preset',
       {
-        modules: isCJS ? 'commonjs' : false,
-        targets: {
-          esmodules: isESM ? true : undefined,
-        },
+        development: isDev,
+        isCJS,
+        isESM,
+        useTypescript: true,
+        useReact: true,
       },
     ],
-    '@babel/preset-typescript',
-    '@babel/preset-react',
   ];
 
   return {
