@@ -1,0 +1,27 @@
+import type {Options} from 'prettier';
+
+module.exports = {
+  printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  jsxSingleQuote: false,
+  trailingComma: 'all',
+  bracketSpacing: false,
+  jsxBracketSameLine: false,
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  // parser: '',
+  // filepath: string,
+  requirePragma: false,
+  insertPragma: false,
+  proseWrap: 'always',
+  arrowParens: 'always',
+  // plugins: [],
+  htmlWhitespaceSensitivity: 'css',
+  endOfLine: 'lf',
+  quoteProps: 'consistent',
+  vueIndentScriptAndStyle: false,
+  embeddedLanguageFormatting: 'auto',
+} as Options;

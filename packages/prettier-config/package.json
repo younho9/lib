@@ -1,0 +1,28 @@
+{
+  "name": "@younho9/prettier-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Younho Choo <younho9.choo@gmail.com>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "babel index.ts -o dist/index.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript"
+    ],
+    "sourceType": "unambiguous"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.3.2"
+  },
+  "peerDependencies": {
+    "prettier": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
