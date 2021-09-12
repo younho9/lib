@@ -8,6 +8,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublish": "yarn build",
     "build": "babel index.js -o dist/index.js"
   },
   "babel": {
