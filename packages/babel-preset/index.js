@@ -9,6 +9,7 @@ export default declare((api, opts) => {
     useReact = false,
     isCJS = false,
     isESM = false,
+    addModuleExports = false,
   } = opts;
 
   const config = {
@@ -36,7 +37,10 @@ export default declare((api, opts) => {
         },
       ],
     ].filter(Boolean),
-    plugins: ['@babel/plugin-proposal-class-properties'].filter(Boolean),
+    plugins: [
+      '@babel/plugin-proposal-class-properties',
+      addModuleExports && 'babel-plugin-add-module-exports',
+    ].filter(Boolean),
   };
 
   return config;
