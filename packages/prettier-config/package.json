@@ -3,22 +3,27 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
-  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "prepublish": "yarn build",
-    "build": "babel index.ts -o dist/index.js",
+    "build": "concurrently yarn:build:*",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "lint": "concurrently yarn:lint:*",
-    "lint:src": "eslint ./index.ts --config ../../.eslintrc.js",
+    "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc.js",
     "lint:types": "tsc --noEmit"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-typescript"
-    ],
-    "sourceType": "unambiguous"
   },
   "devDependencies": {
     "@types/prettier": "^2.3.2",
