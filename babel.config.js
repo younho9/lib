@@ -14,6 +14,7 @@ module.exports = function (api) {
         isESM,
         useTypescript: true,
         useReact: true,
+        addModuleExports: false,
       },
     ],
   ];
