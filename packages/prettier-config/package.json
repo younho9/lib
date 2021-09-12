@@ -18,7 +18,8 @@
     "sourceType": "unambiguous"
   },
   "devDependencies": {
-    "@types/prettier": "^2.3.2"
+    "@types/prettier": "^2.3.2",
+    "prettier": "^2.3.2"
   },
   "peerDependencies": {
     "prettier": "*"
