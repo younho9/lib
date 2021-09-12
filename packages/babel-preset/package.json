@@ -1,6 +1,6 @@
 {
   "name": "@younho9/babel-preset",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
   "main": "dist/index.js",
