@@ -30,7 +30,8 @@
     "lint:types": "lerna run lint:types --no-private --stream",
     "pkgs": "manypkg run",
     "pkgs:check": "manypkg check",
-    "pkgs:fix": "manypkg fix"
+    "pkgs:fix": "manypkg fix",
+    "release": "yarn lerna publish"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md,mdx}": [
