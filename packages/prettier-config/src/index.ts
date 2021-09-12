@@ -9,7 +9,7 @@ export default {
   jsxSingleQuote: false,
   trailingComma: 'all',
   bracketSpacing: false,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   rangeStart: 0,
   rangeEnd: Infinity,
   // parser: '',
