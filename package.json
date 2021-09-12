@@ -19,14 +19,14 @@
     "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "lerna clean --yes && rimraf node_modules",
-    "clean:dist": "yarn lerna exec -- rimraf dist",
+    "clean:dist": "yarn lerna exec rimraf dist",
     "format:code": "prettier --write packages/**/*.{js,jsx,ts,tsx,json,css,md,mdx}",
     "format:pkg": "sort-package-json",
     "git:commit-msg": "commitlint --edit",
     "git:install-hooks": "husky install",
     "git:pre-commit": "lint-staged",
-    "lint": "eslint .",
-    "lint:fix": "yarn lint --fix",
+    "lint": "lerna run lint --no-private --stream",
+    "lint:types": "lerna run lint:types --no-private --stream",
     "pkgs": "manypkg run",
     "pkgs:check": "manypkg check",
     "pkgs:fix": "manypkg fix"
@@ -42,7 +42,7 @@
       "sort-package-json"
     ]
   },
-  "prettier": "./packages/prettier-config/dist/index.js",
+  "prettier": "@younho9/prettier-config",
   "dependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.4",
@@ -55,8 +55,8 @@
     "@types/node": "^16.7.10",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
-    "@younho9/babel-preset": "0.0.0",
-    "concurrently": "^6.2.1",
+    "@younho9/babel-preset": "0.1.0",
+    "concurrently": "6.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",

@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "prepublish": "yarn build",
-    "build": "babel index.js -o dist/index.js"
+    "build": "babel index.js -o dist/index.js",
+    "lint": "concurrently yarn:lint:*",
+    "lint:src": "eslint ./index.js --config ../../.eslintrc.js"
   },
   "babel": {
     "presets": [
