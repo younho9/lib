@@ -1,6 +1,6 @@
 {
   "name": "@younho9/prettier-config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
   "main": "dist/index.js",
