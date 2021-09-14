@@ -1,6 +1,15 @@
 {
   "name": "@younho9/eslint-plugin",
   "version": "0.1.0",
+  "homepage": "https://github.com/younho9/lib#readme",
+  "bugs": {
+    "url": "https://github.com/younho9/lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younho9/lib.git",
+    "directory": "packages/eslint-plugin"
+  },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
   "exports": {

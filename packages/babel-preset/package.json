@@ -1,6 +1,15 @@
 {
   "name": "@younho9/babel-preset",
   "version": "0.2.1",
+  "homepage": "https://github.com/younho9/lib#readme",
+  "bugs": {
+    "url": "https://github.com/younho9/lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younho9/lib.git",
+    "directory": "packages/babel-preset"
+  },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
   "main": "dist/index.js",
