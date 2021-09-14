@@ -1,5 +1,16 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.3.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@1.2.0...@younho9/prettier-config@1.3.0) (2021-09-14)
+
+### :rocket: New Features
+
+- **`prettier-config`:** specify @types/prettier as peer dependency ([b4c0648](https://github.com/younho9/lib/commit/b4c0648c91a395e1f0a8548440aac7428e6655c4))
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
