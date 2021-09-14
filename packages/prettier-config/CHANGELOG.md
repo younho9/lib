@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@1.1.0...@younho9/prettier-config@1.2.0) (2021-09-14)
+
+### :rocket: New Features
+
+- **`prettier-config`:** set proseWrap to preserve
+  ([24ed417](https://github.com/younho9/lib/commit/24ed41744b8c843d880a8a9654353e5af3797e99))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.1.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@1.0.0...@younho9/prettier-config@1.1.0) (2021-09-12)
 
 ### :rocket: New Features
