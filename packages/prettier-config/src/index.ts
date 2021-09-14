@@ -16,7 +16,7 @@ export default {
   // filepath: string,
   requirePragma: false,
   insertPragma: false,
-  proseWrap: 'always',
+  proseWrap: 'preserve',
   arrowParens: 'always',
   // plugins: [],
   htmlWhitespaceSensitivity: 'css',
