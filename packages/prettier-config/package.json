@@ -30,6 +30,7 @@
     "prettier": "2.4.0"
   },
   "peerDependencies": {
+    "@types/prettier": "*",
     "prettier": "*"
   },
   "publishConfig": {
