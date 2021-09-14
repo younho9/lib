@@ -58,7 +58,7 @@
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "@younho9/babel-preset": "0.2.1",
-    "@younho9/prettier-config": "1.2.0",
+    "@younho9/prettier-config": "1.3.0",
     "concurrently": "6.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
