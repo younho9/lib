@@ -3,6 +3,7 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
+  "ignoreChanges": ["**/*.md"],
   "registry": "https://registry.npmjs.org/",
   "command": {
     "version": {
