@@ -7,6 +7,7 @@ module.exports = {
       './tsconfig.json',
       './packages/*/tsconfig.json',
     ],
+    tsconfigRootDir: __dirname,
   },
   overrides: [
     {
