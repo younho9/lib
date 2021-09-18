@@ -1,0 +1,23 @@
+{
+  "name": "@younho9/types",
+  "version": "0.0.0",
+  "homepage": "https://github.com/younho9/lib#readme",
+  "bugs": {
+    "url": "https://github.com/younho9/lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younho9/lib.git",
+    "directory": "packages/types"
+  },
+  "license": "MIT",
+  "author": "Younho Choo <younho9.choo@gmail.com>",
+  "main": "",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
