@@ -1,3 +1,23 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+### [0.2.2](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.2.1...@younho9/babel-preset@0.2.2) (2021-09-18)
+
+
+### :broom: Other
+
+* **`eslint`:** use custom plugin ([ce6e6f8](https://github.com/younho9/lib/commit/ce6e6f869cfec313b89ad5a2c5a32c2fd79743a5))
+* **`pkgs`:** add repository and homepage info ([902403d](https://github.com/younho9/lib/commit/902403d6d2b0430effa51b037d48b91b92739eef))
+
+
+### :memo: Documentation
+
+* **`CHANGELOG`:** remove repeated headers ([3691c85](https://github.com/younho9/lib/commit/3691c8544bdaceafd94e4692da1a6316daecd69c))
+
+
+
 ### [0.2.1](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.2.0...@younho9/babel-preset@0.2.1) (2021-09-12)
 
 **Note:** Version bump only for package @younho9/babel-preset

@@ -1,3 +1,24 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+### [0.1.1](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.0...@younho9/eslint-plugin@0.1.1) (2021-09-18)
+
+
+### :broom: Other
+
+* **`eslint-plugin`:** add comments ([b4201ac](https://github.com/younho9/lib/commit/b4201ac51591c324d979bbaf961605d25aa4feb5))
+* **`eslint`:** use custom plugin ([ce6e6f8](https://github.com/younho9/lib/commit/ce6e6f869cfec313b89ad5a2c5a32c2fd79743a5))
+* **`pkgs`:** add repository and homepage info ([902403d](https://github.com/younho9/lib/commit/902403d6d2b0430effa51b037d48b91b92739eef))
+
+
+### :memo: Documentation
+
+* **`CHANGELOG`:** remove repeated headers ([3691c85](https://github.com/younho9/lib/commit/3691c8544bdaceafd94e4692da1a6316daecd69c))
+
+
+
 ## 0.1.0 (2021-09-14)
 
 ### :rocket: New Features
