@@ -19,7 +19,19 @@ module.exports = function (api) {
     ],
   ];
 
+  const ignore = [
+    '**/*.spec.js',
+    '**/*.spec.ts',
+    '**/*.spec.jsx',
+    '**/*.spec.tsx',
+    '**/*.test.js',
+    '**/*.test.ts',
+    '**/*.test.jsx',
+    '**/*.test.tsx',
+  ];
+
   return {
     presets,
+    ignore,
   };
 };
