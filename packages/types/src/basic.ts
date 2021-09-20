@@ -56,3 +56,8 @@ export type Falsy =
   | null
   | undefined
   | HTMLAllCollection;
+
+/**
+ * @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+ */
+export type Truthy<T = JSTypes> = Exclude<T, Falsy>;
