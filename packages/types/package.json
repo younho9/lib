@@ -13,10 +13,13 @@
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
   "main": "",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "index.d.ts"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly --declaration --declarationDir dist"
+  },
   "publishConfig": {
     "access": "public"
   }
