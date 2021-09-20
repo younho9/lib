@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.1.2](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.1...@younho9/eslint-plugin@0.1.2) (2021-09-20)
+
+
+### :broom: Other
+
+* **`eslint-plugin`:** export constants ([d65297f](https://github.com/younho9/lib/commit/d65297fcf93d32faa850e51c112c81f43f5167ed))
+
+
+
 ### [0.1.1](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.0...@younho9/eslint-plugin@0.1.1) (2021-09-18)
 
 
