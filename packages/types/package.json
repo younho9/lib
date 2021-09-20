@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
-  "main": "",
+  "main": "dist/index.d.ts",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
