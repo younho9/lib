@@ -20,6 +20,9 @@
   "scripts": {
     "build": "tsc --emitDeclarationOnly --declaration --declarationDir dist"
   },
+  "dependencies": {
+    "@younho9/eslint-plugin": "0.1.4"
+  },
   "publishConfig": {
     "access": "public"
   }
