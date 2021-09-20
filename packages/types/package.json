@@ -1,6 +1,6 @@
 {
   "name": "@younho9/types",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/younho9/lib#readme",
   "bugs": {
     "url": "https://github.com/younho9/lib/issues"
@@ -21,7 +21,7 @@
     "build": "tsc --emitDeclarationOnly --declaration --declarationDir dist"
   },
   "dependencies": {
-    "@younho9/eslint-plugin": "0.1.4"
+    "@younho9/eslint-plugin": "0.1.5"
   },
   "publishConfig": {
     "access": "public"
