@@ -1,1 +1,1 @@
-export type IndexType = string | number | symbol;
+export type Dict<T = any> = Record<string, T>;
