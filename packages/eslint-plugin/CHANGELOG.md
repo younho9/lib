@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.1.3](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.2...@younho9/eslint-plugin@0.1.3) (2021-09-20)
+
+
+### :bug: Bug Fix
+
+* **`eslint-plugin`:** treat subpath exports ([4ece299](https://github.com/younho9/lib/commit/4ece29959ad2dd7e4207fcbd1cf0095b702275c1))
+
+
+
 ### [0.1.2](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.1...@younho9/eslint-plugin@0.1.2) (2021-09-20)
 
 
