@@ -36,6 +36,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@sniptt/guards": "0.2.0",
     "@younho9/types": "0.4.0"
   },
   "publishConfig": {
