@@ -1,6 +1,6 @@
 {
   "name": "@younho9/guards",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/younho9/lib#readme",
   "bugs": {
     "url": "https://github.com/younho9/lib/issues"
@@ -36,7 +36,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@younho9/types": "0.3.0"
+    "@younho9/types": "0.4.0"
   },
   "publishConfig": {
     "access": "public"

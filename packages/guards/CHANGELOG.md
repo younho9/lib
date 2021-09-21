@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/younho9/lib/compare/@younho9/guards@0.2.1...@younho9/guards@0.3.0) (2021-09-21)
+
+
+### :rocket: New Features
+
+* **`guards`:** add `isFalsy` & `isTruthy` and setup test ([e1c08d7](https://github.com/younho9/lib/commit/e1c08d783c7d54e26587a604dbbc19bb11795f45))
+
+
+
 ### [0.2.1](https://github.com/younho9/lib/compare/@younho9/guards@0.2.0...@younho9/guards@0.2.1) (2021-09-20)
 
 **Note:** Version bump only for package @younho9/guards

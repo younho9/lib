@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/younho9/lib/compare/@younho9/types@0.3.0...@younho9/types@0.4.0) (2021-09-21)
+
+
+### :rocket: New Features
+
+* **`types`:** add `Truthy` type ([e57c632](https://github.com/younho9/lib/commit/e57c632875bad8738abc1ba0be659d52ef380490))
+* **`types`:** typing basic & alternative & convenience ([9ef264d](https://github.com/younho9/lib/commit/9ef264d95ed36ff941114f20ca0a7a0a9266c804))
+
+
+### :broom: Other
+
+* **`types`:** add main field for module resolution ([d205b7c](https://github.com/younho9/lib/commit/d205b7c9550df6626b2b0047801410b2037cbb9e))
+* **`types`:** aggregate export `Basic` & `Convenience` ([dc3c55d](https://github.com/younho9/lib/commit/dc3c55df97bad5a92d7765d766092e615487d0a0))
+* **`types`:** unuse typescript path alias ([241cda3](https://github.com/younho9/lib/commit/241cda3962ca86eb50d1399d3ef8af9dcbc62675))
+
+
+
 ## [0.3.0](https://github.com/younho9/lib/compare/@younho9/types@0.2.0...@younho9/types@0.3.0) (2021-09-20)
 
 
