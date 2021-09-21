@@ -31,7 +31,7 @@
     "pkgs:check": "manypkg check",
     "pkgs:fix": "manypkg fix",
     "release": "yarn lerna publish",
-    "test": "jest"
+    "test": "lerna run test --stream"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md,mdx}": [

@@ -33,7 +33,7 @@
     "lint": "concurrently yarn:lint:*",
     "lint:src": "eslint src --ext .ts,.tsx",
     "lint:types": "tsc --noEmit",
-    "test": "jest --config=\"../../jest.config.ts\""
+    "test": "jest"
   },
   "dependencies": {
     "@younho9/types": "0.3.0"

@@ -1,4 +1,4 @@
-import isKeyOf from '.';
+import {isKeyOf} from '../src';
 
 describe('isKeyof', () => {
   it('detects valid keys', () => {
