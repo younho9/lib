@@ -1,6 +1,6 @@
 {
   "name": "@younho9/object",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/younho9/lib#readme",
   "bugs": {
     "url": "https://github.com/younho9/lib/issues"
@@ -38,7 +38,7 @@
     "test:types": "tsd"
   },
   "dependencies": {
-    "@younho9/types": "0.4.1"
+    "@younho9/types": "0.4.2"
   },
   "publishConfig": {
     "access": "public"
