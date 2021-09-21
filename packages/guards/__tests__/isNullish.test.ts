@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import {isNullish} from '../src';
 
 describe('isNullish', () => {
