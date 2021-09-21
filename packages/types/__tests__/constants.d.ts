@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import type * as Alt from '@/alternative';
-import type * as Basic from '@/basic';
-import type * as Convenience from '@/convenience';
+import type * as Alt from '../src/alternative';
+import type * as Basic from '../src/basic';
+import type * as Convenience from '../src/convenience';
 
 export interface Primitives {
   string: string;

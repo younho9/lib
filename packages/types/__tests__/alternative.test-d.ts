@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/ban-types */
 import type {IsExact} from 'conditional-type-checks';
 import {assert} from 'conditional-type-checks';
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
-import {alt, def, functions, Records, records} from './constants';
+import type * as Alt from '../src/alternative';
 
-import type * as Alt from '@/alternative';
+import {alt, def, functions, Records, records} from './constants';
 
 /**
  * Assignability

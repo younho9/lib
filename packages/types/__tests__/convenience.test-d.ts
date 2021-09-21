@@ -2,10 +2,10 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
-import {alt, def, dicts} from './constants';
+import type * as Alt from '../src/alternative';
+import type * as Convenience from '../src/convenience';
 
-import type * as Alt from '@/alternative';
-import type * as Convenience from '@/convenience';
+import {alt, def, dicts} from './constants';
 
 /**
  * Assignability

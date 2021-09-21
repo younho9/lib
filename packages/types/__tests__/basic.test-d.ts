@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/ban-types */
 import {expectAssignable, expectError, expectNotAssignable} from 'tsd';
 
-import {falsy, nullish, objects, primitive, truthy} from './constants';
+import type * as Basic from '../src/basic';
 
-import type * as Basic from '@/basic';
+import {falsy, nullish, objects, primitive, truthy} from './constants';
 
 /**
  * Primitive
