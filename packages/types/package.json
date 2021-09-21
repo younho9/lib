@@ -21,7 +21,7 @@
     "build": "tsc --emitDeclarationOnly --declaration --declarationDir dist",
     "test": "tsd"
   },
-  "dependencies": {
+  "devDependencies": {
     "@younho9/eslint-plugin": "0.1.5"
   },
   "publishConfig": {
