@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/younho9/lib/compare/@younho9/guards@0.3.1...@younho9/guards@0.4.0) (2021-09-21)
+
+
+### :rocket: New Features
+
+* **`types`:** export @sniptt/guards functions ([279f8d9](https://github.com/younho9/lib/commit/279f8d9dd66dc6364d043362f1d802b49a0131b5))
+
+
+
 ### [0.3.1](https://github.com/younho9/lib/compare/@younho9/guards@0.3.0...@younho9/guards@0.3.1) (2021-09-21)
 
 
