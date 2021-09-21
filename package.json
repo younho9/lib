@@ -30,6 +30,7 @@
     "pkgs": "manypkg run",
     "pkgs:check": "manypkg check",
     "pkgs:fix": "manypkg fix",
+    "prerelease": "yarn test",
     "release": "yarn lerna publish",
     "test": "lerna run test --stream"
   },
