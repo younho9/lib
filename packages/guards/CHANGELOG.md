@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.3.1](https://github.com/younho9/lib/compare/@younho9/guards@0.3.0...@younho9/guards@0.3.1) (2021-09-21)
+
+
+### :broom: Other
+
+* **`guards`:** install @sniptt/guards ([d713e89](https://github.com/younho9/lib/commit/d713e898724af3dac93fcdd8c653f5c5a8c0487f))
+
+
+
 ## [0.3.0](https://github.com/younho9/lib/compare/@younho9/guards@0.2.1...@younho9/guards@0.3.0) (2021-09-21)
 
 
