@@ -23,4 +23,14 @@ module.exports = {
       extends: ['plugin:@younho9/react', 'plugin:@younho9/typescript'],
     },
   ],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        project: 'packages/*/tsconfig.json',
+      },
+    },
+  },
 };
