@@ -18,12 +18,16 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --emitDeclarationOnly --declaration --declarationDir dist"
+    "build": "tsc -p tsconfig.build.json --emitDeclarationOnly --declaration --declarationDir dist",
+    "test": "tsd"
   },
   "dependencies": {
     "@younho9/eslint-plugin": "0.1.5"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "tsd": {
+    "directory": "__tests__"
   }
 }

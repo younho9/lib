@@ -26,6 +26,7 @@ module.exports = function (api) {
     '**/*.spec.tsx',
     '**/*.test.js',
     '**/*.test.ts',
+    '**/*.test-d.ts',
     '**/*.test.jsx',
     '**/*.test.tsx',
   ];

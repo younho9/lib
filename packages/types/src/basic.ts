@@ -11,29 +11,10 @@ export type Primitive =
   | undefined;
 
 /**
- * Alternative of @type {object}
- *
- * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md#default-options
- *
- * @typeParam T - Type of properties
- * @typeParam K - Type of keys
- */
-export type Dict<T = unknown, K extends PropertyKey = PropertyKey> = Record<
-  K,
-  T
->;
-
-/**
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#javascript_types
  */
-export type JSTypes = Primitive | Dict;
-
-/**
- * Alternative of @type {Function}
- *
- * @see https://www.typescriptlang.org/docs/handbook/2/functions.html#function
- */
-export type Func = () => void;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type Type = Primitive | object;
 
 /**
  * @see https://developer.mozilla.org/en-US/docs/Glossary/Nullish
@@ -46,18 +27,13 @@ export type Nullish = undefined | null;
  * NaN is also falsy, but TypeScript doesn't have a numeric literal.
  * @see https://github.com/Microsoft/TypeScript/issues/15135
  *
+ * HTMLAllCollection is also falsy, but it's a deprecated feature.
+ * Also, !!HTMLAllCollection is inferred as true in typescript.
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/all
  */
-export type Falsy =
-  | false
-  | 0
-  | -0
-  | 0n
-  | ''
-  | null
-  | undefined
-  | HTMLAllCollection;
+export type Falsy = false | 0 | -0 | 0n | '' | null | undefined;
 
 /**
  * @see https://developer.mozilla.org/en-US/docs/Glossary/Truthy
  */
-export type Truthy<T = JSTypes> = Exclude<T, Falsy>;
+export type Truthy<T = Type> = Exclude<T, Falsy>;
