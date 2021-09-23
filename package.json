@@ -13,8 +13,8 @@
   "scripts": {
     "postinstall": "yarn pkgs:check",
     "prepare": "yarn git:install-hooks && yarn build",
-    "prebuild": "yarn clean:dist && yarn pkgs babel-preset build",
-    "build": "lerna run build --no-private --stream",
+    "prebuild": "yarn pkgs babel-preset build",
+    "build": "lerna run build --no-private --ignore @younho9/babel-preset --stream",
     "clean": "concurrently yarn:clean:*",
     "clean:modules": "lerna clean --yes && rimraf node_modules",
     "clean:dist": "yarn lerna exec rimraf dist",

@@ -18,9 +18,13 @@
   ],
   "scripts": {
     "prepublish": "yarn build",
-    "build": "babel index.js -o dist/index.js",
+    "prebuild": "yarn clean:dist",
+    "build": "concurrently yarn:build:*",
+    "build:js": "babel src -d dist --source-maps",
+    "clean": "concurrently yarn:clean:*",
+    "clean:dist": "rimraf dist",
     "lint": "concurrently yarn:lint:*",
-    "lint:src": "eslint ./index.js"
+    "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx"
   },
   "babel": {
     "presets": [

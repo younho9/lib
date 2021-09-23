@@ -12,16 +12,22 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
-  "main": "dist/index.d.ts",
-  "types": "dist/index.d.ts",
+  "main": "dist/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "prepublish": "yarn build",
-    "build": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist",
-    "lint": "tsc --noEmit",
-    "test": "tsd"
+    "prebuild": "yarn clean:dist",
+    "build": "concurrently yarn:build:*",
+    "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
+    "clean": "concurrently yarn:clean:*",
+    "clean:dist": "rimraf dist",
+    "lint": "concurrently yarn:lint:*",
+    "lint:types": "tsc --noEmit",
+    "test": "concurrently yarn:test:*",
+    "test:types": "tsd"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.1.5"
