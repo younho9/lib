@@ -20,6 +20,7 @@
   "scripts": {
     "prepublish": "yarn build",
     "build": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist",
+    "lint": "tsc --noEmit",
     "test": "tsd"
   },
   "devDependencies": {
