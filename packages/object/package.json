@@ -43,6 +43,9 @@
   "dependencies": {
     "@younho9/types": "0.4.2"
   },
+  "devDependencies": {
+    "@younho9/eslint-plugin": "0.1.5"
+  },
   "publishConfig": {
     "access": "public"
   },
