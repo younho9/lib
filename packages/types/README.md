@@ -49,9 +49,100 @@ type Function = (...args: Array<any>) => any;
 
 ## [`basic`](src/basic.ts)
 
+> Types of basic terms used in JavaScript
+
+### `Primitive`
+
+7 primitive data types in [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+
+```ts
+type Primitive = bigint | boolean | null | number | string | symbol | undefined;
+```
+
+### `Type`
+
+The set of types in the [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#javascript_types) language.
+
+```ts
+type Type = Primitive | object;
+```
+
+### `Nullish`
+
+In JavaScript, a [Nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) value is the value which is either `null` or `undefined`.
+
+```ts
+type Nullish = undefined | null;
+```
+
+### `Falsy`
+
+A value that is considered false when encountered in a Boolean context.
+
+> `NaN` is also `Falsy`, but [TypeScript](https://github.com/Microsoft/TypeScript/issues/15135) doesn't have a numeric literal.
+>
+> `HTMLAllCollection` is also `Falsy`, but it's a [deprecated feature](https://developer.mozilla.org/en-US/docs/Web/API/Document/all).
+>
+> Also, `!!HTMLAllCollection` is inferred as true in [TypeScript](https://www.typescriptlang.org/play?#code/MYewdgzgLgBAlhAEgFQLIBkCCAbbBhEXAU2CjnGQCcBXKACwE8YBeGAQjYBMRhqBbImCgA6AIa4A3EA).
+
+```ts
+type Falsy = false | 0 | -0 | 0n | '' | null | undefined;
+```
+
+### `Truthy`
+
+A value that is considered true when encountered in a Boolean context.
+
+```ts
+type Truthy<T = Type> = Exclude<T, Falsy>;
+```
+
+#### [Limitation of `Truthy`](__tests__/basic.test-d.ts#L170)
+
+Generic type parameter is required to infer truthiness of literal type of `number` | `string` | `bigint`
+
+```ts
+expectAssignable<Basic.Truthy>(0);
+expectAssignable<Basic.Truthy>(-0);
+expectAssignable<Basic.Truthy>(0n);
+expectAssignable<Basic.Truthy>('');
+
+expectNotAssignable<Basic.Truthy<0>>(0);
+expectNotAssignable<Basic.Truthy<-0>>(-0);
+expectNotAssignable<Basic.Truthy<0n>>(0n);
+expectNotAssignable<Basic.Truthy<''>>('');
+```
+
 ## [`convenience`](src/convenience.ts)
 
+> Some types for convenience
+
+### `Dict`
+
+```ts
+type Dict<T = unknown> = Record<string, T>;
+```
+
 ## [`system`](src/system.ts)
+
+> Types for simulate other types of systems
+
+### `Invariant`
+
+<!-- prettier-ignore -->
+Constructs a [invariant](https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)#:~:text=invariant%20or%20nonvariant%20if%20not%20variant.) object type
+
+```ts
+type Invariant<Type extends object = object> = Type & Shaped<Type>;
+```
+
+### `Nominal`
+
+Constructs a [nominal](https://en.wikipedia.org/wiki/Nominal_type_system) type
+
+```ts
+type Nominal<Type extends unknown, Tag extends string> = Type & Branded<Tag>;
+```
 
 ---
 

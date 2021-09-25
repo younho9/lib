@@ -13,7 +13,6 @@ export type Primitive =
 /**
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#javascript_types
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
 export type Type = Primitive | object;
 
 /**
@@ -24,11 +23,12 @@ export type Nullish = undefined | null;
 /**
  * @see https://developer.mozilla.org/en-US/docs/Glossary/Falsy
  *
- * NaN is also falsy, but TypeScript doesn't have a numeric literal.
+ * `NaN` is also `Falsy`, but TypeScript doesn't have a numeric literal.
  * @see https://github.com/Microsoft/TypeScript/issues/15135
  *
- * HTMLAllCollection is also falsy, but it's a deprecated feature.
- * Also, !!HTMLAllCollection is inferred as true in typescript.
+ * `HTMLAllCollection` is also `Falsy`, but it's a deprecated feature.
+ *
+ * Also, `!!HTMLAllCollection` is inferred as true in TypeScript.
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Document/all
  */
 export type Falsy = false | 0 | -0 | 0n | '' | null | undefined;

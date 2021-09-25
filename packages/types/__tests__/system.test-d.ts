@@ -121,6 +121,12 @@ declare const NominalABCLike: Nominal<ABCLike, 'ABCLike'>;
  * Nominal Compatibility
  */
 {
+  /** Nominal type branding */
+  expectNotType<Nominal<string, 'PersonID'>>('1234');
+  expectType<Nominal<string, 'PersonID'>>(
+    '1234' as Nominal<string, 'PersonID'>,
+  );
+
   /** Nominal is exact with equal type (ABC === ABC) */
   expectType<Nominal<ABC, 'ABC'>>(NominalABC);
 
