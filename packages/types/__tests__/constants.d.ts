@@ -48,7 +48,6 @@ export interface Functions {
   arg0: () => any;
   arg1: (arg: any) => any;
   arg2: (arg1: any, arg2: any) => any;
-  args: (...args: Array<any>) => any;
 }
 
 export declare const alt: Alternatives;

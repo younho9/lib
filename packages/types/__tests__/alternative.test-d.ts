@@ -125,7 +125,7 @@ const recordValue: Record<string, unknown> = abc;
   /**
    * `{}` | `object` | `Object` is hard to use due to not being able to assert that keys exist
    *
-   * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
+   * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md#default-options
    */
   expectError((abc as {}).a);
   expectError((abc as object).a);
@@ -247,21 +247,29 @@ const recordValue: Record<string, unknown> = abc;
   expectAssignable<Function>(functions.arg0);
   expectAssignable<Function>(functions.arg1);
   expectAssignable<Function>(functions.arg2);
-  expectAssignable<Function>(functions.args);
+  expectAssignable<Function>(alt.function);
 
   expectNotAssignable<Functions['arg0']>(def.function);
+  expectAssignable<Functions['arg0']>(functions.arg0);
+  expectNotAssignable<Functions['arg0']>(functions.arg1);
+  expectNotAssignable<Functions['arg0']>(functions.arg2);
+  expectAssignable<Functions['arg0']>(alt.function);
+
   expectNotAssignable<Functions['arg1']>(def.function);
+  expectAssignable<Functions['arg1']>(functions.arg0);
+  expectAssignable<Functions['arg1']>(functions.arg1);
+  expectNotAssignable<Functions['arg1']>(functions.arg2);
+  expectAssignable<Functions['arg1']>(alt.function);
+
   expectNotAssignable<Functions['arg2']>(def.function);
-  expectNotAssignable<Functions['args']>(def.function);
+  expectAssignable<Functions['arg2']>(functions.arg0);
+  expectAssignable<Functions['arg2']>(functions.arg1);
+  expectAssignable<Functions['arg2']>(functions.arg2);
+  expectAssignable<Functions['arg2']>(alt.function);
 
   expectNotAssignable<Alt.Function>(def.function);
   expectAssignable<Alt.Function>(functions.arg0);
   expectAssignable<Alt.Function>(functions.arg1);
   expectAssignable<Alt.Function>(functions.arg2);
-  expectAssignable<Alt.Function>(functions.args);
-
-  expectAssignable<Functions['arg0']>(alt.function);
-  expectAssignable<Functions['arg1']>(alt.function);
-  expectAssignable<Functions['arg2']>(alt.function);
-  expectAssignable<Functions['args']>(alt.function);
+  expectAssignable<Alt.Function>(alt.function);
 }
