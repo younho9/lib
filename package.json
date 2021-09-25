@@ -32,7 +32,9 @@
     "pkgs:fix": "manypkg fix",
     "prerelease": "yarn test",
     "release": "yarn lerna publish",
-    "test": "lerna run test --stream"
+    "test": "lerna run test --stream",
+    "test:src": "lerna run test:src --stream",
+    "test:types": "lerna run test:types --stream"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md,mdx}": [

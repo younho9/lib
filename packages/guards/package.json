@@ -36,7 +36,8 @@
     "lint": "concurrently yarn:lint:*",
     "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:types": "tsc --noEmit",
-    "test": "jest"
+    "test": "concurrently yarn:test:*",
+    "test:src": "jest"
   },
   "dependencies": {
     "@sniptt/guards": "0.2.0",
