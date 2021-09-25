@@ -1,50 +1,100 @@
-/* eslint-disable @typescript-eslint/ban-types */
-import type {IsExact} from 'conditional-type-checks';
-import {assert} from 'conditional-type-checks';
-import {expectAssignable, expectNotAssignable} from 'tsd';
+import {
+  expectAssignable,
+  expectNotAssignable,
+  expectNotType,
+  expectType,
+} from 'tsd';
 
 import type * as Alt from '../src/alternative';
 
-import {alt, def, functions, Records, records} from './constants';
+import {alt, def, Functions, functions, Records, records} from './constants';
 
 /**
- * Assignability
+ * Equality of Default and Alternative
+ */
+{
+  expectType<object>(def.object);
+  expectNotType<object>(alt.object);
+
+  expectType<Function>(def.function);
+  expectNotType<Function>(alt.function);
+
+  expectType<Alt.Object>(alt.object);
+  expectNotType<Alt.Object>(def.object);
+
+  expectType<Alt.Function>(alt.function);
+  expectNotType<Alt.Function>(def.function);
+}
+
+/**
+ * Assignability of Default and Alternative
  */
 {
   expectAssignable<object>(def.object);
+  expectAssignable<object>(alt.object);
   expectAssignable<object>(def.function);
+  expectAssignable<object>(alt.function);
+
+  expectNotAssignable<Alt.Object>(def.object);
   expectAssignable<Alt.Object>(alt.object);
+  expectNotAssignable<Alt.Object>(def.function);
   expectNotAssignable<Alt.Object>(alt.function);
 
-  expectAssignable<object>(alt.object);
-  expectAssignable<object>(alt.function);
-  expectNotAssignable<Alt.Object>(def.object);
-  expectNotAssignable<Alt.Object>(def.function);
+  expectNotAssignable<Function>(def.object);
+  expectNotAssignable<Function>(alt.object);
+  expectAssignable<Function>(def.function);
+  expectAssignable<Function>(alt.function);
+
+  expectNotAssignable<Alt.Function>(def.object);
+  expectNotAssignable<Alt.Function>(alt.object);
+  expectNotAssignable<Alt.Function>(def.function);
+  expectAssignable<Alt.Function>(alt.function);
 }
 
 /**
- * Object to Record
+ * Equality of Record and Object
  */
 {
-  expectNotAssignable<Record<string, unknown>>(def.object);
-  expectNotAssignable<Record<number, unknown>>(def.object);
-  expectAssignable<Record<symbol, unknown>>(def.object); // not expected behavior
-  expectNotAssignable<Record<string | number, unknown>>(def.object);
-  expectNotAssignable<Record<string | symbol, unknown>>(def.object);
-  expectNotAssignable<Record<number | symbol, unknown>>(def.object);
-  expectNotAssignable<Record<string | number | symbol, unknown>>(def.object);
+  expectNotType<object>(records.string);
+  expectNotType<object>(records.number);
+  expectNotType<object>(records.symbol);
+  expectNotType<object>(records.strnum);
+  expectNotType<object>(records.strsym);
+  expectNotType<object>(records.numsym);
+  expectNotType<object>(records.all);
 
-  expectAssignable<Record<string, unknown>>(alt.object);
-  expectAssignable<Record<number, unknown>>(alt.object);
-  expectAssignable<Record<symbol, unknown>>(alt.object);
-  expectAssignable<Record<string | number, unknown>>(alt.object);
-  expectAssignable<Record<string | symbol, unknown>>(alt.object);
-  expectAssignable<Record<number | symbol, unknown>>(alt.object);
-  expectAssignable<Record<string | number | symbol, unknown>>(alt.object);
+  expectType<Alt.Object>(records.string);
+  expectNotType<Alt.Object>(records.number);
+  expectNotType<Alt.Object>(records.symbol);
+  expectNotType<Alt.Object>(records.strnum);
+  expectNotType<Alt.Object>(records.strsym);
+  expectNotType<Alt.Object>(records.numsym);
+  expectNotType<Alt.Object>(records.all);
 }
 
 /**
- * Record to Object
+ * Assignability of Object to Record
+ */
+{
+  expectNotAssignable<Records['string']>(def.object);
+  expectNotAssignable<Records['number']>(def.object);
+  expectNotAssignable<Records['symbol']>(def.object);
+  expectNotAssignable<Records['strnum']>(def.object);
+  expectNotAssignable<Records['strsym']>(def.object);
+  expectNotAssignable<Records['numsym']>(def.object);
+  expectNotAssignable<Records['all']>(def.object);
+
+  expectAssignable<Records['string']>(alt.object);
+  expectAssignable<Records['number']>(alt.object);
+  expectAssignable<Records['symbol']>(alt.object);
+  expectAssignable<Records['strnum']>(alt.object);
+  expectAssignable<Records['strsym']>(alt.object);
+  expectAssignable<Records['numsym']>(alt.object);
+  expectAssignable<Records['all']>(alt.object);
+}
+
+/**
+ * Assignability of Record to Object
  */
 {
   expectAssignable<object>(records.string);
@@ -65,28 +115,7 @@ import {alt, def, functions, Records, records} from './constants';
 }
 
 /**
- * Equivalence Record and Object
- */
-{
-  assert<IsExact<object, Records['string']>>(false);
-  assert<IsExact<object, Records['number']>>(false);
-  assert<IsExact<object, Records['symbol']>>(true); // not expected behavior
-  assert<IsExact<object, Records['strnum']>>(false);
-  assert<IsExact<object, Records['strsym']>>(false);
-  assert<IsExact<object, Records['numsym']>>(false);
-  assert<IsExact<object, Records['all']>>(false);
-
-  assert<IsExact<Alt.Object, Records['string']>>(true);
-  assert<IsExact<Alt.Object, Records['number']>>(true);
-  assert<IsExact<Alt.Object, Records['symbol']>>(true);
-  assert<IsExact<Alt.Object, Records['strnum']>>(true);
-  assert<IsExact<Alt.Object, Records['strsym']>>(true);
-  assert<IsExact<Alt.Object, Records['numsym']>>(true);
-  assert<IsExact<Alt.Object, Records['all']>>(true);
-}
-
-/**
- * Function
+ * Assignability of Functions
  */
 {
   expectAssignable<Function>(def.function);
@@ -95,9 +124,19 @@ import {alt, def, functions, Records, records} from './constants';
   expectAssignable<Function>(functions.arg2);
   expectAssignable<Function>(functions.args);
 
+  expectNotAssignable<Functions['arg0']>(def.function);
+  expectNotAssignable<Functions['arg1']>(def.function);
+  expectNotAssignable<Functions['arg2']>(def.function);
+  expectNotAssignable<Functions['args']>(def.function);
+
   expectNotAssignable<Alt.Function>(def.function);
   expectAssignable<Alt.Function>(functions.arg0);
   expectAssignable<Alt.Function>(functions.arg1);
   expectAssignable<Alt.Function>(functions.arg2);
   expectAssignable<Alt.Function>(functions.args);
+
+  expectAssignable<Functions['arg0']>(alt.function);
+  expectAssignable<Functions['arg1']>(alt.function);
+  expectAssignable<Functions['arg2']>(alt.function);
+  expectAssignable<Functions['args']>(alt.function);
 }

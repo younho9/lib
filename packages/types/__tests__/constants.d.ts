@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import type * as Alt from '../src/alternative';
 import type * as Basic from '../src/basic';
 import type * as Convenience from '../src/convenience';

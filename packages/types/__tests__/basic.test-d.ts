@@ -164,10 +164,12 @@ import {falsy, nullish, objects, primitive, truthy} from './constants';
   expectNotAssignable<Basic.Truthy>(nullish);
 
   expectNotAssignable<Basic.Truthy>(false);
-  expectNotAssignable<Basic.Truthy<0>>(0); // limitation
-  expectNotAssignable<Basic.Truthy<-0>>(-0); // limitation
-  expectNotAssignable<Basic.Truthy<0n>>(0n); // limitation
-  expectNotAssignable<Basic.Truthy<''>>(''); // limitation
   expectNotAssignable<Basic.Truthy>(null);
   expectNotAssignable<Basic.Truthy>(undefined);
+
+  /** Limitation: Generic needs to be used to infer truthiness of literal type (number | string | bigint) */
+  expectNotAssignable<Basic.Truthy<0>>(0);
+  expectNotAssignable<Basic.Truthy<-0>>(-0);
+  expectNotAssignable<Basic.Truthy<0n>>(0n);
+  expectNotAssignable<Basic.Truthy<''>>('');
 }

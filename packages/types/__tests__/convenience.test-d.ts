@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/ban-types */
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
 import type * as Alt from '../src/alternative';
