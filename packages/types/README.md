@@ -1,5 +1,7 @@
 # @younho9/types
 
+> A set of utility types for TypeScript
+
 ## [`alternative`](src/alternative.ts)
 
 > Alternative of some [ban-types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
@@ -147,3 +149,7 @@ type Nominal<Type extends unknown, Tag extends string> = Type & Branded<Tag>;
 ---
 
 <a name="abc">[1]</a>: `const abc = {a: '123', b: 123, c: false}`
+
+## License
+
+[MIT](../../LICENSE)
