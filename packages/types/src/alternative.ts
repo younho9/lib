@@ -10,4 +10,4 @@ export type Object = Record<string, unknown>;
  *
  * @see https://www.typescriptlang.org/docs/handbook/2/functions.html#function
  */
-export type Function = (...args: Array<any>) => void;
+export type Function = (...args: Array<any>) => any;
