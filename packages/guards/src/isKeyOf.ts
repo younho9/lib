@@ -1,5 +1,4 @@
-import type {Dict} from '@younho9/types';
-
-export default function isKeyOf<T extends Dict>(obj: T) {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export default function isKeyOf<T extends object>(obj: T) {
   return (key: PropertyKey): key is keyof T => key in obj;
 }
