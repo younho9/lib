@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.2.3](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.2.2...@younho9/babel-preset@0.2.3) (2021-09-25)
+
+
+### :broom: Other
+
+* **`scripts`:** unify scripts naming ([22a148d](https://github.com/younho9/lib/commit/22a148d449c440ad8dc002a14bad4aaff6472f65))
+
+
+
 ### [0.2.2](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.2.1...@younho9/babel-preset@0.2.2) (2021-09-18)
 
 

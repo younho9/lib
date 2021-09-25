@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.1.6](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.5...@younho9/eslint-plugin@0.1.6) (2021-09-25)
+
+
+### :broom: Other
+
+* **`scripts`:** add src folder param to build:types ([f10e2fb](https://github.com/younho9/lib/commit/f10e2fb681bb632dd046ac655087e516b03e9925))
+* **`scripts`:** unify scripts naming ([22a148d](https://github.com/younho9/lib/commit/22a148d449c440ad8dc002a14bad4aaff6472f65))
+* **`tsconfig`:** remove include option to recognize test folder ([b0bf0ea](https://github.com/younho9/lib/commit/b0bf0ea007b2ff7ac28b5afc81ea896ef9a9b833))
+
+
+
 ### [0.1.5](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.1.4...@younho9/eslint-plugin@0.1.5) (2021-09-20)
 
 

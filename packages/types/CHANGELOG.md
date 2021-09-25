@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/younho9/lib/compare/@younho9/types@0.4.2...@younho9/types@0.5.0) (2021-09-25)
+
+
+### :broom: Other
+
+* **`eslint`:** ignore `object` & `Function` type of ban-types ([7ce9878](https://github.com/younho9/lib/commit/7ce9878bb0080e3e8b0baf88eed2bffcfe5c9e3d))
+* **`scripts`:** add src folder param to build:types ([f10e2fb](https://github.com/younho9/lib/commit/f10e2fb681bb632dd046ac655087e516b03e9925))
+* **`scripts`:** unify scripts naming ([22a148d](https://github.com/younho9/lib/commit/22a148d449c440ad8dc002a14bad4aaff6472f65))
+* **`tsconfig`:** remove include option to recognize test folder ([b0bf0ea](https://github.com/younho9/lib/commit/b0bf0ea007b2ff7ac28b5afc81ea896ef9a9b833))
+* **`types`:** add lint script ([1f9ceb0](https://github.com/younho9/lib/commit/1f9ceb0fa5bea2aca7aed4c6d077f4125fda4d0f))
+
+
+### :test_tube: Test
+
+* **`types`:** add comparison of object types ([fbf396b](https://github.com/younho9/lib/commit/fbf396b7a9fd6c01fb1ee515a770053db9afac0b))
+* **`types`:** update type tests ([c001b49](https://github.com/younho9/lib/commit/c001b49e41ba7d9c0992de4a71c02c36125d4308))
+
+
+### :rocket: New Features
+
+* **`types`:** add `Nominal` and `Invariant` type ([38c77d5](https://github.com/younho9/lib/commit/38c77d5f49cdc105ada388476ea4bd787c1972f7))
+* **`types`:** change return type of `Alt.Function` to any ([e95732a](https://github.com/younho9/lib/commit/e95732a863188c5cb89cb69f6ac1ca5b55178edc))
+
+
+### :memo: Documentation
+
+* **`types`:** add comparison of function types ([b7d0dc0](https://github.com/younho9/lib/commit/b7d0dc0ab78222f94bce71d38daeab0ecbdc0e47))
+* **`types`:** update README.md ([c60431e](https://github.com/younho9/lib/commit/c60431e6586e981368cbde544cc6f206a65726b8))
+
+
+
 ### [0.4.2](https://github.com/younho9/lib/compare/@younho9/types@0.4.1...@younho9/types@0.4.2) (2021-09-21)
 
 

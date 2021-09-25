@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.3.2](https://github.com/younho9/lib/compare/@younho9/prettier-config@1.3.1...@younho9/prettier-config@1.3.2) (2021-09-25)
+
+
+### :broom: Other
+
+* **`scripts`:** add src folder param to build:types ([f10e2fb](https://github.com/younho9/lib/commit/f10e2fb681bb632dd046ac655087e516b03e9925))
+* **`scripts`:** unify scripts naming ([22a148d](https://github.com/younho9/lib/commit/22a148d449c440ad8dc002a14bad4aaff6472f65))
+* **`tsconfig`:** remove include option to recognize test folder ([b0bf0ea](https://github.com/younho9/lib/commit/b0bf0ea007b2ff7ac28b5afc81ea896ef9a9b833))
+
+
+
 ### [1.3.1](https://github.com/younho9/lib/compare/@younho9/prettier-config@1.3.0...@younho9/prettier-config@1.3.1) (2021-09-18)
 
 
