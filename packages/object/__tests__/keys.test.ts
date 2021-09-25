@@ -1,87 +1,81 @@
 import {keys} from '../src';
 
-describe('keys', () => {
-  it('keys of Record<string, any> is Array<string>', () => {
-    expect(keys({name: 'kim', age: 30, id: 1})).toEqual(['name', 'age', 'id']);
+export const stringKeyObj = {name: 'kim', age: 30, id: 1};
+export const numberKeyObj = {1: 'one', 2: 'two', 3: 'three'};
+export const symbolKeyObj = {
+  [Symbol('one')]: 'one',
+  [Symbol('two')]: 'two',
+  [Symbol('three')]: 'three',
+};
+export const mixedKeyObj = {
+  1: 'one',
+  two: 'two',
+  [Symbol('three')]: 'three',
+};
+export const array = ['a', 'b', 'c'];
+
+describe('return', () => {
+  it('keys of Record<K extends string, any> is K[]', () => {
+    expect(keys(stringKeyObj)).toEqual(['name', 'age', 'id']);
   });
 
-  it('keys of Record<number, any> is Array<number>', () => {
-    expect(keys({1: 1, 2: 2, 3: 3})).toEqual(['1', '2', '3']);
+  it('keys of Record<K extends number, any> is K[]', () => {
+    expect(keys(numberKeyObj)).toEqual(['1', '2', '3']);
   });
 
-  it('keys of Record<symbol, any> is empty array', () => {
-    expect(
-      keys({
-        [Symbol('one')]: 'one',
-        [Symbol('two')]: 'two',
-        [Symbol('three')]: 'three',
-      }),
-    ).toEqual([]);
+  it('keys of Record<K extends symbol, any> is []', () => {
+    expect(keys(symbolKeyObj)).toEqual([]);
   });
 
-  it('keys of Record<number | string | symbol, any> is Array<number | string>', () => {
-    expect(
-      keys({
-        1: 'one',
-        two: 'two',
-        [Symbol('three')]: 'three',
-      }),
-    ).toEqual(['1', 'two']);
+  it('keys of Record<K extends PropertyKey, any> is Exclude<keyof T, symbol>[]', () => {
+    expect(keys(mixedKeyObj)).toEqual(['1', 'two']);
   });
 
-  it('keys of Array<any> is Array<number>', () => {
-    expect(keys(['a', 'b', 'c'])).toEqual(['0', '1', '2']);
-  });
-
-  it('keys of string is Array<number>', () => {
-    expect(keys('abc')).toEqual(['0', '1', '2']);
-  });
-
-  it('keys of number is empty array', () => {
-    expect(keys(100)).toEqual([]);
-  });
-
-  it('keys of bigint is empty array', () => {
-    expect(keys(100n)).toEqual([]);
-  });
-
-  it('keys of undefined throw TypeError', () => {
-    expect(() => {
-      keys(undefined);
-    }).toThrowError(
-      new TypeError('Cannot convert undefined or null to object'),
-    );
-  });
-
-  it('keys of null throw TypeError', () => {
-    expect(() => {
-      keys(null);
-    }).toThrowError(
-      new TypeError('Cannot convert undefined or null to object'),
-    );
+  it('keys of Array<any> is string[]', () => {
+    expect(keys(array)).toEqual(['0', '1', '2']);
   });
 });
 
-describe('keys.map', () => {
-  it('access values in keys.map of Record<symbol, any>', () => {
-    const symbolObj = {
-      [Symbol('one')]: 'one',
-      [Symbol('two')]: 'two',
-      [Symbol('three')]: 'three',
-    };
-    expect(keys(symbolObj).map((key) => symbolObj[key])).toEqual([]);
+describe('access value with key', () => {
+  it('in keys.map of Record<K extends string, any>', () => {
+    expect(keys(stringKeyObj).map((key) => stringKeyObj[key])).toEqual([
+      'kim',
+      30,
+      1,
+    ]);
   });
 
-  it('access values in keys.map of Record<number | string | symbol, any>', () => {
-    const includeSymbolObj = {
-      1: 'one',
-      two: 'two',
-      [Symbol('three')]: 'three',
-    };
-
-    expect(keys(includeSymbolObj).map((key) => includeSymbolObj[key])).toEqual([
+  it('in keys.map of Record<K extends number, any>', () => {
+    expect(keys(numberKeyObj).map((key) => numberKeyObj[key])).toEqual([
       'one',
       'two',
+      'three',
+    ]);
+  });
+
+  it('in keys.map of Record<K extends symbol, any>', () => {
+    expect(keys(symbolKeyObj).map((key) => symbolKeyObj[key])).toEqual([]);
+  });
+
+  it('in keys.map of Record<K extends PropertyKey, any>', () => {
+    expect(keys(mixedKeyObj).map((key) => mixedKeyObj[key])).toEqual([
+      'one',
+      'two',
+    ]);
+  });
+
+  it('in keys.map of Record<K extends PropertyKey, any>', () => {
+    expect(keys(mixedKeyObj).map((key) => mixedKeyObj[key])).toEqual([
+      'one',
+      'two',
+    ]);
+  });
+
+  it('in keys.map of Array<any>', () => {
+    expect(keys(array).map((key) => array[Number(key)])).toEqual([
+      'a',
+      'b',
+      'c',
     ]);
   });
 });
