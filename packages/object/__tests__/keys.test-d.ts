@@ -3,7 +3,6 @@ import {expectType} from 'tsd';
 import {keys} from '../src';
 
 import {
-  array,
   mixedKeyObj,
   numberKeyObj,
   stringKeyObj,
@@ -16,9 +15,8 @@ import {
 {
   expectType<('name' | 'age' | 'id')[]>(keys(stringKeyObj));
   expectType<(1 | 2 | 3)[]>(keys(numberKeyObj));
-  expectType<[]>(keys(symbolKeyObj));
+  expectType<never[]>(keys(symbolKeyObj));
   expectType<('two' | 1)[]>(keys(mixedKeyObj));
-  expectType<string[]>(keys(array));
 }
 
 /**
@@ -31,5 +29,4 @@ import {
   keys(numberKeyObj).map((key) => expectType<string>(numberKeyObj[key]));
   keys(symbolKeyObj).map((key) => expectType<string>(symbolKeyObj[key]));
   keys(mixedKeyObj).map((key) => expectType<string>(mixedKeyObj[key]));
-  keys(array).map((key) => expectType<string>(array[Number(key)]));
 }

@@ -30,10 +30,6 @@ describe('return', () => {
   it('keys of Record<K extends PropertyKey, any> is Exclude<keyof T, symbol>[]', () => {
     expect(keys(mixedKeyObj)).toEqual(['1', 'two']);
   });
-
-  it('keys of Array<any> is string[]', () => {
-    expect(keys(array)).toEqual(['0', '1', '2']);
-  });
 });
 
 describe('access value with key', () => {
@@ -68,14 +64,6 @@ describe('access value with key', () => {
     expect(keys(mixedKeyObj).map((key) => mixedKeyObj[key])).toEqual([
       'one',
       'two',
-    ]);
-  });
-
-  it('in keys.map of Array<any>', () => {
-    expect(keys(array).map((key) => array[Number(key)])).toEqual([
-      'a',
-      'b',
-      'c',
     ]);
   });
 });

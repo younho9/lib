@@ -1,8 +1,4 @@
-export type ObjectKeys<T> = T extends Array<unknown>
-  ? string[]
-  : keyof T extends symbol
-  ? []
-  : Exclude<keyof T, symbol>[];
+import type {Dict, ObjectKeys} from '@younho9/types';
 
 /**
  * @param obj - The object of which the enumerable's own properties are to be returned.
@@ -10,6 +6,6 @@ export type ObjectKeys<T> = T extends Array<unknown>
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
  */
-export default function keys<T extends object>(obj: T): ObjectKeys<T> {
-  return Object.keys(obj) as ObjectKeys<T>;
+export default function keys<O extends Dict>(obj: O): ObjectKeys<O> {
+  return Object.keys(obj) as ObjectKeys<O>;
 }
