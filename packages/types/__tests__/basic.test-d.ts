@@ -3,8 +3,6 @@ import {expectAssignable, expectError, expectNotAssignable} from 'tsd';
 
 import type * as Basic from '../src/basic';
 
-import {falsy, nullish, objects, primitive, truthy} from './constants';
-
 /**
  * Primitive
  */
@@ -15,22 +13,22 @@ import {falsy, nullish, objects, primitive, truthy} from './constants';
    * @see https://developer.mozilla.org/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript
    */
   {
-    expectAssignable<String>(primitive.string);
-    expectAssignable<Number>(primitive.number);
-    expectAssignable<BigInt>(primitive.bigint);
-    expectAssignable<Boolean>(primitive.boolean);
-    expectAssignable<Symbol>(primitive.symbol);
+    expectAssignable<String>('' as string);
+    expectAssignable<Number>(0 as number);
+    expectAssignable<BigInt>(0n as bigint);
+    expectAssignable<Boolean>(false as boolean);
+    expectAssignable<Symbol>(Symbol('symbol'));
 
-    expectNotAssignable<string>(new String(primitive.string));
-    expectNotAssignable<number>(new Number(primitive.number));
-    expectNotAssignable<boolean>(new Boolean(primitive.boolean));
+    expectNotAssignable<string>(new String('' as string));
+    expectNotAssignable<number>(new Number(0 as number));
+    expectNotAssignable<boolean>(new Boolean(false as boolean));
 
     /**
      * Symbol does not support the syntax `new Symbol()`
      *
      * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#constructor
      */
-    expectAssignable<symbol>(primitive.symbol);
+    expectAssignable<symbol>(Symbol('symbol'));
     expectError<symbol>(new Symbol());
 
     /**
@@ -38,29 +36,29 @@ import {falsy, nullish, objects, primitive, truthy} from './constants';
      *
      * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#description
      */
-    expectAssignable<bigint>(primitive.bigint);
-    expectError<bigint>(new BigInt(primitive.bigint));
+    expectAssignable<bigint>(0n as bigint);
+    expectError<bigint>(new BigInt(0n as bigint));
   }
 
   /**
    * It test assignability
    */
   {
-    expectAssignable<Basic.Primitive>(primitive.bigint);
-    expectAssignable<Basic.Primitive>(primitive.boolean);
-    expectAssignable<Basic.Primitive>(primitive.null);
-    expectAssignable<Basic.Primitive>(primitive.number);
-    expectAssignable<Basic.Primitive>(primitive.string);
-    expectAssignable<Basic.Primitive>(primitive.symbol);
-    expectAssignable<Basic.Primitive>(primitive.undefined);
+    expectAssignable<Basic.Primitive>(0n as bigint);
+    expectAssignable<Basic.Primitive>(false as boolean);
+    expectAssignable<Basic.Primitive>(null);
+    expectAssignable<Basic.Primitive>(0 as number);
+    expectAssignable<Basic.Primitive>('' as string);
+    expectAssignable<Basic.Primitive>(Symbol('symbol'));
+    expectAssignable<Basic.Primitive>(undefined);
 
-    expectNotAssignable<Basic.Primitive>(objects.object);
-    expectNotAssignable<Basic.Primitive>(objects.function);
-    expectNotAssignable<Basic.Primitive>(objects.array);
+    expectNotAssignable<Basic.Primitive>({} as object);
+    expectNotAssignable<Basic.Primitive>((() => undefined) as Function);
+    expectNotAssignable<Basic.Primitive>([] as Array<any>);
 
-    expectAssignable<Basic.Primitive>(nullish);
-    expectAssignable<Basic.Primitive>(falsy);
-    expectNotAssignable<Basic.Primitive>(truthy);
+    expectAssignable<Basic.Primitive>(undefined as Basic.Nullish);
+    expectAssignable<Basic.Primitive>(false as Basic.Falsy);
+    expectNotAssignable<Basic.Primitive>(true as Basic.Truthy);
   }
 }
 
@@ -68,42 +66,42 @@ import {falsy, nullish, objects, primitive, truthy} from './constants';
  * JavaScript Types
  */
 {
-  expectAssignable<Basic.Type>(primitive.bigint);
-  expectAssignable<Basic.Type>(primitive.boolean);
-  expectAssignable<Basic.Type>(primitive.null);
-  expectAssignable<Basic.Type>(primitive.number);
-  expectAssignable<Basic.Type>(primitive.string);
-  expectAssignable<Basic.Type>(primitive.symbol);
-  expectAssignable<Basic.Type>(primitive.undefined);
+  expectAssignable<Basic.Type>(0n as bigint);
+  expectAssignable<Basic.Type>(false as boolean);
+  expectAssignable<Basic.Type>(null);
+  expectAssignable<Basic.Type>(0 as number);
+  expectAssignable<Basic.Type>('' as string);
+  expectAssignable<Basic.Type>(Symbol('symbol'));
+  expectAssignable<Basic.Type>(undefined);
 
-  expectAssignable<Basic.Type>(objects.object);
-  expectAssignable<Basic.Type>(objects.function);
-  expectAssignable<Basic.Type>(objects.array);
+  expectAssignable<Basic.Type>({} as object);
+  expectAssignable<Basic.Type>((() => undefined) as Function);
+  expectAssignable<Basic.Type>([] as Array<any>);
 
-  expectAssignable<Basic.Type>(nullish);
-  expectAssignable<Basic.Type>(falsy);
-  expectAssignable<Basic.Type>(truthy);
+  expectAssignable<Basic.Type>(undefined as Basic.Nullish);
+  expectAssignable<Basic.Type>(false as Basic.Falsy);
+  expectAssignable<Basic.Type>(true as Basic.Truthy);
 }
 
 /**
  * Nullish
  */
 {
-  expectNotAssignable<Basic.Nullish>(primitive.bigint);
-  expectNotAssignable<Basic.Nullish>(primitive.boolean);
-  expectAssignable<Basic.Nullish>(primitive.null);
-  expectNotAssignable<Basic.Nullish>(primitive.number);
-  expectNotAssignable<Basic.Nullish>(primitive.string);
-  expectNotAssignable<Basic.Nullish>(primitive.symbol);
-  expectAssignable<Basic.Nullish>(primitive.undefined);
+  expectNotAssignable<Basic.Nullish>(0n as bigint);
+  expectNotAssignable<Basic.Nullish>(false as boolean);
+  expectAssignable<Basic.Nullish>(null);
+  expectNotAssignable<Basic.Nullish>(0 as number);
+  expectNotAssignable<Basic.Nullish>('' as string);
+  expectNotAssignable<Basic.Nullish>(Symbol('symbol'));
+  expectAssignable<Basic.Nullish>(undefined);
 
-  expectNotAssignable<Basic.Nullish>(objects.object);
-  expectNotAssignable<Basic.Nullish>(objects.function);
-  expectNotAssignable<Basic.Nullish>(objects.array);
+  expectNotAssignable<Basic.Nullish>({} as object);
+  expectNotAssignable<Basic.Nullish>((() => undefined) as Function);
+  expectNotAssignable<Basic.Nullish>([] as Array<any>);
 
-  expectNotAssignable<Basic.Nullish>(falsy);
-  expectNotAssignable<Basic.Nullish>(truthy);
-  expectAssignable<Basic.Nullish>(nullish);
+  expectNotAssignable<Basic.Nullish>(false as Basic.Falsy);
+  expectNotAssignable<Basic.Nullish>(true as Basic.Truthy);
+  expectAssignable<Basic.Nullish>(undefined as Basic.Nullish);
 
   expectNotAssignable<Basic.Nullish>(false);
   expectNotAssignable<Basic.Nullish>(0);
@@ -118,21 +116,21 @@ import {falsy, nullish, objects, primitive, truthy} from './constants';
  * Falsy
  */
 {
-  expectNotAssignable<Basic.Falsy>(primitive.bigint);
-  expectNotAssignable<Basic.Falsy>(primitive.boolean);
-  expectAssignable<Basic.Falsy>(primitive.null);
-  expectNotAssignable<Basic.Falsy>(primitive.number);
-  expectNotAssignable<Basic.Falsy>(primitive.string);
-  expectNotAssignable<Basic.Falsy>(primitive.symbol);
-  expectAssignable<Basic.Falsy>(primitive.undefined);
+  expectNotAssignable<Basic.Falsy>(0n as bigint);
+  expectNotAssignable<Basic.Falsy>(false as boolean);
+  expectAssignable<Basic.Falsy>(null);
+  expectNotAssignable<Basic.Falsy>(0 as number);
+  expectNotAssignable<Basic.Falsy>('' as string);
+  expectNotAssignable<Basic.Falsy>(Symbol('symbol'));
+  expectAssignable<Basic.Falsy>(undefined);
 
-  expectNotAssignable<Basic.Falsy>(objects.object);
-  expectNotAssignable<Basic.Falsy>(objects.function);
-  expectNotAssignable<Basic.Falsy>(objects.array);
+  expectNotAssignable<Basic.Falsy>({} as object);
+  expectNotAssignable<Basic.Falsy>((() => undefined) as Function);
+  expectNotAssignable<Basic.Falsy>([] as Array<any>);
 
-  expectAssignable<Basic.Falsy>(falsy);
-  expectNotAssignable<Basic.Falsy>(truthy);
-  expectAssignable<Basic.Falsy>(nullish);
+  expectAssignable<Basic.Falsy>(false as Basic.Falsy);
+  expectNotAssignable<Basic.Falsy>(true as Basic.Truthy);
+  expectAssignable<Basic.Falsy>(undefined as Basic.Nullish);
 
   expectAssignable<Basic.Falsy>(false);
   expectAssignable<Basic.Falsy>(0);
@@ -147,21 +145,21 @@ import {falsy, nullish, objects, primitive, truthy} from './constants';
  * Truthy
  */
 {
-  expectAssignable<Basic.Truthy>(primitive.bigint);
-  expectNotAssignable<Basic.Truthy>(primitive.boolean);
-  expectNotAssignable<Basic.Truthy>(primitive.null);
-  expectAssignable<Basic.Truthy>(primitive.number);
-  expectAssignable<Basic.Truthy>(primitive.string);
-  expectAssignable<Basic.Truthy>(primitive.symbol);
-  expectNotAssignable<Basic.Truthy>(primitive.undefined);
+  expectAssignable<Basic.Truthy>(0n as bigint);
+  expectNotAssignable<Basic.Truthy>(false as boolean);
+  expectNotAssignable<Basic.Truthy>(null);
+  expectAssignable<Basic.Truthy>(0 as number);
+  expectAssignable<Basic.Truthy>('' as string);
+  expectAssignable<Basic.Truthy>(Symbol('symbol'));
+  expectNotAssignable<Basic.Truthy>(undefined);
 
-  expectAssignable<Basic.Truthy>(objects.object);
-  expectAssignable<Basic.Truthy>(objects.function);
-  expectAssignable<Basic.Truthy>(objects.array);
+  expectAssignable<Basic.Truthy>({} as object);
+  expectAssignable<Basic.Truthy>((() => undefined) as Function);
+  expectAssignable<Basic.Truthy>([] as Array<any>);
 
-  expectNotAssignable<Basic.Truthy>(falsy);
-  expectAssignable<Basic.Truthy>(truthy);
-  expectNotAssignable<Basic.Truthy>(nullish);
+  expectNotAssignable<Basic.Truthy>(false as Basic.Falsy);
+  expectAssignable<Basic.Truthy>(true as Basic.Truthy);
+  expectNotAssignable<Basic.Truthy>(undefined as Basic.Nullish);
 
   expectNotAssignable<Basic.Truthy>(false);
   expectNotAssignable<Basic.Truthy>(null);

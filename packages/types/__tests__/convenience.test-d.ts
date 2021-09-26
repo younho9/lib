@@ -1,38 +1,36 @@
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
 import type * as Alt from '../src/alternative';
-import type * as Convenience from '../src/convenience';
-
-import {alt, def, dicts} from './constants';
+import type {Dict} from '../src/convenience';
 
 /**
  * Assignability
  */
 {
-  expectNotAssignable<Convenience.Dict>(def.object);
-  expectNotAssignable<Convenience.Dict>(def.function);
-  expectAssignable<Convenience.Dict>(alt.object);
-  expectNotAssignable<Convenience.Dict>(alt.function);
+  expectNotAssignable<Dict>({} as object);
+  expectNotAssignable<Dict>((() => undefined) as Function);
+  expectAssignable<Dict>({} as Alt.Object);
+  expectNotAssignable<Dict>((() => undefined) as Alt.Function);
 
-  expectAssignable<object>(dicts.string);
-  expectAssignable<object>(dicts.number);
-  expectAssignable<object>(dicts.bigint);
-  expectAssignable<object>(dicts.boolean);
-  expectAssignable<object>(dicts.symbol);
-  expectAssignable<object>(dicts.undefined);
-  expectAssignable<object>(dicts.null);
-  expectAssignable<object>(dicts.object);
-  expectAssignable<object>(dicts.function);
-  expectAssignable<object>(dicts.array);
+  expectAssignable<object>({} as Dict<string>);
+  expectAssignable<object>({} as Dict<number>);
+  expectAssignable<object>({} as Dict<bigint>);
+  expectAssignable<object>({} as Dict<boolean>);
+  expectAssignable<object>({} as Dict<symbol>);
+  expectAssignable<object>({} as Dict<undefined>);
+  expectAssignable<object>({} as Dict<null>);
+  expectAssignable<object>({} as Dict<object>);
+  expectAssignable<object>({} as Dict<Function>);
+  expectAssignable<object>({} as Dict<Array<any>>);
 
-  expectAssignable<Alt.Object>(dicts.string);
-  expectAssignable<Alt.Object>(dicts.number);
-  expectAssignable<Alt.Object>(dicts.bigint);
-  expectAssignable<Alt.Object>(dicts.boolean);
-  expectAssignable<Alt.Object>(dicts.symbol);
-  expectAssignable<Alt.Object>(dicts.undefined);
-  expectAssignable<Alt.Object>(dicts.null);
-  expectAssignable<Alt.Object>(dicts.object);
-  expectAssignable<Alt.Object>(dicts.function);
-  expectAssignable<Alt.Object>(dicts.array);
+  expectAssignable<Alt.Object>({} as Dict<string>);
+  expectAssignable<Alt.Object>({} as Dict<number>);
+  expectAssignable<Alt.Object>({} as Dict<bigint>);
+  expectAssignable<Alt.Object>({} as Dict<boolean>);
+  expectAssignable<Alt.Object>({} as Dict<symbol>);
+  expectAssignable<Alt.Object>({} as Dict<undefined>);
+  expectAssignable<Alt.Object>({} as Dict<null>);
+  expectAssignable<Alt.Object>({} as Dict<object>);
+  expectAssignable<Alt.Object>({} as Dict<Function>);
+  expectAssignable<Alt.Object>({} as Dict<Array<any>>);
 }

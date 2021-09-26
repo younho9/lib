@@ -5,86 +5,65 @@ import {
   expectType,
 } from 'tsd';
 
-import type {IndexSignature} from '../src';
 import type {Invariant, Nominal} from '../src/system';
 
-interface IAB {
-  a: string;
-  b: number;
-}
+type FooBar = {
+  foo: number;
+  bar?: string;
+};
 
-interface IABC extends IAB {
-  c: boolean;
-}
+type FooBarBaz1 = FooBar & {
+  baz: number | undefined;
+};
 
-interface IABCD extends IABC {
-  d: Array<string>;
-}
-
-interface IABCLike {
-  a: string;
-  b: number;
-  c: boolean;
-}
-
-type AB = IndexSignature<IAB>;
-type ABC = IndexSignature<IABC>;
-type ABCD = IndexSignature<IABCD>;
-type ABCLike = IndexSignature<IABCLike>;
-
-declare const AB: AB;
-declare const ABC: ABC;
-declare const ABCD: ABCD;
-declare const ABCLike: ABCLike;
-
-declare const InvariantAB: Invariant<AB>;
-declare const InvariantABC: Invariant<ABC>;
-declare const InvariantABCD: Invariant<ABCD>;
-declare const InvariantABCLike: Invariant<ABCLike>;
-
-declare const NominalAB: Nominal<AB, 'AB'>;
-declare const NominalABC: Nominal<ABC, 'ABC'>;
-declare const NominalABCD: Nominal<ABCD, 'ABCD'>;
-declare const NominalABCLike: Nominal<ABCLike, 'ABCLike'>;
+type FooBarBaz2 = {
+  foo: number;
+  bar?: string;
+  baz: number | undefined;
+};
 
 /**
  * Default Compatibility (structural)
  */
 {
   /** object type is exact with equal type */
-  expectType<ABC>(ABC);
+  expectType<FooBar>({} as FooBar);
+  expectType<FooBar>({} as FooBar);
 
   /** object type is exact with equal structure type */
-  expectType<ABC>(ABCLike);
+  expectAssignable<FooBarBaz1>({} as FooBarBaz2);
+  expectAssignable<FooBarBaz2>({} as FooBarBaz1);
 
-  /** Subtype is assignable to supertype (ABC :> ABCD) */
-  expectAssignable<ABC>(ABCD);
+  /** Subtype is assignable to supertype (FooBar :> FooBarBaz1) */
+  expectAssignable<FooBar>({} as FooBarBaz1);
 
-  /** Supertype is not assignable to subtype (ABC <: AB) */
-  expectNotAssignable<ABC>(AB);
+  /** Supertype is not assignable to subtype (FooBarBaz1 <: FooBar) */
+  expectNotAssignable<FooBarBaz1>({} as FooBar);
 }
 
 /**
  * Invariant Compatibility
  */
 {
-  /** Invariant is exact with equal type (ABC === ABC) */
-  expectType<Invariant<ABC>>(InvariantABC);
+  /** Invariant is exact with equal type (FooBarBaz1 === FooBarBaz1) */
+  expectType<Invariant<FooBarBaz1>>({} as Invariant<FooBarBaz1>);
 
-  /** Invariant is exact with equal structure type (ABC == ABCLike) */
-  expectType<Invariant<ABC>>(InvariantABCLike);
+  /** Invariant is assignable with equal structure type (FooBarBaz1 == FooBarBaz2) */
+  expectNotType<Invariant<FooBarBaz1>>({} as Invariant<FooBarBaz2>);
+  expectAssignable<Invariant<FooBarBaz1>>({} as Invariant<FooBarBaz2>);
+  expectAssignable<Invariant<FooBarBaz2>>({} as Invariant<FooBarBaz1>);
 
-  /** Invariant subtype is not assignable to Invariant supertype (ABC :> ABCD) */
-  expectNotAssignable<Invariant<ABC>>(InvariantABCD);
+  /** Invariant subtype is not assignable to Invariant supertype (FooBar :> FooBarBaz1) */
+  expectNotAssignable<Invariant<FooBar>>({} as Invariant<FooBarBaz1>);
 
-  /** Invariant supertype is not assignable to Invariant subtype (ABC <: AB) */
-  expectNotAssignable<Invariant<ABC>>(InvariantAB);
+  /** Invariant supertype is not assignable to Invariant subtype (FooBarBaz1 <: FooBar) */
+  expectNotAssignable<Invariant<FooBarBaz1>>({} as Invariant<FooBar>);
 
-  /** Invariant type is subtype of default type (Invariant<ABC> <: ABC) */
-  expectNotType<Invariant<ABC>>(ABC);
-  expectNotType<ABC>(InvariantABC);
-  expectNotAssignable<Invariant<ABC>>(ABC);
-  expectAssignable<ABC>(InvariantABC);
+  /** Invariant type is subtype of default type (Invariant<FooBarBaz1> <: FooBarBaz1) */
+  expectNotType<Invariant<FooBarBaz1>>({} as FooBarBaz1);
+  expectNotType<FooBarBaz1>({} as Invariant<FooBarBaz1>);
+  expectNotAssignable<Invariant<FooBarBaz1>>({} as FooBarBaz1);
+  expectAssignable<FooBarBaz1>({} as Invariant<FooBarBaz1>);
 }
 
 /**
@@ -92,34 +71,32 @@ declare const NominalABCLike: Nominal<ABCLike, 'ABCLike'>;
  */
 {
   /** Nominal type branding */
-  expectNotType<Nominal<string, 'PersonID'>>('1234');
-  expectType<Nominal<string, 'PersonID'>>(
-    '1234' as Nominal<string, 'PersonID'>,
-  );
+  expectNotType<Nominal<string, 'PersonID'>>('');
+  expectType<Nominal<string, 'PersonID'>>('' as Nominal<string, 'PersonID'>);
 
-  /** Nominal is exact with equal type (ABC === ABC) */
-  expectType<Nominal<ABC, 'ABC'>>(NominalABC);
+  /** Nominal is exact with equal type (FooBarBaz1 === FooBarBaz1) */
+  expectType<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as Nominal<FooBarBaz1, 'FooBarBaz1'>); // prettier-ignore
 
-  /** Nominal is not assignable with equal structure type (ABC == ABCLike) */
-  expectNotType<Nominal<ABC, 'ABC'>>(NominalABCLike);
-  expectNotAssignable<Nominal<ABC, 'ABC'>>(NominalABCLike);
-  expectNotAssignable<Nominal<ABCLike, 'ABCLike'>>(NominalABC);
+  /** Nominal is not assignable with equal structure type (FooBarBaz1 == FooBarBaz2) */
+  expectNotType<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as Nominal<FooBarBaz2, 'FooBarBaz2'>); // prettier-ignore
+  expectNotAssignable<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as Nominal<FooBarBaz2, 'FooBarBaz2'>); // prettier-ignore
+  expectNotAssignable<Nominal<FooBarBaz2, 'FooBarBaz2'>>({} as Nominal<FooBarBaz1, 'FooBarBaz1'>); // prettier-ignore
 
-  /** Nominal subtype is not assignable to Nominal supertype (ABC :> ABCD) */
-  expectNotAssignable<Nominal<ABC, 'ABC'>>(NominalABCD);
+  /** Nominal subtype is not assignable to Nominal supertype (FooBar :> FooBarBaz1) */
+  expectNotAssignable<Nominal<FooBar, 'FooBar'>>({} as Nominal<FooBarBaz2, 'FooBarBaz2'>); // prettier-ignore
 
-  /** Nominal supertype is not assignable to Nominal subtype (ABC <: AB) */
-  expectNotAssignable<Nominal<ABC, 'ABC'>>(NominalAB);
+  /** Nominal supertype is not assignable to Nominal subtype (FooBarBaz1 <: FooBar) */
+  expectNotAssignable<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as Nominal<FooBar, 'FooBar'>); // prettier-ignore
 
-  /** Nominal type is subtype of default type (Nominal<ABC, 'ABC'> <: ABC) */
-  expectNotType<Nominal<ABC, 'ABC'>>(ABC);
-  expectNotType<ABC>(NominalABC);
-  expectNotAssignable<Nominal<ABC, 'ABC'>>(ABC);
-  expectAssignable<ABC>(NominalABC);
+  /** Nominal type is subtype of default type (Nominal<FooBarBaz1, 'FooBarBaz1'> <: FooBarBaz1) */
+  expectNotType<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as FooBarBaz1);
+  expectNotType<FooBarBaz1>({} as Nominal<FooBarBaz1, 'FooBarBaz1'>);
+  expectNotAssignable<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as FooBarBaz1);
+  expectAssignable<FooBarBaz1>({} as Nominal<FooBarBaz1, 'FooBarBaz1'>);
 
   /** Nominal type is not assignable to Invariant type */
-  expectNotType<Nominal<ABC, 'ABC'>>(InvariantABC);
-  expectNotType<Invariant<ABC>>(NominalABC);
-  expectNotAssignable<Nominal<ABC, 'ABC'>>(InvariantABC);
-  expectNotAssignable<Invariant<ABC>>(NominalABC);
+  expectNotType<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as Invariant<FooBarBaz1>);
+  expectNotType<Invariant<FooBarBaz1>>({} as Nominal<FooBarBaz1, 'FooBarBaz1'>);
+  expectNotAssignable<Nominal<FooBarBaz1, 'FooBarBaz1'>>({} as Invariant<FooBarBaz1>); // prettier-ignore
+  expectNotAssignable<Invariant<FooBarBaz1>>({} as Nominal<FooBarBaz1, 'FooBarBaz1'>); // prettier-ignore
 }
