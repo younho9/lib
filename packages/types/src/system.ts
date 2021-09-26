@@ -1,15 +1,18 @@
+import type {Dict} from './convenience';
+import type {OptionalToUndefined} from './object';
+
 /**
  * Helper for `Invariant` and is not useful on its own
  */
-export class Shaped<Type extends object> {
-  private _keys!: keyof Type;
+export class Shaped<O extends Dict> {
+  protected readonly _keys!: keyof O;
 }
 
 /**
  * Helper for `Nominal` and is not useful on its own
  */
 export class Branded<Tag> {
-  private _brand!: Tag;
+  protected readonly _brand!: Tag;
 }
 
 /**
@@ -17,10 +20,10 @@ export class Branded<Tag> {
  *
  * @see https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)#:~:text=invariant%20or%20nonvariant%20if%20not%20variant.
  */
-export type Invariant<Type extends object = object> = Type & Shaped<Type>;
+export type Invariant<O extends Dict = Dict> = OptionalToUndefined<O> &
+  Shaped<O>;
 
 /**
  * Constructs a nominal type
  */
-export type Nominal<Type extends unknown, Tag extends string> = Type &
-  Branded<Tag>;
+export type Nominal<O extends unknown, Tag extends string> = O & Branded<Tag>;

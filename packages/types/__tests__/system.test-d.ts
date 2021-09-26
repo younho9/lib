@@ -5,30 +5,32 @@ import {
   expectType,
 } from 'tsd';
 
-import type {Shaped, Branded, Invariant, Nominal} from '../src/system';
+import type {IndexSignature} from '../src';
+import type {Invariant, Nominal} from '../src/system';
 
-interface AB {
+interface IAB {
   a: string;
   b: number;
 }
 
-interface ABC extends AB {
+interface IABC extends IAB {
   c: boolean;
 }
 
-interface ABCD extends ABC {
+interface IABCD extends IABC {
   d: Array<string>;
 }
 
-interface ABCLike {
+interface IABCLike {
   a: string;
   b: number;
   c: boolean;
 }
 
-declare const abcShaped: Shaped<ABC>;
-
-declare const myTypeValue: Branded<'myType'>;
+type AB = IndexSignature<IAB>;
+type ABC = IndexSignature<IABC>;
+type ABCD = IndexSignature<IABCD>;
+type ABCLike = IndexSignature<IABCLike>;
 
 declare const AB: AB;
 declare const ABC: ABC;
@@ -44,38 +46,6 @@ declare const NominalAB: Nominal<AB, 'AB'>;
 declare const NominalABC: Nominal<ABC, 'ABC'>;
 declare const NominalABCD: Nominal<ABCD, 'ABCD'>;
 declare const NominalABCLike: Nominal<ABCLike, 'ABCLike'>;
-
-/**
- * Shaped
- */
-{
-  expectType<Shaped<ABC>>(abcShaped);
-  expectNotType<Shaped<AB>>(abcShaped);
-  expectNotType<Shaped<ABCD>>(abcShaped);
-
-  /** forcefully access to private property */
-  expectType<'a' | 'b' | 'c'>(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    abcShaped._keys,
-  );
-}
-
-/**
- * Branded
- */
-{
-  expectType<Branded<'myType'>>(myTypeValue);
-  expectNotType<Branded<string>>(myTypeValue);
-  expectNotType<Branded<boolean>>(myTypeValue);
-
-  /** forcefully access to private property */
-  expectType<'myType'>(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    myTypeValue._brand,
-  );
-}
 
 /**
  * Default Compatibility (structural)
