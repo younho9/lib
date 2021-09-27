@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "files": [
     "dist"
   ],
@@ -20,7 +20,7 @@
     "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
-    "build:js": "babel src -d dist --source-maps",
+    "build:cjs": "babel src -d dist --source-maps --out-file-extension .cjs",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
     "lint": "concurrently yarn:lint:*",
@@ -40,7 +40,8 @@
     "babel-plugin-add-module-exports": "1.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.4"
+    "@babel/core": "^7.15.4",
+    "@types/babel__helper-plugin-utils": "7.10.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"

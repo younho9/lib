@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
+  "type": "commonjs",
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",

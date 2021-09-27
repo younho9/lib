@@ -1,5 +1,6 @@
 import {declare} from '@babel/helper-plugin-utils';
 
+/** @type {import("@types/babel__helper-plugin-utils").declare } */
 export default declare((api, opts) => {
   api.assertVersion(7);
 

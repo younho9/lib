@@ -1,0 +1,34 @@
+{
+  "root": true,
+  "extends": ["./packages/eslint-plugin/dist/cjs/configs/recommended"],
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./packages/*/tsconfig.json"]
+  },
+  "overrides": [
+    {
+      "files": ["*.jsx"],
+      "extends": ["./packages/eslint-plugin/dist/cjs/configs/react"]
+    },
+    {
+      "files": ["*.ts"],
+      "extends": ["./packages/eslint-plugin/dist/cjs/configs/typescript"]
+    },
+    {
+      "files": ["*.tsx"],
+      "extends": [
+        "./packages/eslint-plugin/dist/cjs/configs/react",
+        "./packages/eslint-plugin/dist/cjs/configs/typescript"
+      ]
+    }
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "packages/*/tsconfig.json"
+      }
+    }
+  }
+}

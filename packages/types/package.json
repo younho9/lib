@@ -12,6 +12,8 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
   "main": "dist/types/index.d.ts",
   "types": "dist/types/index.d.ts",
   "files": [
