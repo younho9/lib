@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.3.1](https://github.com/younho9/lib/compare/@younho9/object@0.3.0...@younho9/object@0.3.1) (2021-09-28)
+
+
+### :broom: Other
+
+* **`scripts`:** remove duplicate build process when pre-publish ([c3eecac](https://github.com/younho9/lib/commit/c3eecac5652850fdc3365c555e386837d0a60773))
+
+
+
 ## [0.3.0](https://github.com/younho9/lib/compare/@younho9/object@0.2.0...@younho9/object@0.3.0) (2021-09-28)
 
 

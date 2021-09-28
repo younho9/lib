@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.1](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.0.0...@younho9/prettier-config@2.0.1) (2021-09-28)
+
+
+### :broom: Other
+
+* **`scripts`:** remove duplicate build process when pre-publish ([c3eecac](https://github.com/younho9/lib/commit/c3eecac5652850fdc3365c555e386837d0a60773))
+
+
+### :recycle: Code Refactoring
+
+* migrate ts to js with JSDoc ([02d02dd](https://github.com/younho9/lib/commit/02d02ddc8a68ba3fe74cf7eb184092cebb39cfd5))
+
+
+
 ## [2.0.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@1.3.2...@younho9/prettier-config@2.0.0) (2021-09-28)
 
 
