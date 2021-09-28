@@ -30,7 +30,6 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist --source-maps",

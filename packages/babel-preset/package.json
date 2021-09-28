@@ -19,7 +19,6 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
     "build:cjs": "babel src -d dist --source-maps",

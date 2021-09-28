@@ -20,7 +20,6 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
     "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",

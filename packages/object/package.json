@@ -21,7 +21,6 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
     "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist --source-maps",
