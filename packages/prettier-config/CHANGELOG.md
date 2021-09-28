@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.0.1...@younho9/prettier-config@2.1.0) (2021-09-28)
+
+
+### :broom: Other
+
+* **`deps`:** remove @types/prettier in peerDeps ([6f4e790](https://github.com/younho9/lib/commit/6f4e790156e2cc18068206e1f2311c669cf7ae91))
+
+
+### :rocket: New Features
+
+* **`prettier-config`:** add .prettierignore ([ec21cfc](https://github.com/younho9/lib/commit/ec21cfc4abe7500312595f269135ab3accc302f6))
+
+
+
 ### [2.0.1](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.0.0...@younho9/prettier-config@2.0.1) (2021-09-28)
 
 
