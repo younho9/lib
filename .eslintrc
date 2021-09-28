@@ -1,23 +1,23 @@
 {
   "root": true,
-  "extends": ["./packages/eslint-plugin/dist/cjs/configs/recommended"],
+  "extends": ["./packages/eslint-plugin/dist/configs/recommended"],
   "parserOptions": {
     "project": ["./tsconfig.json", "./packages/*/tsconfig.json"]
   },
   "overrides": [
     {
       "files": ["*.jsx"],
-      "extends": ["./packages/eslint-plugin/dist/cjs/configs/react"]
+      "extends": ["./packages/eslint-plugin/dist/configs/react"]
     },
     {
       "files": ["*.ts"],
-      "extends": ["./packages/eslint-plugin/dist/cjs/configs/typescript"]
+      "extends": ["./packages/eslint-plugin/dist/configs/typescript"]
     },
     {
       "files": ["*.tsx"],
       "extends": [
-        "./packages/eslint-plugin/dist/cjs/configs/react",
-        "./packages/eslint-plugin/dist/cjs/configs/typescript"
+        "./packages/eslint-plugin/dist/configs/react",
+        "./packages/eslint-plugin/dist/configs/typescript"
       ]
     }
   ],

@@ -1,4 +1,4 @@
-import {WARN} from '../../constants/rule-values';
+import {WARN} from '../../constants/index.js';
 
 export default {
   'import/order': [

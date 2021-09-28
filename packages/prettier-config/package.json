@@ -12,16 +12,9 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
-  "sideEffects": false,
-  "type": "module",
-  "exports": {
-    ".": {
-      "require": "./dist/cjs/index.cjs",
-      "default": "./dist/esm/index.mjs"
-    }
-  },
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/esm/index.mjs",
+  "type": "commonjs",
+  "exports": "./dist/index.js",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist"
@@ -30,8 +23,7 @@
     "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist/cjs --source-maps --out-file-extension .cjs",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --extensions .ts,.tsx -d dist/esm --source-maps --out-file-extension .mjs",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist --source-maps",
     "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",

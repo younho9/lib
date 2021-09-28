@@ -1,4 +1,4 @@
-export {default as all} from './all';
-export {default as react} from './react';
-export {default as recommended} from './recommended';
-export {default as typescript} from './typescript';
+export {default as all} from './all.js';
+export {default as react} from './react.js';
+export {default as recommended} from './recommended.js';
+export {default as typescript} from './typescript.js';

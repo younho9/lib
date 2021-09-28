@@ -14,14 +14,8 @@
   "author": "Younho Choo <younho9.choo@gmail.com>",
   "sideEffects": false,
   "type": "module",
-  "exports": {
-    ".": {
-      "require": "./dist/cjs/index.cjs",
-      "default": "./dist/esm/index.mjs"
-    }
-  },
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/esm/index.mjs",
+  "exports": "./dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist"
@@ -30,8 +24,7 @@
     "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps --out-file-extension .cjs",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps --out-file-extension .mjs",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist --source-maps",
     "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
@@ -47,6 +40,9 @@
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.1.6"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "publishConfig": {
     "access": "public"

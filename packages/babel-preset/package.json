@@ -12,7 +12,9 @@
   },
   "license": "MIT",
   "author": "Younho Choo <younho9.choo@gmail.com>",
-  "main": "dist/index.cjs",
+  "type": "commonjs",
+  "exports": "./dist/index.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -20,7 +22,7 @@
     "prepublish": "yarn build",
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
-    "build:cjs": "babel src -d dist --source-maps --out-file-extension .cjs",
+    "build:cjs": "babel src -d dist --source-maps",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
     "lint": "concurrently yarn:lint:*",

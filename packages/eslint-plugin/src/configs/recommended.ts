@@ -1,4 +1,4 @@
-import {IMPORT_RULES} from './rules';
+import {IMPORT_RULES, UNICORN_RULES} from './rules/index.js';
 
 const ignorePatterns = ['**/dist/*'];
 
@@ -19,7 +19,9 @@ export default {
     'plugin:import/recommended',
     'plugin:prettier/recommended',
   ],
+  plugins: ['unicorn'],
   rules: {
     ...IMPORT_RULES,
+    ...UNICORN_RULES,
   },
 };

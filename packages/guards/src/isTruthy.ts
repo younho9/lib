@@ -1,6 +1,6 @@
 import type {Falsy, Truthy} from '@younho9/types';
 
-import isFalsy from './isFalsy';
+import isFalsy from './isFalsy.js';
 
 export default function isTruthy<T>(
   condition: T | Falsy,
