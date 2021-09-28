@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/younho9/lib/compare/@younho9/guards@0.6.0...@younho9/guards@0.7.0) (2021-09-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **`exports`:** DO NOT support dual package strategy
+
+See:
+
+### :memo: Documentation
+
+* update README.md ([23111a6](https://github.com/younho9/lib/commit/23111a61c9b48cd5f5c9ed84514e0d145ac3e0dd))
+
+
+### :hammer: Build System
+
+* **`esm`:** support esm ([f8f3144](https://github.com/younho9/lib/commit/f8f3144921c6d9adfc80c7637620c777a17e6546)), closes [eslint/eslint#13440](https://github.com/eslint/eslint/issues/13440) [facebook/jest#11453](https://github.com/facebook/jest/issues/11453)
+* **`exports`:** export single cjs or esm package ([4086b33](https://github.com/younho9/lib/commit/4086b337c36471268ddb55ee1aa632a3d056bfd0)), closes [/gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#gistcomment-3850849](https://github.com/younho9//gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c/issues/gistcomment-3850849)
+
+
+
 ## [0.6.0](https://github.com/younho9/lib/compare/@younho9/guards@0.5.0...@younho9/guards@0.6.0) (2021-09-25)
 
 
