@@ -1,6 +1,5 @@
-import type {Options} from 'prettier';
-
-export default {
+/** @type {import('prettier').Options} */
+module.exports = {
   printWidth: 80,
   tabWidth: 2,
   useTabs: false,
@@ -24,4 +23,4 @@ export default {
   quoteProps: 'consistent',
   vueIndentScriptAndStyle: false,
   embeddedLanguageFormatting: 'auto',
-} as Options;
+};
