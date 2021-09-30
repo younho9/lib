@@ -1,6 +1,6 @@
 {
   "name": "@younho9/object",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "homepage": "https://github.com/younho9/lib#readme",
   "bugs": {
     "url": "https://github.com/younho9/lib/issues"
@@ -35,7 +35,7 @@
     "test:types": "tsd"
   },
   "dependencies": {
-    "@younho9/types": "0.6.1"
+    "@younho9/types": "0.7.0"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.2.1"

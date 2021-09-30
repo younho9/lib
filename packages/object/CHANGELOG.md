@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/younho9/lib/compare/@younho9/object@0.3.1...@younho9/object@0.4.0) (2021-09-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **`types`:** - deprecate `Nominal` & `Invariant` in types
+- deprecate `seal` in object
+
+### :rocket: New Features
+
+* **`types`:** deprecate system types ([550703f](https://github.com/younho9/lib/commit/550703f19d7683be2fe93b37778e1226ed03f97f))
+
+
+
 ### [0.3.1](https://github.com/younho9/lib/compare/@younho9/object@0.3.0...@younho9/object@0.3.1) (2021-09-28)
 
 

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/younho9/lib/compare/@younho9/types@0.6.1...@younho9/types@0.7.0) (2021-09-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **`types`:** - deprecate `Nominal` & `Invariant` in types
+- deprecate `seal` in object
+
+### :test_tube: Test
+
+* **`types`:** add class case ([fa68c0f](https://github.com/younho9/lib/commit/fa68c0f2bba85e4384370029d006fbab28f48d30))
+
+
+### :rocket: New Features
+
+* **`types`:** deprecate system types ([550703f](https://github.com/younho9/lib/commit/550703f19d7683be2fe93b37778e1226ed03f97f))
+
+
+
 ### [0.6.1](https://github.com/younho9/lib/compare/@younho9/types@0.6.0...@younho9/types@0.6.1) (2021-09-28)
 
 
