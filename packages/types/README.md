@@ -29,8 +29,9 @@ type Object = Record<string, unknown>;
 | `undefined` (`undefined`)                                         | ❌   | ❌       | ❌       | ❌                        | ❌                             |
 | `abc` <sup>[1](#abc)</sup> (`{a: string; b: number; c: boolean}`) | ✅   | ✅       | ✅       | ✅                        | ✅                             |
 | `abc` (`interface IABC`)                                          | ✅   | ✅       | ✅       | ❌                        | ❌                             |
-| `abc` (`type ABCType`)                                            | ✅   | ✅       | ✅       | ✅                        | ✅                             |
+| `abc` (`type TABC`)                                               | ✅   | ✅       | ✅       | ✅                        | ✅                             |
 | `abc` (`Record<string, unknown>`)                                 | ✅   | ✅       | ✅       | ✅                        | ✅                             |
+| `abc` (`class CABC`)                                              | ✅   | ✅       | ✅       | ❌                        | ❌                             |
 | `abc.a` (access property)                                         | ❌   | ❌       | ❌       | ✅                        | ✅                             |
 
 ### `Alt.Function`
@@ -39,7 +40,7 @@ type Object = Record<string, unknown>;
 type Function = (...args: Array<any>) => any;
 ```
 
-#### [`Function` vs `(...args: Array<any>) => any`](__tests__/alternative.test-d.ts#L243)
+#### [`Function` vs `(...args: Array<any>) => any`](__tests__/alternative.test-d.ts#L255)
 
 | `values`                        | `Function` | `() => any` | `(arg: any) => any` | `(arg1: any, arg2: any) => any` | `(...args: Array<any>) => any` |
 | :------------------------------ | :--------- | :---------- | :------------------ | :------------------------------ | :----------------------------- |

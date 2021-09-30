@@ -21,11 +21,17 @@ interface IABC {
   c: boolean;
 }
 
-type ABC = {
+type TABC = {
   a: string;
   b: number;
   c: boolean;
 };
+
+class CABC implements IABC {
+  a!: string;
+  b!: number;
+  c!: boolean;
+}
 
 const abc = {a: '123', b: 123, c: false};
 
@@ -110,11 +116,17 @@ const abc = {a: '123', b: 123, c: false};
   expectNotAssignable<Record<string, unknown>>(abc as IABC);
   expectNotAssignable<Record<PropertyKey, unknown>>(abc as IABC);
 
-  expectAssignable<{}>(abc as ABC);
-  expectAssignable<object>(abc as ABC);
-  expectAssignable<Object>(abc as ABC);
-  expectAssignable<Record<string, unknown>>(abc as ABC);
-  expectAssignable<Record<PropertyKey, unknown>>(abc as ABC);
+  expectAssignable<{}>(abc as TABC);
+  expectAssignable<object>(abc as TABC);
+  expectAssignable<Object>(abc as TABC);
+  expectAssignable<Record<string, unknown>>(abc as TABC);
+  expectAssignable<Record<PropertyKey, unknown>>(abc as TABC);
+
+  expectAssignable<{}>(abc as CABC);
+  expectAssignable<object>(abc as CABC);
+  expectAssignable<Object>(abc as CABC);
+  expectNotAssignable<Record<string, unknown>>(abc as CABC);
+  expectNotAssignable<Record<PropertyKey, unknown>>(abc as CABC);
 
   expectAssignable<{}>(abc as Record<string, unknown>);
   expectAssignable<object>(abc as Record<string, unknown>);
