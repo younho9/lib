@@ -30,8 +30,8 @@ type Object = Record<string, unknown>;
 | `abc` <sup>[1](#abc)</sup> (`{a: string; b: number; c: boolean}`) | ✅   | ✅       | ✅       | ✅                        | ✅                             |
 | `abc` (`interface IABC`)                                          | ✅   | ✅       | ✅       | ❌                        | ❌                             |
 | `abc` (`type TABC`)                                               | ✅   | ✅       | ✅       | ✅                        | ✅                             |
-| `abc` (`Record<string, unknown>`)                                 | ✅   | ✅       | ✅       | ✅                        | ✅                             |
 | `abc` (`class CABC`)                                              | ✅   | ✅       | ✅       | ❌                        | ❌                             |
+| `abc` (`Record<string, unknown>`)                                 | ✅   | ✅       | ✅       | ✅                        | ✅                             |
 | `abc.a` (access property)                                         | ❌   | ❌       | ❌       | ✅                        | ✅                             |
 
 ### `Alt.Function`
@@ -124,27 +124,6 @@ expectNotAssignable<Basic.Truthy<''>>('');
 
 ```ts
 type Dict<T = unknown> = Record<string, T>;
-```
-
-## [`system`](src/system.ts)
-
-> Types for simulate other types of systems
-
-### `Invariant`
-
-<!-- prettier-ignore -->
-Constructs a [invariant](https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)#:~:text=invariant%20or%20nonvariant%20if%20not%20variant.) object type
-
-```ts
-type Invariant<Type extends object = object> = Type & Shaped<Type>;
-```
-
-### `Nominal`
-
-Constructs a [nominal](https://en.wikipedia.org/wiki/Nominal_type_system) type
-
-```ts
-type Nominal<Type extends unknown, Tag extends string> = Type & Branded<Tag>;
 ```
 
 ---
