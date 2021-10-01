@@ -5,5 +5,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.ignorePath": "./packages/prettier-config/.prettierignore"
+  "prettier.ignorePath": "./node_modules/@younho9/prettier-config/.prettierignore"
 }
