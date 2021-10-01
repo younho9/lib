@@ -1,6 +1,11 @@
 {
   "name": "@younho9/guards",
   "version": "0.7.2",
+  "keywords": [
+    "typescript",
+    "typeguard",
+    "type-guard"
+  ],
   "homepage": "https://github.com/younho9/lib#readme",
   "bugs": {
     "url": "https://github.com/younho9/lib/issues"

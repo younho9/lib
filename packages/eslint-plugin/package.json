@@ -1,6 +1,11 @@
 {
   "name": "@younho9/eslint-plugin",
   "version": "0.2.1",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
   "homepage": "https://github.com/younho9/lib#readme",
   "bugs": {
     "url": "https://github.com/younho9/lib/issues"
