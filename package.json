@@ -18,7 +18,7 @@
     "clean": "concurrently yarn:clean:*",
     "clean:modules": "lerna clean --yes && rimraf node_modules",
     "clean:dist": "yarn lerna exec rimraf dist",
-    "format:code": "prettier --write packages/**/*.{js,jsx,ts,tsx,json,css,md,mdx} --ignore-path ./packages/prettier-config/.prettierignore",
+    "format:code": "prettier --write . --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore",
     "format:pkg": "sort-package-json",
     "git:commit-msg": "commitlint --edit",
     "git:install-hooks": "husky install",
@@ -39,7 +39,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,md,mdx}": [
-      "prettier --write --ignore-path ./packages/prettier-config/.prettierignore"
+      "prettier --write --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore"
     ],
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
