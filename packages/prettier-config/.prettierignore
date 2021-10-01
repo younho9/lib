@@ -1,7 +1,17 @@
+# Dependency directories
 node_modules/
 
-**/public/*
-**/.cache/*
-**/dist/*
+# Production
+public/
+dist/
 
+# Cache
+.cache/
+cache/
+
+# yarn v2
+.yarn/
+.pnp.js
+
+# See https://github.com/lerna/lerna/issues/2565
 CHANGELOG.md
