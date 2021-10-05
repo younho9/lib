@@ -45,6 +45,9 @@
     "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:types": "tsc --noEmit"
   },
+  "dependencies": {
+    "@types/eslint": "7.28.0"
+  },
   "devDependencies": {
     "@types/eslint": "7.28.0",
     "@typescript-eslint/eslint-plugin": "4.31.1",

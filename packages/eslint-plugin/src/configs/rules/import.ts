@@ -1,3 +1,5 @@
+import type {Linter} from 'eslint';
+
 import {WARN} from '../../constants/index.js';
 
 export default {
@@ -11,4 +13,4 @@ export default {
       },
     },
   ],
-};
+} as Linter.RulesRecord;

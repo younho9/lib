@@ -1,3 +1,5 @@
+import type {Linter} from 'eslint';
+
 import {NODE_RULES, TSDOC_RULES} from './rules/index.js';
 
 export default {
@@ -12,4 +14,4 @@ export default {
     ...NODE_RULES,
     ...TSDOC_RULES,
   },
-};
+} as Linter.Config;

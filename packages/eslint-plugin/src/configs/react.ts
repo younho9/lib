@@ -1,3 +1,5 @@
+import type {Linter} from 'eslint';
+
 export default {
   parserOptions: {
     ecmaFeatures: {
@@ -14,4 +16,4 @@ export default {
       version: 'detect',
     },
   },
-};
+} as Linter.Config;

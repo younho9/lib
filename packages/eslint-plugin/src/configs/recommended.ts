@@ -1,3 +1,5 @@
+import type {Linter} from 'eslint';
+
 import {IMPORT_RULES, UNICORN_RULES} from './rules/index.js';
 
 const ignorePatterns = ['**/dist/*'];
@@ -5,7 +7,7 @@ const ignorePatterns = ['**/dist/*'];
 export default {
   ignorePatterns,
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   env: {
@@ -30,6 +32,10 @@ export default {
       extends: ['plugin:@younho9/javascript'],
     },
     {
+      files: ['*.cjs'],
+      extends: ['plugin:@younho9/javascript', 'plugin:node/recommended-script'],
+    },
+    {
       files: ['*.jsx'],
       extends: ['plugin:@younho9/javascript', 'plugin:@younho9/react'],
     },
@@ -46,4 +52,4 @@ export default {
       extends: ['plugin:@younho9/jest'],
     },
   ],
-};
+} as Linter.Config;

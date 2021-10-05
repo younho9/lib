@@ -18,6 +18,7 @@
 | ----------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | [eslint:recommended](https://eslint.org/docs/rules/)                                                        | `*`                               |
 | [plugin:node/recommended-module](https://github.com/mysticatea/eslint-plugin-node#-configs)                 | `*`                               |
+| [plugin:node/recommended-script](https://github.com/mysticatea/eslint-plugin-node#-configs)                 | `*.cjs`                           |
 | [plugin:import/recommended](https://github.com/import-js/eslint-plugin-import#installation)                 | `*`                               |
 | [plugin:prettier/recommended](https://github.com/prettier/eslint-plugin-prettier#recommended-configuration) | `*`                               |
 | [plugin:@younho9/javascript](#javascript)                                                                   | `*.{js,jsx}`                      |
