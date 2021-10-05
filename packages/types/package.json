@@ -1,6 +1,6 @@
 {
   "name": "@younho9/types",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "keywords": [
     "typescript",
     "types"
@@ -35,7 +35,7 @@
     "test:types": "tsd"
   },
   "devDependencies": {
-    "@younho9/eslint-plugin": "0.2.1"
+    "@younho9/eslint-plugin": "0.3.0"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.1](https://github.com/younho9/lib/compare/@younho9/types@0.7.0...@younho9/types@0.7.1) (2021-10-05)
+
+
+### :broom: Other
+
+* add keywords ([ad936d0](https://github.com/younho9/lib/commit/ad936d0a2aa3ecb5d1a7450359688b6f4fbd3ea9))
+
+
+
 ## [0.7.0](https://github.com/younho9/lib/compare/@younho9/types@0.6.1...@younho9/types@0.7.0) (2021-09-30)
 
 

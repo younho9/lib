@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.2.1...@younho9/eslint-plugin@0.3.0) (2021-10-05)
+
+
+### :broom: Other
+
+* **`deps`:** upgrade prettier@2.4.1 ([74f0618](https://github.com/younho9/lib/commit/74f0618588da6fb4d2cafc62835c20f90eee45e8))
+* add keywords ([ad936d0](https://github.com/younho9/lib/commit/ad936d0a2aa3ecb5d1a7450359688b6f4fbd3ea9))
+
+
+### :rocket: New Features
+
+* **`eslint-config`:** add `javascript` and `jest` ([fcb84c1](https://github.com/younho9/lib/commit/fcb84c1c473f85ce6cdd5040d65c48e4f641fb8a))
+* **`eslint-config`:** add plugins `jest`, `jsdoc`, `tsdoc`, `node` ([5a73bdc](https://github.com/younho9/lib/commit/5a73bdc244249ec3103bd28dce00d0cd45b707c8))
+
+
+### :memo: Documentation
+
+* **`eslint-plugin`:** update `README.md` ([5b408e1](https://github.com/younho9/lib/commit/5b408e13912e25b84e02342d5c633c0769f67587))
+
+
+### :hammer: Build System
+
+* **`eslint-plugin`:** remove esm build ([fd56557](https://github.com/younho9/lib/commit/fd565572c49f685a47bb3cf604fe96be4517836b))
+
+
+
 ### [0.2.1](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.2.0...@younho9/eslint-plugin@0.2.1) (2021-09-28)
 
 
