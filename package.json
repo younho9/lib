@@ -74,10 +74,14 @@
     "eslint-import-resolver-node": "0.3.6",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jest": "24.5.2",
+    "eslint-plugin-jsdoc": "36.1.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.25.1",
     "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-tsdoc": "0.2.14",
     "eslint-plugin-unicorn": "36.0.0",
     "husky": "^7.0.1",
     "jest": "27.2.0",
@@ -90,5 +94,8 @@
     "ts-node": "10.2.1",
     "tsd": "https://github.com/younho9/tsd#prepare",
     "typescript": "^4.4.3"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   }
 }

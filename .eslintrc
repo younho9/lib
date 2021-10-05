@@ -2,7 +2,8 @@
   "root": true,
   "extends": ["./packages/eslint-plugin/dist/configs/recommended"],
   "parserOptions": {
-    "project": ["./tsconfig.json", "./packages/*/tsconfig.json"]
+    "project": ["./tsconfig.json", "./packages/*/tsconfig.json"],
+    "ecmaVersion": "latest"
   },
   "overrides": [
     {
