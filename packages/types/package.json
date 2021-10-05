@@ -1,6 +1,6 @@
 {
   "name": "@younho9/types",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A set of utility types for TypeScript",
   "keywords": [
     "typescript",
@@ -36,7 +36,7 @@
     "test:types": "tsd"
   },
   "devDependencies": {
-    "@younho9/eslint-plugin": "0.3.0"
+    "@younho9/eslint-plugin": "0.3.1"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"

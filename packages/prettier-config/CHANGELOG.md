@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.2.1](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.0...@younho9/prettier-config@2.2.1) (2021-10-05)
+
+
+### :broom: Other
+
+* **`package.json`:** add description ([d04772f](https://github.com/younho9/lib/commit/d04772fee6585b8bb1529589b570d8237156189a))
+
+
+
 ## [2.2.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.1.0...@younho9/prettier-config@2.2.0) (2021-10-05)
 
 

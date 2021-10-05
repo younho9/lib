@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.3.3](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.3.2...@younho9/babel-preset@0.3.3) (2021-10-05)
+
+
+### :broom: Other
+
+* **`package.json`:** add description ([d04772f](https://github.com/younho9/lib/commit/d04772fee6585b8bb1529589b570d8237156189a))
+
+
+
 ### [0.3.2](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.3.1...@younho9/babel-preset@0.3.2) (2021-10-05)
 
 

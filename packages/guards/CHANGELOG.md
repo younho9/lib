@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.4](https://github.com/younho9/lib/compare/@younho9/guards@0.7.3...@younho9/guards@0.7.4) (2021-10-05)
+
+
+### :broom: Other
+
+* **`package.json`:** add description ([d04772f](https://github.com/younho9/lib/commit/d04772fee6585b8bb1529589b570d8237156189a))
+
+
+
 ### [0.7.3](https://github.com/younho9/lib/compare/@younho9/guards@0.7.2...@younho9/guards@0.7.3) (2021-10-05)
 
 
