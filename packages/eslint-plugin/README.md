@@ -66,7 +66,7 @@ module.exports = {
 | name                                                                                                                 | Description                                    | Options                                      |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------- |
 | [unicorn/prefer-module](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-module.md) | Prefer JavaScript modules (ESM) over CommonJS. | `ERROR`                                      |
-| [import/order](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)                      | Enforce a convention in module import order.   | [`WARN`](src/configs/rules/import.ts#L4-L13) |
+| [import/order](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)                      | Enforce a convention in module import order.   | [`WARN`](src/configs/rules/import.ts#L6-L15) |
 
 ### [javascript](src/configs/javascript.ts)
 
