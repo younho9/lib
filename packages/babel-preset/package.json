@@ -1,6 +1,7 @@
 {
   "name": "@younho9/babel-preset",
   "version": "0.3.2",
+  "description": "Sharable set of Babel plugins and config options",
   "keywords": [
     "babel",
     "babelpreset",

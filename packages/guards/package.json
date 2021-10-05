@@ -1,6 +1,7 @@
 {
   "name": "@younho9/guards",
   "version": "0.7.3",
+  "description": "A set of type guards for TypeScript",
   "keywords": [
     "typescript",
     "typeguard",
