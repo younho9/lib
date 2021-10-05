@@ -27,11 +27,11 @@ export default {
   overrides: [
     {
       files: ['*.js'],
-      extends: ['plugin:jsdoc/recommended'],
+      extends: ['plugin:@younho9/javascript'],
     },
     {
       files: ['*.jsx'],
-      extends: ['plugin:@younho9/react', 'plugin:jsdoc/recommended'],
+      extends: ['plugin:@younho9/javascript', 'plugin:@younho9/react'],
     },
     {
       files: ['*.ts'],
@@ -39,14 +39,11 @@ export default {
     },
     {
       files: ['*.tsx'],
-      extends: ['plugin:@younho9/react', 'plugin:@younho9/typescript'],
+      extends: ['plugin:@younho9/typescript', 'plugin:@younho9/react'],
     },
     {
       files: ['**/__tests__/**/*.{spec,test}.*'],
-      env: {
-        jest: true,
-      },
-      extends: ['plugin:jest/recommended', 'plugin:jest/style'],
+      extends: ['plugin:@younho9/jest'],
     },
   ],
 };
