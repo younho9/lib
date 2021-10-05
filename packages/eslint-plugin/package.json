@@ -37,7 +37,7 @@
   "scripts": {
     "prebuild": "yarn clean:dist",
     "build": "concurrently yarn:build:*",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --extensions .ts,.tsx -d dist --source-maps",
+    "build:cjs": "babel src --extensions .ts,.tsx -d dist --source-maps",
     "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
