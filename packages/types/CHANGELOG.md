@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/younho9/lib/compare/@younho9/types@0.7.3...@younho9/types@0.8.0) (2021-10-07)
+
+
+### :rocket: New Features
+
+* **`types`:** add `AsyncFunction` type ([f5d4da0](https://github.com/younho9/lib/commit/f5d4da069f763b7bd547379580ae950313fa0c66))
+
+
+
 ### [0.7.3](https://github.com/younho9/lib/compare/@younho9/types@0.7.2...@younho9/types@0.7.3) (2021-10-07)
 
 
