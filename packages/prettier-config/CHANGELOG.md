@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.2.2](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.1...@younho9/prettier-config@2.2.2) (2021-10-07)
+
+
+### :broom: Other
+
+* **`pkgs`:** change author email ([f50d9cc](https://github.com/younho9/lib/commit/f50d9cc4942d756b4b239d109d0990bfbc39f2a2))
+
+
+
 ### [2.2.1](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.0...@younho9/prettier-config@2.2.1) (2021-10-05)
 
 

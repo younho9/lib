@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.3](https://github.com/younho9/lib/compare/@younho9/types@0.7.2...@younho9/types@0.7.3) (2021-10-07)
+
+
+### :broom: Other
+
+* **`pkgs`:** change author email ([f50d9cc](https://github.com/younho9/lib/commit/f50d9cc4942d756b4b239d109d0990bfbc39f2a2))
+
+
+
 ### [0.7.2](https://github.com/younho9/lib/compare/@younho9/types@0.7.1...@younho9/types@0.7.2) (2021-10-05)
 
 

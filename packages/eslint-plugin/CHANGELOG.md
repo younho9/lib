@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.3.1...@younho9/eslint-plugin@0.4.0) (2021-10-07)
+
+
+### :memo: Documentation
+
+* **`eslint-plugin`:** fix reference code line ([41e1b3b](https://github.com/younho9/lib/commit/41e1b3be68708ba829e10f16ce1aa534a67a788c))
+* **`eslint-plugin`:** update README.md ([5a15902](https://github.com/younho9/lib/commit/5a159024aea7b4a7608c48e1f019516aa4070907))
+
+
+### :rocket: New Features
+
+* **`eslint-plugin`:** off eslint-plugin-node rules with bugs ([7519952](https://github.com/younho9/lib/commit/75199526b9bfec7265d8fa81cc6c3f1e3453eb05))
+
+
+### :broom: Other
+
+* **`pkgs`:** change author email ([f50d9cc](https://github.com/younho9/lib/commit/f50d9cc4942d756b4b239d109d0990bfbc39f2a2))
+
+
+
 ### [0.3.1](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.3.0...@younho9/eslint-plugin@0.3.1) (2021-10-05)
 
 
