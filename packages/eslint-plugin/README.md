@@ -24,7 +24,10 @@ module.exports = {
   ],
   /** @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration */
   parserOptions: {
-    project: ['./tsconfig.json', './packages/*/tsconfig.json'],
+    project: [
+      './tsconfig.json', 
+      './packages/*/tsconfig.json' // if you use monorepo
+    ],
     ecmaVersion: 'latest',
   },
   settings: {
