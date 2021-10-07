@@ -6,7 +6,7 @@
     "url": "git+https://github.com/younho9/lib.git"
   },
   "license": "MIT",
-  "author": "Younho Choo <younho9.choo@gmail.com>",
+  "author": "Younho Choo <yo+github@younho9.dev>",
   "workspaces": [
     "packages/*"
   ],
@@ -65,9 +65,9 @@
     "@types/node": "^16.7.10",
     "@typescript-eslint/eslint-plugin": "4.31.1",
     "@typescript-eslint/parser": "4.31.1",
-    "@younho9/babel-preset": "0.3.2",
-    "@younho9/eslint-plugin": "0.3.0",
-    "@younho9/prettier-config": "2.2.0",
+    "@younho9/babel-preset": "0.3.3",
+    "@younho9/eslint-plugin": "0.3.1",
+    "@younho9/prettier-config": "2.2.1",
     "concurrently": "6.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",

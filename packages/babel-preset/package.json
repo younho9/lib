@@ -17,7 +17,7 @@
     "directory": "packages/babel-preset"
   },
   "license": "MIT",
-  "author": "Younho Choo <younho9.choo@gmail.com>",
+  "author": "Younho Choo <yo+github@younho9.dev>",
   "type": "commonjs",
   "exports": "./dist/index.js",
   "main": "dist/index.js",

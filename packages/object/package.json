@@ -16,7 +16,7 @@
     "directory": "packages/object"
   },
   "license": "MIT",
-  "author": "Younho Choo <younho9.choo@gmail.com>",
+  "author": "Younho Choo <yo+github@younho9.dev>",
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/index.js",
