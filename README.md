@@ -9,6 +9,7 @@
 - [@younho9/guards](packages/guards): A set of type guards for TypeScript
 - [@younho9/object](packages/object): A set of type-safe object functions for TypeScript
 - [@younho9/prettier-config](packages/prettier-config): Shared prettier config that personally prefer
+- [@younho9/tsconfig](packages/tsconfig): Shared TypeScript config that personally prefer
 - [@younho9/types](packages/types): A set of utility types for TypeScript
 
 ## License
