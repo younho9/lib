@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.0](https://github.com/younho9/lib/compare/@younho9/types@0.8.0...@younho9/types@0.9.0) (2021-10-08)
+
+
+### :rocket: New Features
+
+* **`types`:** recreate `InvariantOf` type ([dec7cfc](https://github.com/younho9/lib/commit/dec7cfcee4f73e6bff00ae5856dd4d5ea3012244))
+
+
+
 ## [0.8.0](https://github.com/younho9/lib/compare/@younho9/types@0.7.3...@younho9/types@0.8.0) (2021-10-07)
 
 
