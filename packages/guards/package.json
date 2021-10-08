@@ -37,7 +37,7 @@
     "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:types": "tsc --noEmit",
     "test": "concurrently yarn:test:*",
-    "test:src": "jest"
+    "test:src": "jest --config ../../jest.config.cjs -- packages/guards"
   },
   "dependencies": {
     "@sniptt/guards": "0.2.0",

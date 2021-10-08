@@ -33,8 +33,8 @@
     "pkgs:fix": "manypkg fix",
     "prerelease": "yarn test",
     "release": "yarn lerna publish",
-    "test": "lerna run test --stream",
-    "test:src": "lerna run test:src --stream",
+    "test": "concurrently yarn:test:*",
+    "test:src": "jest",
     "test:types": "lerna run test:types --stream"
   },
   "lint-staged": {

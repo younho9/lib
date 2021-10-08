@@ -36,7 +36,7 @@
     "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint:types": "tsc --noEmit",
     "test": "concurrently yarn:test:*",
-    "test:src": "jest",
+    "test:src": "jest --config ../../jest.config.cjs -- packages/object",
     "test:types": "tsd"
   },
   "dependencies": {

@@ -8,6 +8,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^@younho9/(.*)$': '<rootDir>/packages/$1/src',
   },
   testEnvironment: 'node',
   verbose: true,
