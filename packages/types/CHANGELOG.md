@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.9.2](https://github.com/younho9/lib/compare/@younho9/types@0.9.1...@younho9/types@0.9.2) (2021-10-08)
+
+
+### :hammer: Build System
+
+* **`types`:** support esm ([ee1cb1c](https://github.com/younho9/lib/commit/ee1cb1c330637329b2d685621182a1bae3cf308e))
+
+
+
 ### [0.9.1](https://github.com/younho9/lib/compare/@younho9/types@0.9.0...@younho9/types@0.9.1) (2021-10-08)
 
 

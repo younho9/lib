@@ -1,6 +1,6 @@
 {
   "name": "@younho9/object",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "A set of type-safe object functions for TypeScript",
   "keywords": [
     "typescript",
@@ -40,7 +40,7 @@
     "test:types": "tsd"
   },
   "dependencies": {
-    "@younho9/types": "0.9.1"
+    "@younho9/types": "0.9.2"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.4.0"
