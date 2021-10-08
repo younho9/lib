@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.9.1](https://github.com/younho9/lib/compare/@younho9/types@0.9.0...@younho9/types@0.9.1) (2021-10-08)
+
+
+### :hammer: Build System
+
+* **`types`:** exports `dist/index.js` ([bbdc21f](https://github.com/younho9/lib/commit/bbdc21fc3c6fefbefeefda990fb240f5215f6412))
+
+
+
 ## [0.9.0](https://github.com/younho9/lib/compare/@younho9/types@0.8.0...@younho9/types@0.9.0) (2021-10-08)
 
 
