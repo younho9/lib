@@ -1,4 +1,4 @@
-import type {Dict, ObjectKeys} from '@younho9/types';
+import type {Dict, InvariantOf, ObjectKeys} from '@younho9/types';
 
 /**
  * @param obj - The object of which the enumerable's own properties are to be returned.
@@ -6,6 +6,8 @@ import type {Dict, ObjectKeys} from '@younho9/types';
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
  */
-export default function keys<O extends Dict>(obj: O): ObjectKeys<O> {
+export default function keys<O extends Dict>(
+  obj: InvariantOf<O>,
+): ObjectKeys<O> {
   return Object.keys(obj) as ObjectKeys<O>;
 }
