@@ -19,7 +19,8 @@
   "author": "Younho Choo <yo+github@younho9.dev>",
   "sideEffects": false,
   "type": "module",
-  "exports": "./dist/types/index.d.ts",
+  "exports": "./dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist"
