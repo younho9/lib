@@ -16,7 +16,7 @@
     "directory": "packages/types"
   },
   "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.dev>",
+  "author": "Younho Choo <yo+github@younho9.com>",
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/index.js",
@@ -38,6 +38,9 @@
     "test": "concurrently yarn:test:*",
     "test:src": "jest --config ../../jest.config.cjs -- packages/types",
     "test:types": "tsd"
+  },
+  "dependencies": {
+    "ts-indexify": "1.0.0"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.4.0"

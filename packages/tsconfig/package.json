@@ -19,7 +19,7 @@
     "directory": "packages/tsconfig"
   },
   "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.dev>",
+  "author": "Younho Choo <yo+github@younho9.com>",
   "main": "tsconfig.json",
   "files": [
     "tsconfig.json"

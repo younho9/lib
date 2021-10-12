@@ -15,7 +15,7 @@
     "directory": "packages/prettier-config"
   },
   "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.dev>",
+  "author": "Younho Choo <yo+github@younho9.com>",
   "type": "commonjs",
   "exports": "./src/index.js",
   "main": "src/index.js",
