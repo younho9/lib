@@ -5478,10 +5478,10 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-invariant-of@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/invariant-of/-/invariant-of-1.0.0.tgz#4e7042c6a4415ad170f0a493caebded3c6e32af3"
-  integrity sha512-oqpJz66u2fxtuJhJ/U0HfjTqjWkQPRovgemrBBek1/3xUMWkwVdqec5BYIwa/p1gX5COVkxewu0voA0N4l47BQ==
+invariant-of@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/invariant-of/-/invariant-of-1.1.1.tgz#9fd96f6a6e0a8a460f867a24504c4f90a504f9f1"
+  integrity sha512-dV1GV5Sel0d7iz4FZWxj2rJwuTg0t6i44xdXr/+YTeREqBrJA4p1+2TbcnXGSTilYZgO2S2QgzJtZ6TUdTZfLA==
 
 ip@^1.1.5:
   version "1.1.5"

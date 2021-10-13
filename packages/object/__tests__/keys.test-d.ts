@@ -22,8 +22,8 @@ const mixedKeyObj = {
 {
   expectType<('name' | 'age' | 'id')[]>(keys(invariantOf(stringKeyObj)));
   expectType<(1 | 2 | 3)[]>(keys(invariantOf(numberKeyObj)));
-  expectType<symbol[]>(keys(invariantOf(symbolKeyObj)));
-  expectType<(symbol | 'two' | 1)[]>(keys(invariantOf(mixedKeyObj)));
+  expectType<never[]>(keys(invariantOf(symbolKeyObj)));
+  expectType<('two' | 1)[]>(keys(invariantOf(mixedKeyObj)));
 }
 
 /**

@@ -1,3 +1,4 @@
+import type {ObjectKeys} from '@younho9/types';
 import type {InvariantOf} from 'invariant-of';
 
 /**
@@ -8,6 +9,6 @@ import type {InvariantOf} from 'invariant-of';
  */
 export default function keys<O extends object>(
   invariant: InvariantOf<O>,
-): Array<keyof O> {
+): ObjectKeys<O> {
   return Object.keys(invariant);
 }
