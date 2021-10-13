@@ -9279,9 +9279,10 @@ tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
-"tsd@https://github.com/younho9/tsd#prepare":
-  version "0.17.0"
-  resolved "https://github.com/younho9/tsd#4dec7945d784011113859d998667e2c05a3b3197"
+tsd@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/tsd/-/tsd-0.18.0.tgz#d653f87e05ea0d07348601660e41b84c9cc81b5b"
+  integrity sha512-UIkxm2CLmSjXlQs4zqxgVV9UmzK8VgJ63eBpgkH/ZsMkiUdzxxHvdCCg8F314HDxzfQl2muJEy/TEcXHIFIPXg==
   dependencies:
     "@tsd/typescript" "~4.4.3"
     eslint-formatter-pretty "^4.1.0"
