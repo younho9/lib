@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.10](https://github.com/younho9/lib/compare/@younho9/guards@0.7.9...@younho9/guards@0.7.10) (2021-10-13)
+
+
+### :broom: Other
+
+* **`jest`:** use root config ([fdb19e5](https://github.com/younho9/lib/commit/fdb19e591f574dfffdd8dac076dde54382904768))
+* **`pkgs`:** change author email ([ad9b1a5](https://github.com/younho9/lib/commit/ad9b1a57b35b3e47c25096aa451ecf73eede8356))
+
+
+
 ### [0.7.9](https://github.com/younho9/lib/compare/@younho9/guards@0.7.8...@younho9/guards@0.7.9) (2021-10-08)
 
 **Note:** Version bump only for package @younho9/guards

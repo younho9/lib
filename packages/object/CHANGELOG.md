@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/younho9/lib/compare/@younho9/object@0.4.7...@younho9/object@0.5.0) (2021-10-13)
+
+
+### :broom: Other
+
+* **`jest`:** use root config ([fdb19e5](https://github.com/younho9/lib/commit/fdb19e591f574dfffdd8dac076dde54382904768))
+* **`pkgs`:** change author email ([ad9b1a5](https://github.com/younho9/lib/commit/ad9b1a57b35b3e47c25096aa451ecf73eede8356))
+
+
+### :rocket: New Features
+
+* **`object`:** exclude symbol in `Object.keys` ([2799be2](https://github.com/younho9/lib/commit/2799be257612a92dffeb30f92adb95a8cfaaf8a5))
+* **`object`:** use `invariant-of` & setup te-jest esm import ([16320cc](https://github.com/younho9/lib/commit/16320cc5c632e6e13c233f8a83f4d4800920647e))
+* **`object`:** use `InvariantOf` type ([3ffc476](https://github.com/younho9/lib/commit/3ffc47654c6236980bbd60cbea30955716b5ed9e))
+
+
+
 ### [0.4.7](https://github.com/younho9/lib/compare/@younho9/object@0.4.6...@younho9/object@0.4.7) (2021-10-08)
 
 **Note:** Version bump only for package @younho9/object

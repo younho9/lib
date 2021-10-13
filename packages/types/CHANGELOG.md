@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.0](https://github.com/younho9/lib/compare/@younho9/types@0.9.2...@younho9/types@0.10.0) (2021-10-13)
+
+
+### :broom: Other
+
+* **`jest`:** use root config ([fdb19e5](https://github.com/younho9/lib/commit/fdb19e591f574dfffdd8dac076dde54382904768))
+* **`pkgs`:** change author email ([ad9b1a5](https://github.com/younho9/lib/commit/ad9b1a57b35b3e47c25096aa451ecf73eede8356))
+
+
+### :rocket: New Features
+
+* **`types`:** use `ts-indexify` & `invariant-of` ([ac29f46](https://github.com/younho9/lib/commit/ac29f46b4279fb36d2c7b55e2d69d5ffa00086fb))
+
+
+
 ### [0.9.2](https://github.com/younho9/lib/compare/@younho9/types@0.9.1...@younho9/types@0.9.2) (2021-10-08)
 
 
