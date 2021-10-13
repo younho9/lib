@@ -5478,6 +5478,11 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
+invariant-of@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/invariant-of/-/invariant-of-1.0.0.tgz#4e7042c6a4415ad170f0a493caebded3c6e32af3"
+  integrity sha512-oqpJz66u2fxtuJhJ/U0HfjTqjWkQPRovgemrBBek1/3xUMWkwVdqec5BYIwa/p1gX5COVkxewu0voA0N4l47BQ==
+
 ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
@@ -9226,6 +9231,11 @@ trim-off-newlines@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-off-newlines/-/trim-off-newlines-1.0.1.tgz#9f9ba9d9efa8764c387698bcbfeb2c848f11adb3"
   integrity sha1-n5up2e+odkw4dpi8v+sshI8RrbM=
+
+ts-indexify@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ts-indexify/-/ts-indexify-1.0.0.tgz#52844933d15505f8d7a08a4380791a26d5875a17"
+  integrity sha512-falOR5F5/WWc3/4RJiovzDmdg5LGYSUHmkNvkI3Pt7Hw7Wat2s+PzF2BgN8OL4G0TF3BvKeJz57+VQGu9gLZHg==
 
 ts-jest@27.0.5:
   version "27.0.5"

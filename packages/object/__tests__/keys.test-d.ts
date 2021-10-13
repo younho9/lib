@@ -1,4 +1,4 @@
-import {Invariant} from '@younho9/types';
+import {invariantOf} from 'invariant-of';
 import {expectType} from 'tsd';
 
 import {keys} from '../src';
@@ -20,18 +20,18 @@ const mixedKeyObj = {
  * Keys return
  */
 {
-  expectType<('name' | 'age' | 'id')[]>(keys(Invariant(stringKeyObj)));
-  expectType<(1 | 2 | 3)[]>(keys(Invariant(numberKeyObj)));
-  expectType<never[]>(keys(Invariant(symbolKeyObj)));
-  expectType<('two' | 1)[]>(keys(Invariant(mixedKeyObj)));
+  expectType<('name' | 'age' | 'id')[]>(keys(invariantOf(stringKeyObj)));
+  expectType<(1 | 2 | 3)[]>(keys(invariantOf(numberKeyObj)));
+  expectType<symbol[]>(keys(invariantOf(symbolKeyObj)));
+  expectType<(symbol | 'two' | 1)[]>(keys(invariantOf(mixedKeyObj)));
 }
 
 /**
  * Access Value with Key
  */
 {
-  keys(Invariant(stringKeyObj)).map((key) => expectType<string | number>(stringKeyObj[key])); // prettier-ignore
-  keys(Invariant(numberKeyObj)).map((key) => expectType<string>(numberKeyObj[key])); // prettier-ignore
-  keys(Invariant(symbolKeyObj)).map((key) => expectType<string>(symbolKeyObj[key])); // prettier-ignore
-  keys(Invariant(mixedKeyObj)).map((key) => expectType<string>(mixedKeyObj[key])); // prettier-ignore
+  keys(invariantOf(stringKeyObj)).map((key) => expectType<string | number>(stringKeyObj[key])); // prettier-ignore
+  keys(invariantOf(numberKeyObj)).map((key) => expectType<string>(numberKeyObj[key])); // prettier-ignore
+  keys(invariantOf(symbolKeyObj)).map((key) => expectType<string>(symbolKeyObj[key])); // prettier-ignore
+  keys(invariantOf(mixedKeyObj)).map((key) => expectType<string>(mixedKeyObj[key])); // prettier-ignore
 }

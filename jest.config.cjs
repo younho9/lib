@@ -1,6 +1,8 @@
+const esModules = ['invariant-of'];
+
 /** @type {import("@jest/types").Config.InitialOptions } */
 module.exports = {
-  preset: 'ts-jest/presets/default-esm',
+  preset: 'ts-jest/presets/js-with-ts-esm',
   globals: {
     'ts-jest': {
       useESM: true,
@@ -13,4 +15,5 @@ module.exports = {
   testEnvironment: 'node',
   verbose: true,
   testPathIgnorePatterns: ['\\.test-d\\.ts'],
+  transformIgnorePatterns: [`node_modules/(?!(${esModules.join('|')}))`],
 };
