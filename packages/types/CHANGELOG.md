@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.10.1](https://github.com/younho9/lib/compare/@younho9/types@0.10.0...@younho9/types@0.10.1) (2021-10-13)
+
+
+### :bug: Bug Fix
+
+* **`types`:** remove unused class ([ac0f058](https://github.com/younho9/lib/commit/ac0f0588e78380e4ba924c79ee838b1250c95174))
+
+
+
 ## [0.10.0](https://github.com/younho9/lib/compare/@younho9/types@0.9.2...@younho9/types@0.10.0) (2021-10-13)
 
 
