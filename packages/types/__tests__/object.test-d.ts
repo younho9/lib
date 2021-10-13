@@ -1,3 +1,4 @@
+import type {Indexify} from 'ts-indexify';
 import {expectAssignable, expectNotAssignable, expectType} from 'tsd';
 
 import type {
@@ -5,7 +6,6 @@ import type {
   ExcludeKeysByType,
   ExtractKeysByName,
   ExtractKeysByType,
-  IndexSignature,
   ObjectKeys,
   OmitByType,
   Optional,
@@ -20,7 +20,7 @@ declare interface ISomeType {
   baz: number | undefined;
 }
 
-type SomeType = IndexSignature<ISomeType>;
+type SomeType = Indexify<ISomeType>;
 
 /**
  * Index Signature

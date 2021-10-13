@@ -1,16 +1,3 @@
-import type {Dict} from './convenience';
-
-/**
- * Add Index Signature on interface
- *
- * @see https://github.com/microsoft/TypeScript/issues/15300
- */
-export type IndexSignature<O extends object> = {
-  [P in keyof O]: O[P];
-};
-
-export type Indexable = IndexSignature<Dict>;
-
 /**
  * Make all properties in O optional
  */
