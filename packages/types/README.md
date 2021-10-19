@@ -6,7 +6,7 @@
 
 > Alternative of some [ban-types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
 
-### `Alt.Object`
+### `AlternativeObject`
 
 ```ts
 type Object = Record<string, unknown>;
@@ -34,7 +34,7 @@ type Object = Record<string, unknown>;
 | `abc` (`Record<string, unknown>`)                                 | ✅   | ✅       | ✅       | ✅                        | ✅                             |
 | `abc.a` (access property)                                         | ❌   | ❌       | ❌       | ✅                        | ✅                             |
 
-### `Alt.Function`
+### `AlternativeFunction`
 
 ```ts
 type Function = (...args: Array<any>) => any;
