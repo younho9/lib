@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@younho9/types": "0.10.1",
-    "invariant-of": "1.1.1"
+    "type-fest": "2.5.1"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.4.1"

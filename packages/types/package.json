@@ -18,29 +18,20 @@
   "license": "MIT",
   "author": "Younho Choo <yo+github@younho9.com>",
   "sideEffects": false,
-  "type": "module",
-  "exports": "./dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "types/index.d.ts",
   "files": [
-    "dist"
+    "types"
   ],
   "scripts": {
-    "prebuild": "yarn clean:dist",
-    "build": "concurrently yarn:build:*",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist --source-maps",
-    "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
     "lint": "concurrently yarn:lint:*",
     "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:types": "tsc --noEmit",
     "test": "concurrently yarn:test:*",
-    "test:src": "jest --config ../../jest.config.cjs -- packages/types",
     "test:types": "tsd"
   },
   "dependencies": {
-    "ts-indexify": "1.0.0"
+    "type-fest": "2.5.1"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.4.1"
@@ -50,8 +41,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "tsd": {
-    "directory": "__tests__"
   }
 }

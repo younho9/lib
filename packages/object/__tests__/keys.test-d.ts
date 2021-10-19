@@ -1,7 +1,7 @@
-import {invariantOf} from 'invariant-of';
 import {expectType} from 'tsd';
 
 import {keys} from '../src';
+import {invariantOf} from '../src/invariant-of';
 
 const stringKeyObj = {name: 'kim', age: 30, id: 1};
 const numberKeyObj = {1: 'one', 2: 'two', 3: 'three'};
@@ -22,8 +22,8 @@ const mixedKeyObj = {
 {
   expectType<('name' | 'age' | 'id')[]>(keys(invariantOf(stringKeyObj)));
   expectType<(1 | 2 | 3)[]>(keys(invariantOf(numberKeyObj)));
-  expectType<never[]>(keys(invariantOf(symbolKeyObj)));
-  expectType<('two' | 1)[]>(keys(invariantOf(mixedKeyObj)));
+  expectType<symbol[]>(keys(invariantOf(symbolKeyObj)));
+  expectType<(1 | 'two' | symbol)[]>(keys(invariantOf(mixedKeyObj)));
 }
 
 /**
