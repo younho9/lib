@@ -1,16 +1,18 @@
-import type {Indexify} from 'ts-indexify';
 import {expectAssignable, expectNotAssignable, expectType} from 'tsd';
+import type {Simplify} from 'type-fest';
 
 import type {
-  ExcludeKeysByName,
-  ExcludeKeysByType,
-  ExtractKeysByName,
-  ExtractKeysByType,
+  ExcludeKeysByKeyType,
+  ExcludeKeysByValueType,
+  ExtractKeysByKeyType,
+  ExtractKeysByValueType,
   ObjectKeys,
-  OmitByType,
+  OmitByKeyType,
+  OmitByValueType,
   Optional,
   OptionalToUndefined,
-  PickByType,
+  PickByKeyType,
+  PickByValueType,
   UndefinedToOptional,
 } from '../src/object';
 
@@ -20,7 +22,7 @@ declare interface ISomeType {
   baz: number | undefined;
 }
 
-type SomeType = Indexify<ISomeType>;
+type SomeType = Simplify<ISomeType>;
 
 /**
  * Index Signature
@@ -73,54 +75,78 @@ declare const obj: UndefinedToOptional<SomeType>;
  * Extract Keys By Type
  */
 {
-  expectType<ExtractKeysByType<SomeType, undefined>>('' as 'bar' | 'baz');
-  expectType<ExtractKeysByType<SomeType, number>>('' as 'foo' | 'baz');
-  expectType<ExtractKeysByType<SomeType, string>>('' as 'bar');
+  expectType<ExtractKeysByValueType<SomeType, undefined>>('' as 'bar' | 'baz');
+  expectType<ExtractKeysByValueType<SomeType, number>>('' as 'foo' | 'baz');
+  expectType<ExtractKeysByValueType<SomeType, string>>('' as 'bar');
 }
 
 /**
  * Exclude Keys By Type
  */
 {
-  expectType<ExcludeKeysByType<SomeType, undefined>>('' as 'foo');
-  expectType<ExcludeKeysByType<SomeType, number>>('' as 'bar');
-  expectType<ExcludeKeysByType<SomeType, string>>('' as 'foo' | 'baz');
+  expectType<ExcludeKeysByValueType<SomeType, undefined>>('' as 'foo');
+  expectType<ExcludeKeysByValueType<SomeType, number>>('' as 'bar');
+  expectType<ExcludeKeysByValueType<SomeType, string>>('' as 'foo' | 'baz');
 }
 
 /**
- * Pick By Type
+ * Pick By Value Type
  */
 {
-  expectType<PickByType<SomeType, undefined>>({} as Pick<SomeType, 'bar' | 'baz'>); // prettier-ignore
-  expectType<PickByType<SomeType, number>>({} as Pick<SomeType, 'foo' | 'baz'>);
-  expectType<PickByType<SomeType, string>>({} as Pick<SomeType, 'bar'>);
+  expectType<PickByValueType<SomeType, undefined>>({} as Pick<SomeType, 'bar' | 'baz'>); // prettier-ignore
+  expectType<PickByValueType<SomeType, number>>({} as Pick<SomeType, 'foo' | 'baz'>); // prettier-ignore
+  expectType<PickByValueType<SomeType, string>>({} as Pick<SomeType, 'bar'>);
 }
 
 /**
- * Omit By Type
+ * Omit By Value Type
  */
 {
-  expectType<OmitByType<SomeType, undefined>>({} as Omit<SomeType, 'bar' | 'baz'>); // prettier-ignore
-  expectType<OmitByType<SomeType, number>>({} as Omit<SomeType, 'foo' | 'baz'>);
-  expectType<OmitByType<SomeType, string>>({} as Omit<SomeType, 'bar'>);
+  expectType<OmitByValueType<SomeType, undefined>>({} as Omit<SomeType, 'bar' | 'baz'>); // prettier-ignore
+  expectType<OmitByValueType<SomeType, number>>({} as Omit<SomeType, 'foo' | 'baz'>); // prettier-ignore
+  expectType<OmitByValueType<SomeType, string>>({} as Omit<SomeType, 'bar'>);
 }
 
 /**
- * Exclude Keys By Name
+ * Exclude Keys By Key Type
  */
 {
-  expectType<ExcludeKeysByName<SomeType, 'foo'>>('' as Exclude<keyof SomeType, 'foo'>); // prettier-ignore
-  expectType<ExcludeKeysByName<SomeType, 'foo' | 'bar'>>('' as Exclude<keyof SomeType, 'foo' | 'bar'>); // prettier-ignore
-  expectType<ExcludeKeysByName<SomeType, 'baz'>>('' as Exclude<keyof SomeType, 'baz'>); // prettier-ignore
+  expectType<ExcludeKeysByKeyType<SomeType, 'foo'>>('' as Exclude<keyof SomeType, 'foo'>); // prettier-ignore
+  expectType<ExcludeKeysByKeyType<SomeType, 'foo' | 'bar'>>('' as Exclude<keyof SomeType, 'foo' | 'bar'>); // prettier-ignore
+  expectType<ExcludeKeysByKeyType<SomeType, 'baz'>>('' as Exclude<keyof SomeType, 'baz'>); // prettier-ignore
 }
 
 /**
- * Extract Keys By Name
+ * Extract Keys By Key Type
  */
 {
-  expectType<ExtractKeysByName<SomeType, 'foo'>>('' as Extract<keyof SomeType, 'foo'>); // prettier-ignore
-  expectType<ExtractKeysByName<SomeType, 'foo' | 'bar'>>('' as Extract<keyof SomeType, 'foo' | 'bar'>); // prettier-ignore
-  expectType<ExtractKeysByName<SomeType, 'baz'>>('' as Extract<keyof SomeType, 'baz'>); // prettier-ignore
+  expectType<ExtractKeysByKeyType<SomeType, 'foo'>>('' as Extract<keyof SomeType, 'foo'>); // prettier-ignore
+  expectType<ExtractKeysByKeyType<SomeType, 'foo' | 'bar'>>('' as Extract<keyof SomeType, 'foo' | 'bar'>); // prettier-ignore
+  expectType<ExtractKeysByKeyType<SomeType, 'baz'>>('' as Extract<keyof SomeType, 'baz'>); // prettier-ignore
+}
+
+type MixedKeyObj = {
+  1: string;
+  two: 'two';
+  [three: symbol]: 'three';
+};
+
+/**
+ * Pick By Key Type
+ */
+{
+  expectType<PickByKeyType<MixedKeyObj, symbol>>({} as Omit<MixedKeyObj, 1 | 'two'>); // prettier-ignore
+  expectType<PickByKeyType<MixedKeyObj, number>>({} as Pick<MixedKeyObj, 1>);
+  expectType<PickByKeyType<MixedKeyObj, string>>({} as Pick<MixedKeyObj, 'two'>); // prettier-ignore
+}
+
+/**
+ * Omit By Key Type
+ */
+{
+  expectType<OmitByKeyType<MixedKeyObj, symbol>>({} as Pick<MixedKeyObj, 1 | 'two'>); // prettier-ignore
+  expectType<OmitByKeyType<MixedKeyObj, number>>({} as Omit<MixedKeyObj, 1>);
+  expectType<OmitByKeyType<MixedKeyObj, string>>({} as Omit<MixedKeyObj, 'two'>); // prettier-ignore
 }
 
 /**
@@ -129,7 +155,7 @@ declare const obj: UndefinedToOptional<SomeType>;
 {
   expectType<ObjectKeys<{foo: number}>>([] as 'foo'[]);
   expectType<ObjectKeys<SomeType>>([] as ('foo' | 'bar' | 'baz')[]);
-  expectType<ObjectKeys<{1: 'one'; 2: 'two'; 3: 'three'}>>([] as (1 | 2 | 3)[]);
+  expectType<ObjectKeys<{1: 'one'; 2: 'two'; 3: 'three'}>>([] as ('1' | '2' | '3')[]); // prettier-ignore
   expectType<ObjectKeys<{[K: symbol]: unknown}>>([] as never[]);
-  expectType<ObjectKeys<{1: 'one'; two: 'two'; [K: symbol]: 'three'}>>([] as (1 | 'two')[]); // prettier-ignore
+  expectType<ObjectKeys<{1: 'one'; two: 'two'; [K: symbol]: 'three'}>>([] as ('1' | 'two')[]); // prettier-ignore
 }

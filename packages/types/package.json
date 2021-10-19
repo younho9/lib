@@ -40,7 +40,7 @@
     "test:types": "tsd"
   },
   "dependencies": {
-    "ts-indexify": "1.0.0"
+    "type-fest": "2.5.1"
   },
   "devDependencies": {
     "@younho9/eslint-plugin": "0.4.1"
