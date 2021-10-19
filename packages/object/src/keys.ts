@@ -1,5 +1,4 @@
-import type {ObjectKeys} from '@younho9/types';
-import type {InvariantOf} from 'invariant-of';
+import type {InvariantOf} from '@younho9/types';
 
 /**
  * @param invariant - The object of which the enumerable's own properties are to be returned.
@@ -7,8 +6,8 @@ import type {InvariantOf} from 'invariant-of';
  *
  * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys}
  */
-export default function keys<O extends object>(
-  invariant: InvariantOf<O>,
-): ObjectKeys<O> {
-  return Object.keys(invariant);
+export default function keys<ObjectType extends object>(
+  invariant: InvariantOf<ObjectType>,
+): (keyof ObjectType)[] {
+  return Object.keys(invariant) as (keyof ObjectType)[];
 }

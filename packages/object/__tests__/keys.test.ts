@@ -1,6 +1,5 @@
-import {invariantOf} from 'invariant-of';
-
 import {keys} from '../src';
+import {invariantOf} from '../src/invariant-of';
 
 const stringKeyObj = {name: 'kim', age: 30, id: 1};
 const numberKeyObj = {1: 'one', 2: 'two', 3: 'three'};
