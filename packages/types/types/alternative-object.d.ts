@@ -3,7 +3,7 @@
  *
  * Ban-types {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md#default-options}
  *
- * ## `{}` vs `object` vs `Object` vs `Record<string, unknown>` vs `Record<PropertyKey, unknown>`
+ * *`{}` vs `object` vs `Object` vs `Record<string, unknown>` vs `Record<PropertyKey, unknown>`*
  *
  * | `values`                                                          | `{}` | `object` | `Object` | `Record<string, unknown>` | `Record<PropertyKey, unknown>` |
  * | ----------------------------------------------------------------- | :--- | :------- | :------- | :------------------------ | :----------------------------- |
