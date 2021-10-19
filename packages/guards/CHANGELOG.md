@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.12](https://github.com/younho9/lib/compare/@younho9/guards@0.7.11...@younho9/guards@0.7.12) (2021-10-19)
+
+**Note:** Version bump only for package @younho9/guards
+
+
+
+
+
 ### [0.7.11](https://github.com/younho9/lib/compare/@younho9/guards@0.7.10...@younho9/guards@0.7.11) (2021-10-13)
 
 **Note:** Version bump only for package @younho9/guards

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/younho9/lib/compare/@younho9/object@0.5.1...@younho9/object@0.6.0) (2021-10-19)
+
+
+### :rocket: New Features
+
+* **`types`:** improve types package ([#2](https://github.com/younho9/lib/issues/2)) ([dc55902](https://github.com/younho9/lib/commit/dc559023a7c026cdfa38b6390f77df3ed7620f47))
+
+
+
 ### [0.5.1](https://github.com/younho9/lib/compare/@younho9/object@0.5.0...@younho9/object@0.5.1) (2021-10-13)
 
 **Note:** Version bump only for package @younho9/object
