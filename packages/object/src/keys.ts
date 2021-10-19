@@ -5,7 +5,7 @@ import type {InvariantOf} from 'invariant-of';
  * @param invariant - The object of which the enumerable's own properties are to be returned.
  * @returns An array of strings that represent all the enumerable properties of the given object.
  *
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+ * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys}
  */
 export default function keys<O extends object>(
   invariant: InvariantOf<O>,

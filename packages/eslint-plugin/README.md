@@ -22,16 +22,16 @@ module.exports = {
   extends: [
     'plugin:@younho9/recommended',
   ],
-  /** @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration */
+  /** {@link https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration} */
   parserOptions: {
     project: [
-      './tsconfig.json', 
+      './tsconfig.json',
       './packages/*/tsconfig.json' // if you use monorepo
     ],
     ecmaVersion: 'latest',
   },
   settings: {
-    /** @see https://github.com/import-js/eslint-plugin-import#importparsers */
+    /** {@link https://github.com/import-js/eslint-plugin-import#importparsers} */
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
