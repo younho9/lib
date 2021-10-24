@@ -1,6 +1,6 @@
 {
   "name": "@younho9/guards",
-  "version": "0.7.12",
+  "version": "0.7.13",
   "description": "A set of type guards for TypeScript",
   "keywords": [
     "typescript",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@sniptt/guards": "0.2.0",
-    "@younho9/types": "0.11.0"
+    "@younho9/types": "0.11.1"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"

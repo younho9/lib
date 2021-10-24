@@ -1,6 +1,6 @@
 {
   "name": "@younho9/object",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "A set of type-safe object functions for TypeScript",
   "keywords": [
     "typescript",
@@ -40,7 +40,7 @@
     "test:types": "tsd"
   },
   "dependencies": {
-    "@younho9/types": "0.11.0",
+    "@younho9/types": "0.11.1",
     "type-fest": "2.5.1"
   },
   "devDependencies": {

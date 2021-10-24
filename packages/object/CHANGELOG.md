@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/younho9/lib/compare/@younho9/object@0.6.0...@younho9/object@0.7.0) (2021-10-24)
+
+
+### :rocket: New Features
+
+* **`object`:** wide input type of `invariantOf` and invariantOfDeep` ([3629f27](https://github.com/younho9/lib/commit/3629f2754939ac2bf7c6b3a7359ade809ecdaf1c))
+
+
+
 ## [0.6.0](https://github.com/younho9/lib/compare/@younho9/object@0.5.1...@younho9/object@0.6.0) (2021-10-19)
 
 

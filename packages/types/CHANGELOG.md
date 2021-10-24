@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.11.1](https://github.com/younho9/lib/compare/@younho9/types@0.11.0...@younho9/types@0.11.1) (2021-10-24)
+
+
+### :memo: Documentation
+
+* **`types`:** update docs ([7a44412](https://github.com/younho9/lib/commit/7a444123a0e97e8ccf3466954ea258e001c83ee7))
+
+
+
 ## [0.11.0](https://github.com/younho9/lib/compare/@younho9/types@0.10.1...@younho9/types@0.11.0) (2021-10-19)
 
 
