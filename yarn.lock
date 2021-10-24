@@ -2698,37 +2698,6 @@
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
 
-"@younho9/babel-preset@0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@younho9/babel-preset/-/babel-preset-0.3.4.tgz#af074f7cad6ff4a4fd4a93e68b64079fc123f097"
-  integrity sha512-IWQZMlJnkwj6hqVtaV/wFEAxY9INU0LgUnXnBMj5MUyj2zYpsKWR6dE6WMRWPd3Pv6jvqMPfc8gZ7+TAp8PLug==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.14.5"
-    "@babel/plugin-proposal-class-properties" "^7.14.5"
-    "@babel/preset-env" "^7.15.6"
-    "@babel/preset-react" "^7.14.5"
-    "@babel/preset-typescript" "^7.15.0"
-    babel-plugin-add-module-exports "1.0.4"
-
-"@younho9/eslint-plugin@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@younho9/eslint-plugin/-/eslint-plugin-0.4.0.tgz#397e7e2250067fb5be0f8486e8d190b906598a0c"
-  integrity sha512-7S7vpmm8ts+9p6LYUygWN9R5oSsbo/Nu00yg+2SnrVu++dGLs3oYD9CT1GgtNWmX4+q6ttWj/SJdvS4Q1pav5Q==
-  dependencies:
-    "@types/eslint" "7.28.0"
-
-"@younho9/prettier-config@2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@younho9/prettier-config/-/prettier-config-2.2.2.tgz#bb3bda5d5dac0652b1c2c6c7e79bd1dec1fde843"
-  integrity sha512-YgoKEFNJ78CHskInRHLIc0jxQR0jcC7ck5jTTHy0EkBHMIRPfdNGGZcYljyOrABKZjcg7Ps19Ayqi+cc44LAoQ==
-  dependencies:
-    "@types/prettier" "2.4.1"
-
-"@younho9/tsconfig@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@younho9/tsconfig/-/tsconfig-0.1.0.tgz#b67a5508bcf8694c1e687b9389ad8683421224e9"
-  integrity sha512-x2pVGTW2jABFeE/0CSgohn5BHAPoNFxA/VDJ1dIW53h3NdezSfr/EmjgMGyJdzVIbQIDaOhKSxlM2R1VNBgXBA==
-
 JSONStream@^1.0.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
