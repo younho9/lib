@@ -6,7 +6,7 @@ import type {InvariantOf} from '@younho9/types';
  *
  * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys}
  */
-export default function keys<ObjectType extends object>(
+export function keys<ObjectType extends object>(
   invariant: InvariantOf<ObjectType>,
 ): (keyof ObjectType)[] {
   return Object.keys(invariant) as (keyof ObjectType)[];
