@@ -1,7 +1,5 @@
 import type {InvariantOfDeep} from '@younho9/types';
 
-export function invariantOfDeep<ObjectType extends object>(
-  object: ObjectType,
-): InvariantOfDeep<ObjectType> {
-  return object as InvariantOfDeep<ObjectType>;
+export function invariantOfDeep<Type>(value: Type): InvariantOfDeep<Type> {
+  return value as InvariantOfDeep<Type>;
 }
