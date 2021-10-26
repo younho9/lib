@@ -26,7 +26,7 @@
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
     "lint": "concurrently yarn:lint:*",
-    "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:types": "eslint types --ext .js,.jsx,.ts,.tsx",
     "test": "concurrently yarn:test:*",
     "test:types": "tsd"
   },
