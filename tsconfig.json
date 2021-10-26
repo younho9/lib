@@ -3,5 +3,17 @@
   "compilerOptions": {
     "allowJs": true
   },
-  "exclude": ["**/dist/**", "packages/babel-preset", "packages/prettier-config"]
+  "exclude": [
+    "**/dist/**",
+    "**/test-d/**",
+    "**/*.test-d.ts",
+    "packages/babel-preset",
+    "packages/prettier-config"
+  ],
+  "typedocOptions": {
+    "readme": "none",
+    "out": "doc",
+    "entryPointStrategy": "packages",
+    "entryPoints": ["packages/guards", "packages/object", "packages/types"]
+  }
 }

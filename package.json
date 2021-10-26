@@ -18,6 +18,7 @@
     "clean": "concurrently yarn:clean:*",
     "clean:modules": "lerna clean --yes && rimraf node_modules",
     "clean:dist": "yarn lerna exec rimraf dist",
+    "docs": "typedoc",
     "format:code": "prettier --write . --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore",
     "format:pkg": "sort-package-json",
     "git:commit-msg": "commitlint --edit",
@@ -95,6 +96,7 @@
     "ts-jest": "27.0.5",
     "ts-node": "10.2.1",
     "tsd": "0.18.0",
+    "typedoc": "0.22.6",
     "typescript": "^4.4.3"
   },
   "engines": {
