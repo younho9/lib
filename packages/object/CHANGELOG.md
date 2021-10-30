@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.1](https://github.com/younho9/lib/compare/@younho9/object@0.7.0...@younho9/object@0.7.1) (2021-10-30)
+
+
+### :broom: Other
+
+* **`lint`:** migrate to xo ([#4](https://github.com/younho9/lib/issues/4)) ([9ed6f4b](https://github.com/younho9/lib/commit/9ed6f4ba2861fa57692df4c66416fdcbb94629d7))
+* **`object`:** export functions ([7da8e7b](https://github.com/younho9/lib/commit/7da8e7bc7f277ab11e33ccce4e189d32fa10e150))
+
+
+
 ## [0.7.0](https://github.com/younho9/lib/compare/@younho9/object@0.6.0...@younho9/object@0.7.0) (2021-10-24)
 
 

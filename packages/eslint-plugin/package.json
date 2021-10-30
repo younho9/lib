@@ -1,6 +1,6 @@
 {
   "name": "@younho9/eslint-plugin",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Personal ESLint plugin with multiple configs",
   "keywords": [
     "eslint",

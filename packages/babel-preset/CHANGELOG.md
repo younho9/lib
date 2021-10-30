@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.3.6](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.3.5...@younho9/babel-preset@0.3.6) (2021-10-30)
+
+
+### :broom: Other
+
+* **`lint`:** migrate to xo ([#4](https://github.com/younho9/lib/issues/4)) ([9ed6f4b](https://github.com/younho9/lib/commit/9ed6f4ba2861fa57692df4c66416fdcbb94629d7))
+
+
+
 ### [0.3.5](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.3.4...@younho9/babel-preset@0.3.5) (2021-10-13)
 
 

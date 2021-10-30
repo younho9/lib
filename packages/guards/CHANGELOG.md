@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.14](https://github.com/younho9/lib/compare/@younho9/guards@0.7.13...@younho9/guards@0.7.14) (2021-10-30)
+
+
+### :broom: Other
+
+* **`lint`:** migrate to xo ([#4](https://github.com/younho9/lib/issues/4)) ([9ed6f4b](https://github.com/younho9/lib/commit/9ed6f4ba2861fa57692df4c66416fdcbb94629d7))
+
+
+
 ### [0.7.13](https://github.com/younho9/lib/compare/@younho9/guards@0.7.12...@younho9/guards@0.7.13) (2021-10-24)
 
 **Note:** Version bump only for package @younho9/guards

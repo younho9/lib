@@ -1,6 +1,6 @@
 {
   "name": "@younho9/types",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "A set of utility types for TypeScript",
   "keywords": [
     "typescript",
@@ -44,7 +44,7 @@
     "type-fest": "2.5.1"
   },
   "devDependencies": {
-    "@younho9/eslint-plugin": "0.5.0"
+    "@younho9/eslint-plugin": "0.5.1"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"

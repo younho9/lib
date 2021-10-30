@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.11.2](https://github.com/younho9/lib/compare/@younho9/types@0.11.1...@younho9/types@0.11.2) (2021-10-30)
+
+
+### :broom: Other
+
+* **`lint`:** migrate to xo ([#4](https://github.com/younho9/lib/issues/4)) ([9ed6f4b](https://github.com/younho9/lib/commit/9ed6f4ba2861fa57692df4c66416fdcbb94629d7))
+* **`scripts`:** lint types folder ([46c70b0](https://github.com/younho9/lib/commit/46c70b014c53cf5c62beb4d79135cbc65af50819))
+
+
+
 ### [0.11.1](https://github.com/younho9/lib/compare/@younho9/types@0.11.0...@younho9/types@0.11.1) (2021-10-24)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.2.4](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.3...@younho9/prettier-config@2.2.4) (2021-10-30)
+
+
+### :broom: Other
+
+* **`lint`:** migrate to xo ([#4](https://github.com/younho9/lib/issues/4)) ([9ed6f4b](https://github.com/younho9/lib/commit/9ed6f4ba2861fa57692df4c66416fdcbb94629d7))
+
+
+
 ### [2.2.3](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.2...@younho9/prettier-config@2.2.3) (2021-10-13)
 
 

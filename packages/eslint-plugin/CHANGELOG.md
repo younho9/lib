@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.5.1](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.5.0...@younho9/eslint-plugin@0.5.1) (2021-10-30)
+
+
+### :broom: Other
+
+* **`lint`:** migrate to xo ([#4](https://github.com/younho9/lib/issues/4)) ([9ed6f4b](https://github.com/younho9/lib/commit/9ed6f4ba2861fa57692df4c66416fdcbb94629d7))
+
+
+
 ## [0.5.0](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.4.1...@younho9/eslint-plugin@0.5.0) (2021-10-19)
 
 
