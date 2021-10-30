@@ -4,7 +4,7 @@
 
 ## Installation
 
-Install `@younho9/eslint-plugin` with peerDependencies:
+Install `@younho9/eslint-plugin` with peerDependencies.
 
 ```sh
 npx install-peerdeps --dev @younho9/eslint-plugin

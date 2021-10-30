@@ -4,10 +4,10 @@
 
 ## Usage
 
-Install the package using `npm` or `yarn`
+Install `@younho9/prettier-config` with peerDependencies.
 
 ```sh
-npm install --save-dev @younho9/prettier
+npx install-peerdeps --dev @younho9/eslint-plugin
 ```
 
 Add `prettier` key to your `package.json`
