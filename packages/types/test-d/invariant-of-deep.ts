@@ -1,7 +1,7 @@
 import {expectType} from 'tsd';
 
-import type {InvariantOf} from '../types';
-import type {InvariantOfDeep} from '../types/invariant-of-deep';
+import type {InvariantOf} from '../types/invariant-of.js';
+import type {InvariantOfDeep} from '../types/invariant-of-deep.js';
 
 type BaseType = {
   foo: number;

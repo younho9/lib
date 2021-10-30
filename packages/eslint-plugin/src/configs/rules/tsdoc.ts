@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type {Linter} from 'eslint';
 
 import {WARN} from '../../constants/index.js';
 
-export default {
+const TSDOC_RULES: Linter.RulesRecord = {
   'tsdoc/syntax': WARN,
-} as Linter.RulesRecord;
+};
+
+export default TSDOC_RULES;

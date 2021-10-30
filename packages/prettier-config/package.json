@@ -17,8 +17,8 @@
   "license": "MIT",
   "author": "Younho Choo <yo+github@younho9.com>",
   "type": "commonjs",
-  "exports": "./src/index.js",
-  "main": "src/index.js",
+  "exports": "./src/index.cjs",
+  "main": "src/index.cjs",
   "files": [
     "src",
     ".prettierignore"

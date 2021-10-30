@@ -1,4 +1,6 @@
-const BABEL_ENV = process.env.BABEL_ENV;
+const {env} = require('process');
+
+const {BABEL_ENV} = env;
 const isCJS = BABEL_ENV !== undefined && BABEL_ENV === 'cjs';
 const isESM = BABEL_ENV !== undefined && BABEL_ENV === 'esm';
 

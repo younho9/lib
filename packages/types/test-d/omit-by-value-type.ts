@@ -1,6 +1,6 @@
 import {expectType} from 'tsd';
 
-import type {OmitByValueType} from '../types/omit-by-value-type';
+import type {OmitByValueType} from '../types/omit-by-value-type.js';
 
 type SomeType = {
   foo: number;

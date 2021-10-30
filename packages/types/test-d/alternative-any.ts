@@ -1,6 +1,6 @@
 import {expectAssignable, expectNotType} from 'tsd';
 
-import type {AlternativeAny} from '../types/alternative-any';
+import type {AlternativeAny} from '../types/alternative-any.js';
 
 declare const valueAsAny: any;
 expectNotType<AlternativeAny>(valueAsAny);
@@ -35,5 +35,5 @@ expectAssignable<AlternativeAny>(objectValue);
 declare const functionValue: Function;
 expectAssignable<AlternativeAny>(functionValue);
 
-declare const arrayValue: Array<any>;
+declare const arrayValue: any[];
 expectAssignable<AlternativeAny>(arrayValue);

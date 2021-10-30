@@ -1,6 +1,6 @@
 import {expectType} from 'tsd';
 
-import type {ExcludeKeysByValueType} from '../types/exclude-keys-by-value-type';
+import type {ExcludeKeysByValueType} from '../types/exclude-keys-by-value-type.js';
 
 type SomeType = {
   foo: number;

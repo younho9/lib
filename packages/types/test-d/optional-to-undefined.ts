@@ -1,6 +1,6 @@
 import {expectAssignable, expectNotAssignable, expectType} from 'tsd';
 
-import type {OptionalToUndefined} from '../types/optional-to-undefined';
+import type {OptionalToUndefined} from '../types/optional-to-undefined.js';
 
 type SomeType = {
   foo: number;

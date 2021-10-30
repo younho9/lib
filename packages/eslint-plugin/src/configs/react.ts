@@ -1,6 +1,6 @@
 import type {Linter} from 'eslint';
 
-export default {
+const react: Linter.Config = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -16,4 +16,6 @@ export default {
       version: 'detect',
     },
   },
-} as Linter.Config;
+};
+
+export default react;

@@ -41,10 +41,7 @@
     "build:cjs": "babel src --extensions .ts,.tsx -d dist --source-maps",
     "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "concurrently yarn:clean:*",
-    "clean:dist": "rimraf dist",
-    "lint": "concurrently yarn:lint:*",
-    "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:types": "tsc --noEmit"
+    "clean:dist": "rimraf dist"
   },
   "dependencies": {
     "@types/eslint": "7.28.0"

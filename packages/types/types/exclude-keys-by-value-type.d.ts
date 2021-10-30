@@ -1,4 +1,4 @@
-import type {ExtractKeysByValueType} from './extract-keys-by-value-type';
+import type {ExtractKeysByValueType} from './extract-keys-by-value-type.js';
 
 /**
  * Excludes keys with a value type from an object.

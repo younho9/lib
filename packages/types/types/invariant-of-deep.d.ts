@@ -1,6 +1,6 @@
 import type {Primitive} from 'type-fest';
 
-import type {InvariantOf} from './invariant-of';
+import type {InvariantOf} from './invariant-of.js';
 
 /**
  * Make type as Invariant deeply

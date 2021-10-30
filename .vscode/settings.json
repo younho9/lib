@@ -4,6 +4,14 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "xo.enable": true,
+  "xo.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
   "typescript.tsdk": "node_modules/typescript/lib",
   "prettier.ignorePath": "./node_modules/@younho9/prettier-config/.prettierignore"
 }

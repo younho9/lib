@@ -1,17 +1,17 @@
 import {expectType} from 'tsd';
 
-import type {PickByKeyType} from '../types/pick-by-key-type';
+import type {PickByKeyType} from '../types/pick-by-key-type.js';
 
-type MixedKeyObj = {
-  1: string;
-  two: 'two';
-  [three: symbol]: 'three';
+type MixedKeyObject = {
+  [one: symbol]: 'three';
+  2: string;
+  three: 'three';
 };
 
-declare const pickSymbolKeysObject: Omit<MixedKeyObj, 1 | 'two'>;
-declare const pickNumberKeysObject: Pick<MixedKeyObj, 1>;
-declare const pickStringKeysObject: Pick<MixedKeyObj, 'two'>;
+declare const pickSymbolKeysObject: Omit<MixedKeyObject, 2 | 'three'>;
+declare const pickNumberKeysObject: Pick<MixedKeyObject, 2>;
+declare const pickStringKeysObject: Pick<MixedKeyObject, 'three'>;
 
-expectType<PickByKeyType<MixedKeyObj, symbol>>(pickSymbolKeysObject);
-expectType<PickByKeyType<MixedKeyObj, number>>(pickNumberKeysObject);
-expectType<PickByKeyType<MixedKeyObj, string>>(pickStringKeysObject);
+expectType<PickByKeyType<MixedKeyObject, symbol>>(pickSymbolKeysObject);
+expectType<PickByKeyType<MixedKeyObject, number>>(pickNumberKeysObject);
+expectType<PickByKeyType<MixedKeyObject, string>>(pickStringKeysObject);

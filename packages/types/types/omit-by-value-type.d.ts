@@ -1,4 +1,4 @@
-import type {PickByValueType} from './pick-by-value-type';
+import type {PickByValueType} from './pick-by-value-type.js';
 
 /**
  * Construct a type with the properties of ObjectType except for those are assignable to ValueType

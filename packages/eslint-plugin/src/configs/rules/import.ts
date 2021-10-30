@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type {Linter} from 'eslint';
 
 import {WARN} from '../../constants/index.js';
 
-export default {
+const IMPORT_RULES: Linter.RulesRecord = {
   'import/order': [
     WARN,
     {
@@ -13,4 +14,6 @@ export default {
       },
     },
   ],
-} as Linter.RulesRecord;
+};
+
+export default IMPORT_RULES;

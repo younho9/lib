@@ -1,6 +1,6 @@
 import {expectAssignable, expectNotAssignable, expectType} from 'tsd';
 
-import type {InvariantOf} from '../types/invariant-of';
+import type {InvariantOf} from '../types/invariant-of.js';
 
 declare const invariantString: InvariantOf<string>;
 declare const invariantStringOrNumber: InvariantOf<string | number>;

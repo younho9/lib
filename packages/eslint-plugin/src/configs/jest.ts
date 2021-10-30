@@ -1,8 +1,10 @@
 import type {Linter} from 'eslint';
 
-export default {
+const jest: Linter.Config = {
   env: {
     jest: true,
   },
   extends: ['plugin:jest/recommended', 'plugin:jest/style'],
-} as Linter.Config;
+};
+
+export default jest;
