@@ -1,6 +1,6 @@
 import {expectType} from 'tsd';
 
-import type {PickByValueType} from '../types/pick-by-value-type';
+import type {PickByValueType} from '../types/pick-by-value-type.js';
 
 type SomeType = {
   foo: number;

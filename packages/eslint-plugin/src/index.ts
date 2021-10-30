@@ -1,5 +1,7 @@
 import * as configs from './configs/index.js';
 
-export default {
+const eslintPlugin = {
   configs,
 };
+
+export default eslintPlugin;

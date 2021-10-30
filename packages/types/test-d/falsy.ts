@@ -1,8 +1,8 @@
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
-import type {Falsy} from '../types/falsy';
-import type {Nullish} from '../types/nullish';
-import type {Truthy} from '../types/truthy';
+import type {Falsy} from '../types/falsy.js';
+import type {Nullish} from '../types/nullish.js';
+import type {Truthy} from '../types/truthy.js';
 
 declare const valueAsBigint: bigint;
 expectNotAssignable<Falsy>(valueAsBigint);
@@ -25,7 +25,7 @@ expectNotAssignable<Falsy>(valueAsObject);
 declare const valueAsFunction: Function;
 expectNotAssignable<Falsy>(valueAsFunction);
 
-declare const valueAsArray: Array<any>;
+declare const valueAsArray: any[];
 expectNotAssignable<Falsy>(valueAsArray);
 
 declare const valueAsFalsy: Falsy;

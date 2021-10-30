@@ -15,4 +15,4 @@
  *
  * @category Alternative
  */
-export type AlternativeFunction = (...args: Array<any>) => any;
+export type AlternativeFunction = (...args: any[]) => any;

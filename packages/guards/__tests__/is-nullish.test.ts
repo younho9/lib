@@ -18,7 +18,7 @@ describe('isNullish', () => {
     expect(isNullish(12n)).toBeFalsy();
     expect(isNullish(3.14)).toBeFalsy();
     expect(isNullish(-3.14)).toBeFalsy();
-    expect(isNullish(Infinity)).toBeFalsy();
-    expect(isNullish(-Infinity)).toBeFalsy();
+    expect(isNullish(Number.POSITIVE_INFINITY)).toBeFalsy();
+    expect(isNullish(Number.NEGATIVE_INFINITY)).toBeFalsy();
   });
 });

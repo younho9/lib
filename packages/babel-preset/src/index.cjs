@@ -1,7 +1,7 @@
 import {declare} from '@babel/helper-plugin-utils';
 
 /** @type {import("@types/babel__helper-plugin-utils").declare } */
-export default declare((api, opts) => {
+export default declare((api, options) => {
   api.assertVersion(7);
 
   const {
@@ -11,7 +11,7 @@ export default declare((api, opts) => {
     isCJS = false,
     isESM = false,
     addModuleExports = false,
-  } = opts;
+  } = options;
 
   const config = {
     presets: [

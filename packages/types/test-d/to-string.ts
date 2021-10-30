@@ -1,6 +1,6 @@
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
-import type {ToString} from '../types/to-string';
+import type {ToString} from '../types/to-string.js';
 
 expectAssignable<ToString<number>>('1');
 expectAssignable<ToString<boolean>>('false');

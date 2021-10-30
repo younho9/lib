@@ -4,7 +4,7 @@ import {IMPORT_RULES, UNICORN_RULES} from './rules/index.js';
 
 const ignorePatterns = ['**/dist/*'];
 
-export default {
+const recommended: Linter.Config = {
   ignorePatterns,
   parserOptions: {
     ecmaVersion: 2021,
@@ -52,4 +52,6 @@ export default {
       extends: ['plugin:@younho9/jest'],
     },
   ],
-} as Linter.Config;
+};
+
+export default recommended;

@@ -1,10 +1,12 @@
 import type {Linter} from 'eslint';
 
-export default {
+const javascript: Linter.Config = {
   extends: ['plugin:jsdoc/recommended'],
   settings: {
     jsdoc: {
       mode: 'typescript',
     },
   },
-} as Linter.Config;
+};
+
+export default javascript;

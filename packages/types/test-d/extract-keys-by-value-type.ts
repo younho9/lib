@@ -1,6 +1,6 @@
 import {expectType} from 'tsd';
 
-import type {ExtractKeysByValueType} from '../types/extract-keys-by-value-type';
+import type {ExtractKeysByValueType} from '../types/extract-keys-by-value-type.js';
 
 type SomeType = {
   foo: number;

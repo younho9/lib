@@ -32,15 +32,13 @@
     "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
-    "lint": "concurrently yarn:lint:*",
-    "lint:src": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:types": "tsc --noEmit",
     "test": "concurrently yarn:test:*",
     "test:src": "jest --config ../../jest.config.cjs -- packages/object",
     "test:types": "tsd"
   },
   "dependencies": {
     "@younho9/types": "0.11.1",
+    "tsd": "0.18.0",
     "type-fest": "2.5.1"
   },
   "devDependencies": {

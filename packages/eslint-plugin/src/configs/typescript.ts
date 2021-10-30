@@ -2,7 +2,7 @@ import type {Linter} from 'eslint';
 
 import {NODE_RULES, TSDOC_RULES} from './rules/index.js';
 
-export default {
+const typescript: Linter.Config = {
   parser: '@typescript-eslint/parser',
   plugins: ['eslint-plugin-tsdoc'],
   extends: [
@@ -14,4 +14,6 @@ export default {
     ...NODE_RULES,
     ...TSDOC_RULES,
   },
-} as Linter.Config;
+};
+
+export default typescript;

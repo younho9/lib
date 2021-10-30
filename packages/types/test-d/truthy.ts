@@ -1,8 +1,8 @@
 import {expectAssignable, expectNotAssignable} from 'tsd';
 
-import type {Falsy} from '../types/falsy';
-import type {Nullish} from '../types/nullish';
-import type {Truthy} from '../types/truthy';
+import type {Falsy} from '../types/falsy.js';
+import type {Nullish} from '../types/nullish.js';
+import type {Truthy} from '../types/truthy.js';
 
 declare const valueAsBigint: bigint;
 expectAssignable<Truthy>(valueAsBigint);
@@ -25,7 +25,7 @@ expectAssignable<Truthy>(valueAsObject);
 declare const valueAsFunction: Function;
 expectAssignable<Truthy>(valueAsFunction);
 
-declare const valueAsArray: Array<any>;
+declare const valueAsArray: any[];
 expectAssignable<Truthy>(valueAsArray);
 
 declare const valueAsFalsy: Falsy;

@@ -13,7 +13,7 @@ describe('isTruthy', () => {
     expect(isTruthy(``)).toBeFalsy();
     expect(isTruthy(null)).toBeFalsy();
     expect(isTruthy(undefined)).toBeFalsy();
-    expect(isTruthy(NaN)).toBeFalsy();
+    expect(isTruthy(Number.NaN)).toBeFalsy();
     expect(isTruthy(document.all)).toBeFalsy();
   });
 
@@ -29,7 +29,7 @@ describe('isTruthy', () => {
     expect(isTruthy(12n)).toBeTruthy();
     expect(isTruthy(3.14)).toBeTruthy();
     expect(isTruthy(-3.14)).toBeTruthy();
-    expect(isTruthy(Infinity)).toBeTruthy();
-    expect(isTruthy(-Infinity)).toBeTruthy();
+    expect(isTruthy(Number.POSITIVE_INFINITY)).toBeTruthy();
+    expect(isTruthy(Number.NEGATIVE_INFINITY)).toBeTruthy();
   });
 });

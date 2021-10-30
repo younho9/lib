@@ -1,7 +1,7 @@
 import {expectAssignable, expectNotAssignable, expectNotType} from 'tsd';
 
-import type {AlternativeFunction} from '../types/alternative-function';
-import type {AlternativeObject} from '../types/alternative-object';
+import type {AlternativeFunction} from '../types/alternative-function.js';
+import type {AlternativeObject} from '../types/alternative-object.js';
 
 interface Functions {
   arg0: () => any;

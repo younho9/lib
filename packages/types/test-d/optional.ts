@@ -1,6 +1,6 @@
 import {expectType} from 'tsd';
 
-import type {Optional} from '../types/optional';
+import type {Optional} from '../types/optional.js';
 
 type SomeType = {
   foo: number;

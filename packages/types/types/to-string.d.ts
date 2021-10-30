@@ -1,4 +1,4 @@
-import type {Subtract} from './subtract';
+import type {Subtract} from './subtract.js';
 
 /**
  * @category Utilities

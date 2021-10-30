@@ -1,4 +1,4 @@
-import type {ExtractKeysByValueType} from './extract-keys-by-value-type';
+import type {ExtractKeysByValueType} from './extract-keys-by-value-type.js';
 
 /**
  * From ObjectType, pick a set of properties whose values are in ValueType

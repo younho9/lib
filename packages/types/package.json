@@ -25,12 +25,22 @@
   "scripts": {
     "clean": "concurrently yarn:clean:*",
     "clean:dist": "rimraf dist",
-    "lint": "concurrently yarn:lint:*",
-    "lint:types": "eslint types --ext .js,.jsx,.ts,.tsx",
     "test": "concurrently yarn:test:*",
     "test:types": "tsd"
   },
+  "xo": {
+    "parserOptions": {
+      "project": "../../tsconfig.xo.json"
+    },
+    "prettier": true,
+    "rules": {
+      "@typescript-eslint/ban-types": "off",
+      "no-new-wrappers": "off",
+      "unicorn/new-for-builtins": "off"
+    }
+  },
   "dependencies": {
+    "tsd": "0.18.0",
     "type-fest": "2.5.1"
   },
   "devDependencies": {
