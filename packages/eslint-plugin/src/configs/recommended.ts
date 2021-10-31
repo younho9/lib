@@ -1,6 +1,6 @@
 import type {Linter} from 'eslint';
 
-import {IMPORT_RULES, UNICORN_RULES} from './rules/index.js';
+import {IMPORT_RULES} from './rules/index.js';
 
 const ignorePatterns = ['**/dist/*'];
 
@@ -21,10 +21,8 @@ const recommended: Linter.Config = {
     'plugin:import/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['unicorn'],
   rules: {
     ...IMPORT_RULES,
-    ...UNICORN_RULES,
   },
   overrides: [
     {

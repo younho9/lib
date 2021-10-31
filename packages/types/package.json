@@ -36,7 +36,17 @@
     "rules": {
       "@typescript-eslint/ban-types": "off",
       "no-new-wrappers": "off",
-      "unicorn/new-for-builtins": "off"
+      "unicorn/new-for-builtins": "off",
+      "import/order": [
+        "warn",
+        {
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          }
+        }
+      ]
     }
   },
   "dependencies": {

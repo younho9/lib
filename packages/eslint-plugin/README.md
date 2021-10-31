@@ -66,10 +66,10 @@ module.exports = {
 
 #### rules
 
-| name                                                                                                                 | Description                                    | Options                                      |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------- |
-| [unicorn/prefer-module](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-module.md) | Prefer JavaScript modules (ESM) over CommonJS. | `ERROR`                                      |
-| [import/order](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)                      | Enforce a convention in module import order.   | [`WARN`](src/configs/rules/import.ts#L6-L15) |
+| name                                                                                                            | Description                                                 | Options                                      |
+| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------- |
+| [import/no-unresolved](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md) | Ensure imports point to a file/module that can be resolved. | [`OFF`](src/configs/rules/import.ts#L7)      |
+| [import/order](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)                 | Enforce a convention in module import order.                | [`WARN`](src/configs/rules/import.ts#L8-L17) |
 
 ### [javascript](src/configs/javascript.ts)
 
@@ -87,10 +87,10 @@ module.exports = {
 
 #### extends
 
-| configs                                                                                      | files |
-| -------------------------------------------------------------------------------------------- | ----- |
-| [plugin:jsdoc/recommended](https://github.com/jest-community/eslint-plugin-jest#recommended) | `*`   |
-| [plugin:jsdoc/style](https://github.com/jest-community/eslint-plugin-jest#style)             | `*`   |
+| configs                                                                                     | files |
+| ------------------------------------------------------------------------------------------- | ----- |
+| [plugin:jest/recommended](https://github.com/jest-community/eslint-plugin-jest#recommended) | `*`   |
+| [plugin:jest/style](https://github.com/jest-community/eslint-plugin-jest#style)             | `*`   |
 
 ### [react](src/configs/react.ts)
 
@@ -114,10 +114,12 @@ module.exports = {
 
 #### rules
 
-| name                                                                                                                   | Description                                                                                      | Options |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------- |
-| [node/no-missing-import](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-import.md) | disallow import declarations which import non-existence modules.                                 | `WARN`  |
-| [tsdoc/syntax](https://github.com/microsoft/tsdoc/tree/master/eslint-plugin#usage)                                     | validating that TypeScript doc comments conform to the [TSDoc specification](https://tsdoc.org/) | `WARN`  |
+| name                                                                                                                           | Description                                                         | Options                                |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | -------------------------------------- |
+| [node/no-missing-import](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-import.md)         | disallow `import` declarations which import non-existence modules   | [`OFF`](src/configs/rules/node.ts#L7)  |
+| [node/no-missing-require](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-require.md)       | disallow `require()` expressions which import non-existence modules | [`OFF`](src/configs/rules/node.ts#L8)  |
+| [node/no-extraneous-import](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-import.md)   | disallow `import` declarations which import extraneous modules      | [`OFF`](src/configs/rules/node.ts#L9)  |
+| [node/no-extraneous-require](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-require.md) | disallow `require()` expressions which import extraneous modules    | [`OFF`](src/configs/rules/node.ts#L10) |
 
 ## License
 

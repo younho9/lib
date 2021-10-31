@@ -49,7 +49,19 @@
     "parserOptions": {
       "project": "./tsconfig.xo.json"
     },
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "import/order": [
+        "warn",
+        {
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          }
+        }
+      ]
+    }
   },
   "prettier": "@younho9/prettier-config",
   "dependencies": {
@@ -63,11 +75,8 @@
     "@commitlint/types": "13.1.0",
     "@manypkg/cli": "0.18.0",
     "@types/babel__core": "7.1.16",
-    "@types/eslint": "7.28.0",
     "@types/jest": "27.0.1",
     "@types/node": "^16.7.10",
-    "@typescript-eslint/eslint-plugin": "4.31.1",
-    "@typescript-eslint/parser": "4.31.1",
     "@younho9/babel-preset": "0.3.6",
     "@younho9/eslint-plugin": "0.5.1",
     "@younho9/prettier-config": "2.2.4",

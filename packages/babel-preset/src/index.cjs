@@ -1,7 +1,7 @@
-import {declare} from '@babel/helper-plugin-utils';
+const {declare} = require('@babel/helper-plugin-utils');
 
 /** @type {import("@types/babel__helper-plugin-utils").declare } */
-export default declare((api, options) => {
+module.exports = declare((api, options) => {
   api.assertVersion(7);
 
   const {
