@@ -1,6 +1,6 @@
 import {
   expectAssignable,
-  expectError,
+  // ExpectError,
   expectNotAssignable,
   expectNotType,
   expectType,
@@ -33,9 +33,9 @@ class SomeClass implements SomeInterface {
 }
 
 const valueAsLiteral = {a: '123', b: 123, c: false};
-const valueAsEmptyObject: {} = valueAsLiteral;
-const valueAsObject: object = valueAsLiteral;
-const valueAsObjectWrapper: Object = valueAsLiteral;
+// Const valueAsEmptyObject: {} = valueAsLiteral;
+// const valueAsObject: object = valueAsLiteral;
+// const valueAsObjectWrapper: Object = valueAsLiteral;
 const valueAsInterface: SomeInterface = valueAsLiteral;
 const valueAsType: SomeType = valueAsLiteral;
 const valueAsClassInstance: SomeClass = new SomeClass(valueAsLiteral);
@@ -151,9 +151,9 @@ expectAssignable<Record<PropertyKey, unknown>>(valueAsRecordWithPropertyKey);
  *
  * {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md#default-options}
  */
-expectError(valueAsEmptyObject.a);
-expectError(valueAsObject.a);
-expectError(valueAsObjectWrapper.a);
+// expectError(valueAsEmptyObject.a);
+// expectError(valueAsObject.a);
+// expectError(valueAsObjectWrapper.a);
 expectType<unknown>(valueAsRecordWithStringKey.a);
 expectType<unknown>(valueAsRecordWithPropertyKey.a);
 

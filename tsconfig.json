@@ -4,10 +4,9 @@
     "allowJs": true
   },
   "exclude": [
-    "**/test-d/**",
-    "**/*.test-d.ts",
     "packages/babel-preset",
-    "packages/prettier-config"
+    "packages/prettier-config",
+    "packages/tsconfig"
   ],
   "typedocOptions": {
     "readme": "none",

@@ -1,4 +1,8 @@
-import {expectAssignable, expectError, expectNotAssignable} from 'tsd';
+import {
+  expectAssignable,
+  // ExpectError,
+  expectNotAssignable,
+} from 'tsd';
 import type {Primitive} from 'type-fest';
 
 import type {Falsy} from '../types/falsy.js';
@@ -26,7 +30,7 @@ expectNotAssignable<boolean>(new Boolean(false as boolean));
  * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#constructor}
  */
 expectAssignable<symbol>(Symbol('symbol'));
-expectError<symbol>(new Symbol()); // eslint-disable-line no-new-symbol
+// ExpectError<symbol>(new Symbol()); // eslint-disable-line no-new-symbol
 
 /**
  * BigInt does not support the syntax `new BigInt()`
@@ -34,7 +38,7 @@ expectError<symbol>(new Symbol()); // eslint-disable-line no-new-symbol
  * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#description}
  */
 expectAssignable<bigint>(0n as bigint);
-expectError<bigint>(new BigInt(0n as bigint));
+// ExpectError<bigint>(new BigInt(0n as bigint));
 
 /**
  * It test assignability
