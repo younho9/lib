@@ -6,7 +6,8 @@
   "exclude": [
     "packages/babel-preset",
     "packages/prettier-config",
-    "packages/tsconfig"
+    "packages/tsconfig",
+    "**/dist/**"
   ],
   "typedocOptions": {
     "readme": "none",
