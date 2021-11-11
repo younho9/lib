@@ -38,10 +38,12 @@
   },
   "dependencies": {
     "@younho9/types": "0.11.2",
+    "lodash-es": "4.17.21",
     "tsd": "0.18.0",
     "type-fest": "2.5.1"
   },
   "devDependencies": {
+    "@types/lodash-es": "4.17.5",
     "@younho9/eslint-plugin": "0.5.1"
   },
   "engines": {
