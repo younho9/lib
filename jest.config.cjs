@@ -1,4 +1,4 @@
-const esModules = ['invariant-of'];
+const esModules = [];
 
 /** @type {import("@jest/types").Config.InitialOptions } */
 module.exports = {
