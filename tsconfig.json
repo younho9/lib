@@ -6,12 +6,11 @@
   "exclude": [
     "packages/babel-preset",
     "packages/prettier-config",
-    "packages/tsconfig",
-    "**/dist/**"
+    "packages/tsconfig"
   ],
   "typedocOptions": {
     "readme": "none",
-    "out": "doc",
+    "out": "docs",
     "entryPointStrategy": "packages",
     "entryPoints": ["packages/guards", "packages/object", "packages/types"]
   }
