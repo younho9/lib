@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/younho9/lib/compare/@younho9/object@0.7.1...@younho9/object@0.8.0) (2021-11-19)
+
+
+### :memo: Documentation
+
+* update README.md ([746ff46](https://github.com/younho9/lib/commit/746ff46300c6ba8654ac19bef3f4287b2484a199))
+
+
+### :rocket: New Features
+
+* **`object`:** add get function ([ed2573c](https://github.com/younho9/lib/commit/ed2573c6a2c88f84ba5f57fa82ff1f437f7865d8))
+
+
+
 ### [0.7.1](https://github.com/younho9/lib/compare/@younho9/object@0.7.0...@younho9/object@0.7.1) (2021-10-30)
 
 

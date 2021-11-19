@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.5.1...@younho9/eslint-plugin@0.6.0) (2021-11-19)
+
+
+### :memo: Documentation
+
+* update README.md ([746ff46](https://github.com/younho9/lib/commit/746ff46300c6ba8654ac19bef3f4287b2484a199))
+
+
+### :rocket: New Features
+
+* **`eslint-plugin`:** update eslint-plugin ([8d225ee](https://github.com/younho9/lib/commit/8d225ee954171b4495cbd27c44a65fd3d8bfede5))
+
+
+
 ### [0.5.1](https://github.com/younho9/lib/compare/@younho9/eslint-plugin@0.5.0...@younho9/eslint-plugin@0.5.1) (2021-10-30)
 
 

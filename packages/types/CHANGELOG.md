@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.0](https://github.com/younho9/lib/compare/@younho9/types@0.11.2...@younho9/types@0.12.0) (2021-11-19)
+
+
+### :memo: Documentation
+
+* update README.md ([746ff46](https://github.com/younho9/lib/commit/746ff46300c6ba8654ac19bef3f4287b2484a199))
+
+
+### :broom: Other
+
+* **`typedoc`:** include test-d and remove `expectError` ([a7bb5d5](https://github.com/younho9/lib/commit/a7bb5d58a2ece25a15cb24f18dff42d3ec2a8843))
+
+
+### :rocket: New Features
+
+* **`eslint-plugin`:** update eslint-plugin ([8d225ee](https://github.com/younho9/lib/commit/8d225ee954171b4495cbd27c44a65fd3d8bfede5))
+* **`types`:** add any-function.d.ts ([2542f0b](https://github.com/younho9/lib/commit/2542f0bd0882158dfad658227093b325579798f2))
+
+
+
 ### [0.11.2](https://github.com/younho9/lib/compare/@younho9/types@0.11.1...@younho9/types@0.11.2) (2021-10-30)
 
 

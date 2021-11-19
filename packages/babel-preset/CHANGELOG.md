@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.3.6...@younho9/babel-preset@0.4.0) (2021-11-19)
+
+
+### :memo: Documentation
+
+* update README.md ([746ff46](https://github.com/younho9/lib/commit/746ff46300c6ba8654ac19bef3f4287b2484a199))
+
+
+### :rocket: New Features
+
+* **`eslint-plugin`:** update eslint-plugin ([8d225ee](https://github.com/younho9/lib/commit/8d225ee954171b4495cbd27c44a65fd3d8bfede5))
+
+
+
 ### [0.3.6](https://github.com/younho9/lib/compare/@younho9/babel-preset@0.3.5...@younho9/babel-preset@0.3.6) (2021-10-30)
 
 
