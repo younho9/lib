@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.0](https://github.com/younho9/lib/compare/@younho9/types@0.12.0...@younho9/types@0.13.0) (2021-11-19)
+
+
+### :rocket: New Features
+
+* **`types`:** replace duplicate types with type-fest ([c18bd67](https://github.com/younho9/lib/commit/c18bd67a90dd07dbdacb0e1ada1a6e8ce70996ea))
+
+
+
 ## [0.12.0](https://github.com/younho9/lib/compare/@younho9/types@0.11.2...@younho9/types@0.12.0) (2021-11-19)
 
 
