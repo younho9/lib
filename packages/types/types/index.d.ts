@@ -1,6 +1,7 @@
 export * from './alternative-any.js';
 export * from './alternative-function.js';
 export * from './alternative-object.js';
+export * from './any-function.js';
 export * from './dict.js';
 export * from './exclude-keys-by-value-type.js';
 export * from './extract-keys-by-value-type.js';

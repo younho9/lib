@@ -1,3 +1,5 @@
+import type {AnyFunction} from './any-function.js';
+
 /**
  * Alternative of `Function`
  *
@@ -15,4 +17,4 @@
  *
  * @category Alternative
  */
-export type AlternativeFunction = (...args: any[]) => any;
+export type AlternativeFunction = AnyFunction;
