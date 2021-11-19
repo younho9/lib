@@ -30,6 +30,7 @@
     "pkgs:fix": "manypkg fix",
     "prerelease": "yarn test",
     "release": "yarn lerna publish",
+    "postrelease": "yarn pkgs:fix",
     "test": "concurrently yarn:test:*",
     "test:src": "jest",
     "test:types": "lerna run test:types --stream"
@@ -77,8 +78,8 @@
     "@types/babel__core": "7.1.16",
     "@types/jest": "27.0.1",
     "@types/node": "^16.7.10",
-    "@younho9/babel-preset": "0.3.6",
-    "@younho9/eslint-plugin": "0.5.1",
+    "@younho9/babel-preset": "0.4.0",
+    "@younho9/eslint-plugin": "0.6.0",
     "@younho9/prettier-config": "2.2.4",
     "@younho9/tsconfig": "0.1.1",
     "concurrently": "6.2.1",
