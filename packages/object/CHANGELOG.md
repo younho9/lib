@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.0](https://github.com/younho9/lib/compare/@younho9/object@0.8.1...@younho9/object@0.9.0) (2021-12-10)
+
+
+### :rocket: New Features
+
+* **`object`:** add `defaultValue` argument to `get()` ([69a14cf](https://github.com/younho9/lib/commit/69a14cfff9bc10801e65c5755a4b643a99986c0a))
+
+
+
 ### [0.8.1](https://github.com/younho9/lib/compare/@younho9/object@0.8.0...@younho9/object@0.8.1) (2021-11-19)
 
 **Note:** Version bump only for package @younho9/object
