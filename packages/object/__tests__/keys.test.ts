@@ -1,3 +1,5 @@
+import {expectTypeOf} from 'expect-type';
+
 import {keys} from '../src';
 import {invariantOf} from '../src/invariant-of';
 
@@ -16,44 +18,68 @@ const mixedKeyObject = {
 
 describe('return', () => {
   it('keys of Record<K extends string, any> is K[]', () => {
-    expect(keys(invariantOf(stringKeyObject))).toEqual(['name', 'age', 'id']);
+    const keys_ = keys(invariantOf(stringKeyObject));
+
+    expect(keys_).toEqual(['name', 'age', 'id']);
+    expectTypeOf<Array<'name' | 'age' | 'id'>>(keys_);
   });
 
   it('keys of Record<K extends number, any> is K[]', () => {
-    expect(keys(invariantOf(numberKeyObject))).toEqual(['1', '2', '3']);
+    const keys_ = keys(invariantOf(numberKeyObject));
+
+    expect(keys_).toEqual(['1', '2', '3']);
+    expectTypeOf<Array<1 | 2 | 3>>(keys_);
   });
 
   it('keys of Record<K extends symbol, any> is []', () => {
-    expect(keys(invariantOf(symbolKeyObject))).toEqual([]);
+    const keys_ = keys(invariantOf(symbolKeyObject));
+
+    expect(keys_).toEqual([]);
+    expectTypeOf<symbol[]>(keys_);
   });
 
   it('keys of Record<K extends PropertyKey, any> is Exclude<keyof T, symbol>[]', () => {
-    expect(keys(invariantOf(mixedKeyObject))).toEqual(['1', 'two']);
+    const keys_ = keys(invariantOf(mixedKeyObject));
+
+    expect(keys_).toEqual(['1', 'two']);
+    expectTypeOf<Array<1 | 'two' | symbol>>(keys_);
   });
 });
 
 describe('access value with key', () => {
   it('in keys.map of Record<K extends string, any>', () => {
     expect(
-      keys(invariantOf(stringKeyObject)).map((key) => stringKeyObject[key]),
+      keys(invariantOf(stringKeyObject)).map((key) => {
+        expectTypeOf<string | number>(stringKeyObject[key]);
+        return stringKeyObject[key];
+      }),
     ).toEqual(['kim', 30, 1]);
   });
 
   it('in keys.map of Record<K extends number, any>', () => {
     expect(
-      keys(invariantOf(numberKeyObject)).map((key) => numberKeyObject[key]),
+      keys(invariantOf(numberKeyObject)).map((key) => {
+        expectTypeOf<string>(numberKeyObject[key]);
+        return numberKeyObject[key];
+      }),
     ).toEqual(['one', 'two', 'three']);
   });
 
   it('in keys.map of Record<K extends symbol, any>', () => {
     expect(
-      keys(invariantOf(symbolKeyObject)).map((key) => symbolKeyObject[key]),
+      keys(invariantOf(symbolKeyObject)).map((key) => {
+        expectTypeOf<string>(symbolKeyObject[key]);
+        return symbolKeyObject[key];
+      }),
     ).toEqual([]);
   });
 
   it('in keys.map of Record<K extends PropertyKey, any>', () => {
     expect(
-      keys(invariantOf(mixedKeyObject)).map((key) => mixedKeyObject[key]),
+      keys(invariantOf(mixedKeyObject)).map((key) => {
+        expectTypeOf<string>(mixedKeyObject[key]);
+        return mixedKeyObject[key];
+      }),
     ).toEqual(['one', 'two']);
   });
 });
