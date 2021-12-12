@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.9.1](https://github.com/younho9/lib/compare/@younho9/object@0.9.0...@younho9/object@0.9.1) (2021-12-12)
+
+
+### :test_tube: Test
+
+* **`object`:** add test for `get()` ([b0ceb6c](https://github.com/younho9/lib/commit/b0ceb6c1204c9f288ab6a95f377034c69040df16))
+
+
+### :bug: Bug Fix
+
+* **`object`:** add extension name to export module ([26bd7e7](https://github.com/younho9/lib/commit/26bd7e7327d3955a6d89909fca8373db8764a08f))
+
+
+
 ## [0.9.0](https://github.com/younho9/lib/compare/@younho9/object@0.8.1...@younho9/object@0.9.0) (2021-12-10)
 
 

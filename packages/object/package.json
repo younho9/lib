@@ -1,6 +1,6 @@
 {
   "name": "@younho9/object",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A set of type-safe object functions for TypeScript",
   "keywords": [
     "typescript",
