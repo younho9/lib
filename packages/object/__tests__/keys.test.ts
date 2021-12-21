@@ -1,7 +1,6 @@
 import {expectTypeOf} from 'expect-type';
 
-import {keys} from '../src';
-import {invariantOf} from '../src/invariant-of';
+import {keys, invariantOf} from '../src/index.js';
 
 const stringKeyObject = {name: 'kim', age: 30, id: 1};
 const numberKeyObject = {1: 'one', 2: 'two', 3: 'three'};

@@ -1,6 +1,6 @@
 import {expectTypeOf} from 'expect-type';
 
-import {get} from '../src';
+import {get} from '../src/index.js';
 
 test('get()', () => {
   const object_ = {

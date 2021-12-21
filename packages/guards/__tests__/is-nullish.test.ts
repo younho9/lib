@@ -1,4 +1,4 @@
-import {isNullish} from '../src';
+import {isNullish} from '../src/index.js';
 
 describe('isNullish', () => {
   it('value is Nullish', () => {

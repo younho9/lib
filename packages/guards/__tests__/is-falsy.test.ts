@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import {isFalsy} from '../src';
+import {isFalsy} from '../src/index.js';
 
 describe('isFalsy', () => {
   it('condition is Falsy', () => {
