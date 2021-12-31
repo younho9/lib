@@ -1,49 +1,49 @@
 {
-  "name": "@younho9/guards",
-  "version": "0.7.16",
-  "description": "A set of type guards for TypeScript",
-  "keywords": [
-    "typescript",
-    "typeguard",
-    "type-guard"
-  ],
-  "homepage": "https://github.com/younho9/lib#readme",
-  "bugs": {
-    "url": "https://github.com/younho9/lib/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younho9/lib.git",
-    "directory": "packages/guards"
-  },
-  "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.com>",
-  "sideEffects": false,
-  "type": "module",
-  "exports": "./dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "prebuild": "yarn clean:dist",
-    "build": "concurrently yarn:build:*",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist --source-maps",
-    "build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
-    "clean": "concurrently yarn:clean:*",
-    "clean:dist": "rimraf dist",
-    "test": "concurrently yarn:test:*",
-    "test:src": "jest --config ../../jest.config.cjs -- packages/guards"
-  },
-  "dependencies": {
-    "@sniptt/guards": "0.2.0",
-    "@younho9/types": "0.13.0"
-  },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@younho9/guards",
+	"version": "0.7.17",
+	"description": "A set of type guards for TypeScript",
+	"keywords": [
+		"typescript",
+		"typeguard",
+		"type-guard"
+	],
+	"homepage": "https://github.com/younho9/lib#readme",
+	"bugs": {
+		"url": "https://github.com/younho9/lib/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/younho9/lib.git",
+		"directory": "packages/guards"
+	},
+	"license": "MIT",
+	"author": "Younho Choo <yo+github@younho9.com>",
+	"sideEffects": false,
+	"type": "module",
+	"exports": "./dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/types/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"prebuild": "yarn clean:dist",
+		"build": "concurrently yarn:build:*",
+		"build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist --source-maps",
+		"build:types": "tsc src/*.ts --emitDeclarationOnly --declaration --declarationDir dist/types",
+		"clean": "concurrently yarn:clean:*",
+		"clean:dist": "rimraf dist",
+		"test": "concurrently yarn:test:*",
+		"test:src": "jest --config ../../jest.config.cjs -- packages/guards"
+	},
+	"dependencies": {
+		"@sniptt/guards": "0.2.0",
+		"@younho9/types": "0.13.0"
+	},
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

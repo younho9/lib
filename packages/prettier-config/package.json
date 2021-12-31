@@ -1,38 +1,38 @@
 {
-  "name": "@younho9/prettier-config",
-  "version": "2.2.4",
-  "description": "Shared prettier config that personally prefer",
-  "keywords": [
-    "prettier"
-  ],
-  "homepage": "https://github.com/younho9/lib#readme",
-  "bugs": {
-    "url": "https://github.com/younho9/lib/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younho9/lib.git",
-    "directory": "packages/prettier-config"
-  },
-  "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.com>",
-  "type": "commonjs",
-  "exports": "./src/index.cjs",
-  "main": "src/index.cjs",
-  "files": [
-    "src",
-    ".prettierignore"
-  ],
-  "dependencies": {
-    "@types/prettier": "2.4.1"
-  },
-  "devDependencies": {
-    "prettier": "2.4.1"
-  },
-  "peerDependencies": {
-    "prettier": "*"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@younho9/prettier-config",
+	"version": "2.3.0",
+	"description": "Shared prettier config that personally prefer",
+	"keywords": [
+		"prettier"
+	],
+	"homepage": "https://github.com/younho9/lib#readme",
+	"bugs": {
+		"url": "https://github.com/younho9/lib/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/younho9/lib.git",
+		"directory": "packages/prettier-config"
+	},
+	"license": "MIT",
+	"author": "Younho Choo <yo+github@younho9.com>",
+	"type": "commonjs",
+	"exports": "./src/index.cjs",
+	"main": "src/index.cjs",
+	"files": [
+		"src",
+		".prettierignore"
+	],
+	"dependencies": {
+		"@types/prettier": "2.4.1"
+	},
+	"devDependencies": {
+		"prettier": "2.4.1"
+	},
+	"peerDependencies": {
+		"prettier": "*"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

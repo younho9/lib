@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.7.17](https://github.com/younho9/lib/compare/@younho9/guards@0.7.16...@younho9/guards@0.7.17) (2021-12-31)
+
+
+### :broom: Other
+
+* fix lint error ([cd4d314](https://github.com/younho9/lib/commit/cd4d3140ea526059feada3abd293827f92d245dc))
+
+
+
 ### [0.7.16](https://github.com/younho9/lib/compare/@younho9/guards@0.7.15...@younho9/guards@0.7.16) (2021-11-19)
 
 **Note:** Version bump only for package @younho9/guards

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.9.2](https://github.com/younho9/lib/compare/@younho9/object@0.9.1...@younho9/object@0.9.2) (2021-12-31)
+
+
+### :broom: Other
+
+* fix lint error ([cd4d314](https://github.com/younho9/lib/commit/cd4d3140ea526059feada3abd293827f92d245dc))
+
+
+
 ### [0.9.1](https://github.com/younho9/lib/compare/@younho9/object@0.9.0...@younho9/object@0.9.1) (2021-12-12)
 
 

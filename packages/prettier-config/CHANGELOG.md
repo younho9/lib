@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.4...@younho9/prettier-config@2.3.0) (2021-12-31)
+
+
+### :memo: Documentation
+
+* update README.md ([746ff46](https://github.com/younho9/lib/commit/746ff46300c6ba8654ac19bef3f4287b2484a199))
+
+
+### :rocket: New Features
+
+* **`prettier-config`:** turn on `useTabs` ([379a590](https://github.com/younho9/lib/commit/379a59080d6e850b3531deae18f67a3c922c1913))
+
+
+
 ### [2.2.4](https://github.com/younho9/lib/compare/@younho9/prettier-config@2.2.3...@younho9/prettier-config@2.2.4) (2021-10-30)
 
 
