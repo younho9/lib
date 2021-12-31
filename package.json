@@ -1,104 +1,104 @@
 {
-  "name": "@younho9/lib",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younho9/lib.git"
-  },
-  "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.com>",
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "postinstall": "yarn pkgs:check",
-    "prepare": "yarn git:install-hooks && yarn build",
-    "prebuild": "yarn pkgs babel-preset build",
-    "build": "lerna run build --no-private --ignore @younho9/babel-preset --stream",
-    "clean": "concurrently yarn:clean:*",
-    "clean:modules": "lerna clean --yes && rimraf node_modules",
-    "clean:dist": "yarn lerna exec rimraf dist",
-    "docs": "typedoc",
-    "format:code": "prettier --write . --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore",
-    "format:pkg": "sort-package-json",
-    "git:commit-msg": "commitlint --edit",
-    "git:install-hooks": "husky install",
-    "git:pre-commit": "lint-staged",
-    "lint": "xo",
-    "pkgs": "manypkg run",
-    "pkgs:check": "manypkg check",
-    "pkgs:fix": "manypkg fix",
-    "prerelease": "yarn test",
-    "release": "yarn lerna publish",
-    "postrelease": "yarn pkgs:fix",
-    "test": "concurrently yarn:test:*",
-    "test:src": "jest",
-    "test:types": "lerna run test:types --stream"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md,mdx}": [
-      "prettier --write --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "xo"
-    ],
-    "package.json": [
-      "sort-package-json"
-    ]
-  },
-  "xo": {
-    "parserOptions": {
-      "project": "./tsconfig.xo.json"
-    },
-    "prettier": true,
-    "rules": {
-      "import/order": [
-        "warn",
-        {
-          "newlines-between": "always",
-          "alphabetize": {
-            "order": "asc",
-            "caseInsensitive": true
-          }
-        }
-      ]
-    }
-  },
-  "prettier": "@younho9/prettier-config",
-  "dependencies": {
-    "@babel/cli": "^7.15.4",
-    "@babel/core": "^7.15.4",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@commitlint/types": "13.1.0",
-    "@manypkg/cli": "0.18.0",
-    "@types/babel__core": "7.1.16",
-    "@types/jest": "27.0.1",
-    "@types/node": "^16.7.10",
-    "@younho9/babel-preset": "0.4.0",
-    "@younho9/eslint-plugin": "0.6.0",
-    "@younho9/prettier-config": "2.2.4",
-    "@younho9/tsconfig": "0.1.1",
-    "concurrently": "6.2.1",
-    "cross-env": "^7.0.3",
-    "husky": "^7.0.1",
-    "jest": "27.2.0",
-    "lerna": "^4.0.0",
-    "lint-staged": "^11.1.2",
-    "prettier": "2.4.1",
-    "rimraf": "3.0.2",
-    "sort-package-json": "1.50.0",
-    "ts-jest": "27.0.5",
-    "ts-node": "10.2.1",
-    "tsd": "0.18.0",
-    "typedoc": "0.22.6",
-    "typescript": "^4.4.3",
-    "xo": "0.47.0"
-  },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  }
+	"name": "@younho9/lib",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/younho9/lib.git"
+	},
+	"license": "MIT",
+	"author": "Younho Choo <yo+github@younho9.com>",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"postinstall": "yarn pkgs:check",
+		"prepare": "yarn git:install-hooks && yarn build",
+		"prebuild": "yarn pkgs babel-preset build",
+		"build": "lerna run build --no-private --ignore @younho9/babel-preset --stream",
+		"clean": "concurrently yarn:clean:*",
+		"clean:modules": "lerna clean --yes && rimraf node_modules",
+		"clean:dist": "yarn lerna exec rimraf dist",
+		"docs": "typedoc",
+		"format:code": "prettier --write . --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore",
+		"format:pkg": "sort-package-json",
+		"git:commit-msg": "commitlint --edit",
+		"git:install-hooks": "husky install",
+		"git:pre-commit": "lint-staged",
+		"lint": "xo",
+		"pkgs": "manypkg run",
+		"pkgs:check": "manypkg check",
+		"pkgs:fix": "manypkg fix",
+		"prerelease": "yarn test",
+		"release": "yarn lerna publish",
+		"postrelease": "yarn pkgs:fix",
+		"test": "concurrently yarn:test:*",
+		"test:src": "jest",
+		"test:types": "lerna run test:types --stream"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,md,mdx}": [
+			"prettier --write --ignore-path ./node_modules/@younho9/prettier-config/.prettierignore"
+		],
+		"*.{js,jsx,ts,tsx}": [
+			"xo"
+		],
+		"package.json": [
+			"sort-package-json"
+		]
+	},
+	"xo": {
+		"parserOptions": {
+			"project": "./tsconfig.xo.json"
+		},
+		"prettier": true,
+		"rules": {
+			"import/order": [
+				"warn",
+				{
+					"newlines-between": "always",
+					"alphabetize": {
+						"order": "asc",
+						"caseInsensitive": true
+					}
+				}
+			]
+		}
+	},
+	"prettier": "@younho9/prettier-config",
+	"dependencies": {
+		"@babel/cli": "^7.15.4",
+		"@babel/core": "^7.15.4",
+		"@babel/preset-env": "^7.15.6",
+		"@babel/preset-react": "^7.14.5",
+		"@babel/preset-typescript": "^7.15.0",
+		"@commitlint/cli": "^13.1.0",
+		"@commitlint/config-conventional": "^13.1.0",
+		"@commitlint/types": "13.1.0",
+		"@manypkg/cli": "0.18.0",
+		"@types/babel__core": "7.1.16",
+		"@types/jest": "27.0.1",
+		"@types/node": "^16.7.10",
+		"@younho9/babel-preset": "0.4.0",
+		"@younho9/eslint-plugin": "0.6.0",
+		"@younho9/prettier-config": "2.3.0",
+		"@younho9/tsconfig": "0.1.1",
+		"concurrently": "6.2.1",
+		"cross-env": "^7.0.3",
+		"husky": "^7.0.1",
+		"jest": "27.2.0",
+		"lerna": "^4.0.0",
+		"lint-staged": "^11.1.2",
+		"prettier": "2.4.1",
+		"rimraf": "3.0.2",
+		"sort-package-json": "1.50.0",
+		"ts-jest": "27.0.5",
+		"ts-node": "10.2.1",
+		"tsd": "0.18.0",
+		"typedoc": "0.22.6",
+		"typescript": "^4.4.3",
+		"xo": "0.47.0"
+	},
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	}
 }
