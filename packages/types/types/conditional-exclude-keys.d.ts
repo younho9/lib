@@ -31,6 +31,6 @@ type StringKeysAndUndefined = ConditionalKeys<Example, string | undefined>;
 @category Object
 */
 export type ConditionalExcludeKeys<Base, Condition> = Exclude<
-  keyof Base,
-  ConditionalKeys<Base, Condition>
+	keyof Base,
+	ConditionalKeys<Base, Condition>
 >;

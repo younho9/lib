@@ -3,9 +3,9 @@ import {expectType} from 'tsd';
 import type {StringKeyOf} from '../types/string-key-of.js';
 
 type SomeType = {
-  foo: number;
-  bar?: string;
-  baz: number | undefined;
+	foo: number;
+	bar?: string;
+	baz: number | undefined;
 };
 
 declare const fooArray: Array<'foo'>;
@@ -22,5 +22,5 @@ expectType<StringKeyOf<Record<symbol, unknown>>>(neverArray);
 
 declare const string1OrTwoArray: Array<'1' | 'two'>;
 expectType<StringKeyOf<{[symbolKey: symbol]: 'three'; 1: 'one'; two: 'two'}>>(
-  string1OrTwoArray,
+	string1OrTwoArray,
 );

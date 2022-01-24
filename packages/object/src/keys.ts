@@ -7,7 +7,7 @@ import type {InvariantOf} from '@younho9/types';
  * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys}
  */
 export function keys<
-  ObjectType extends object, // eslint-disable-line @typescript-eslint/ban-types
+	ObjectType extends object, // eslint-disable-line @typescript-eslint/ban-types
 >(invariant: InvariantOf<ObjectType>): Array<keyof ObjectType> {
-  return Object.keys(invariant) as Array<keyof ObjectType>;
+	return Object.keys(invariant) as Array<keyof ObjectType>;
 }

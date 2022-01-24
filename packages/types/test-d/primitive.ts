@@ -1,7 +1,7 @@
 import {
-  expectAssignable,
-  // ExpectError,
-  expectNotAssignable,
+	expectAssignable,
+	// ExpectError,
+	expectNotAssignable,
 } from 'tsd';
 import type {Primitive} from 'type-fest';
 

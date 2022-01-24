@@ -1,79 +1,79 @@
 {
-  "packages": ["packages/*"],
-  "version": "independent",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "ignoreChanges": ["**/*.md"],
-  "registry": "https://registry.npmjs.org/",
-  "command": {
-    "version": {
-      "conventionalCommits": true,
-      "exact": true,
-      "message": "chore(`release`): publish",
-      "changelogPreset": {
-        "name": "conventional-changelog-conventionalcommits",
-        "types": [
-          {
-            "type": "feat",
-            "section": ":rocket: New Features",
-            "hidden": false
-          },
-          {
-            "type": "fix",
-            "section": ":bug: Bug Fix",
-            "hidden": false
-          },
-          {
-            "type": "build",
-            "section": ":hammer: Build System",
-            "hidden": false
-          },
-          {
-            "type": "chore",
-            "section": ":broom: Other",
-            "hidden": false
-          },
-          {
-            "type": "refactor",
-            "section": ":recycle: Code Refactoring",
-            "hidden": false
-          },
-          {
-            "type": "docs",
-            "section": ":memo: Documentation",
-            "hidden": false
-          },
-          {
-            "type": "test",
-            "section": ":test_tube: Test",
-            "hidden": false
-          },
-          {
-            "type": "style",
-            "section": ":nail_care: Styling",
-            "hidden": false
-          },
-          {
-            "type": "perf",
-            "section": ":racing_car: Performance",
-            "hidden": false
-          },
-          {
-            "type": "ci",
-            "section": ":vertical_traffic_light: CI",
-            "hidden": false
-          }
-        ],
-        "issuePrefixes": ["#"],
-        "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
-        "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
-        "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
-        "userUrlFormat": "{{host}}/{{user}}"
-      }
-    },
-    "publish": {
-      "conventionalCommits": true,
-      "allowBranch": "main"
-    }
-  }
+	"packages": ["packages/*"],
+	"version": "independent",
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"ignoreChanges": ["**/*.md"],
+	"registry": "https://registry.npmjs.org/",
+	"command": {
+		"version": {
+			"conventionalCommits": true,
+			"exact": true,
+			"message": "chore(`release`): publish",
+			"changelogPreset": {
+				"name": "conventional-changelog-conventionalcommits",
+				"types": [
+					{
+						"type": "feat",
+						"section": ":rocket: New Features",
+						"hidden": false
+					},
+					{
+						"type": "fix",
+						"section": ":bug: Bug Fix",
+						"hidden": false
+					},
+					{
+						"type": "build",
+						"section": ":hammer: Build System",
+						"hidden": false
+					},
+					{
+						"type": "chore",
+						"section": ":broom: Other",
+						"hidden": false
+					},
+					{
+						"type": "refactor",
+						"section": ":recycle: Code Refactoring",
+						"hidden": false
+					},
+					{
+						"type": "docs",
+						"section": ":memo: Documentation",
+						"hidden": false
+					},
+					{
+						"type": "test",
+						"section": ":test_tube: Test",
+						"hidden": false
+					},
+					{
+						"type": "style",
+						"section": ":nail_care: Styling",
+						"hidden": false
+					},
+					{
+						"type": "perf",
+						"section": ":racing_car: Performance",
+						"hidden": false
+					},
+					{
+						"type": "ci",
+						"section": ":vertical_traffic_light: CI",
+						"hidden": false
+					}
+				],
+				"issuePrefixes": ["#"],
+				"issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+				"commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+				"compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+				"userUrlFormat": "{{host}}/{{user}}"
+			}
+		},
+		"publish": {
+			"conventionalCommits": true,
+			"allowBranch": "main"
+		}
+	}
 }

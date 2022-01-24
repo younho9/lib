@@ -8,7 +8,7 @@ import type {RequiredKeys} from './required-keys.js';
  * @category Object
  */
 export type Completed<Base> = {
-  [Key in keyof Required<Base>]: Key extends RequiredKeys<Base>
-    ? Base[Key]
-    : Base[Key] | undefined;
+	[Key in keyof Required<Base>]: Key extends RequiredKeys<Base>
+		? Base[Key]
+		: Base[Key] | undefined;
 };

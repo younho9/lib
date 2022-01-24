@@ -12,7 +12,7 @@ declare const tag: unique symbol;
  * Internal type to generate Invariant type using function signature
  */
 type InvariantSignature<Type> = {
-  readonly [tag]: InvariantProperty<Type>;
+	readonly [tag]: InvariantProperty<Type>;
 };
 
 /**

@@ -3,9 +3,9 @@ import {expectType} from 'tsd';
 import type {ConditionalExcludeKeys} from '../types/conditional-exclude-keys.js';
 
 type SomeType = {
-  foo: number;
-  bar?: string;
-  baz: number | undefined;
+	foo: number;
+	bar?: string;
+	baz: number | undefined;
 };
 
 declare const barOrBaz: 'bar' | 'baz';

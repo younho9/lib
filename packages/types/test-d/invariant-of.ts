@@ -12,45 +12,45 @@ expectNotAssignable<InvariantOf<string | number>>(invariantString);
 expectNotAssignable<InvariantOf<string>>(invariantStringOrNumber);
 
 type BaseType = {
-  foo: number;
-  bar?: string;
+	foo: number;
+	bar?: string;
 };
 
 type SubType = BaseType & {
-  baz: number | undefined;
+	baz: number | undefined;
 };
 
 type SameType = {
-  foo: number;
-  bar?: string;
+	foo: number;
+	bar?: string;
 };
 
 interface BaseInterface {
-  foo: number;
-  bar?: string;
+	foo: number;
+	bar?: string;
 }
 
 interface SubInterface extends BaseInterface {
-  baz: number | undefined;
+	baz: number | undefined;
 }
 
 interface SameInterface {
-  foo: number;
-  bar?: string;
+	foo: number;
+	bar?: string;
 }
 
 class BaseClass {
-  declare foo: number;
-  declare bar?: string;
+	declare foo: number;
+	declare bar?: string;
 }
 
 class SubClass extends BaseClass {
-  declare baz: number | undefined;
+	declare baz: number | undefined;
 }
 
 class SameClass {
-  declare foo: number;
-  declare bar?: string;
+	declare foo: number;
+	declare bar?: string;
 }
 
 declare const baseTypeValue: BaseType;
