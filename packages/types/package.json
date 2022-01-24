@@ -1,65 +1,65 @@
 {
-  "name": "@younho9/types",
-  "version": "0.13.0",
-  "description": "A set of utility types for TypeScript",
-  "keywords": [
-    "typescript",
-    "types"
-  ],
-  "homepage": "https://github.com/younho9/lib#readme",
-  "bugs": {
-    "url": "https://github.com/younho9/lib/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/younho9/lib.git",
-    "directory": "packages/types"
-  },
-  "license": "MIT",
-  "author": "Younho Choo <yo+github@younho9.com>",
-  "sideEffects": false,
-  "types": "types/index.d.ts",
-  "files": [
-    "types"
-  ],
-  "scripts": {
-    "clean": "concurrently yarn:clean:*",
-    "clean:dist": "rimraf dist",
-    "test": "concurrently yarn:test:*",
-    "test:types": "tsd"
-  },
-  "xo": {
-    "parserOptions": {
-      "project": "../../tsconfig.xo.json"
-    },
-    "prettier": true,
-    "rules": {
-      "@typescript-eslint/ban-types": "off",
-      "no-new-wrappers": "off",
-      "unicorn/new-for-builtins": "off",
-      "import/order": [
-        "warn",
-        {
-          "newlines-between": "always",
-          "alphabetize": {
-            "order": "asc",
-            "caseInsensitive": true
-          }
-        }
-      ]
-    }
-  },
-  "dependencies": {
-    "tsd": "0.18.0",
-    "type-fest": "2.5.1"
-  },
-  "devDependencies": {
-    "@younho9/eslint-plugin": "0.6.0"
-  },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@younho9/types",
+	"version": "0.13.0",
+	"description": "A set of utility types for TypeScript",
+	"keywords": [
+		"typescript",
+		"types"
+	],
+	"homepage": "https://github.com/younho9/lib#readme",
+	"bugs": {
+		"url": "https://github.com/younho9/lib/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/younho9/lib.git",
+		"directory": "packages/types"
+	},
+	"license": "MIT",
+	"author": "Younho Choo <yo+github@younho9.com>",
+	"sideEffects": false,
+	"types": "types/index.d.ts",
+	"files": [
+		"types"
+	],
+	"scripts": {
+		"clean": "concurrently yarn:clean:*",
+		"clean:dist": "rimraf dist",
+		"test": "concurrently yarn:test:*",
+		"test:types": "tsd"
+	},
+	"xo": {
+		"parserOptions": {
+			"project": "../../tsconfig.xo.json"
+		},
+		"prettier": true,
+		"rules": {
+			"@typescript-eslint/ban-types": "off",
+			"no-new-wrappers": "off",
+			"unicorn/new-for-builtins": "off",
+			"import/order": [
+				"warn",
+				{
+					"newlines-between": "always",
+					"alphabetize": {
+						"order": "asc",
+						"caseInsensitive": true
+					}
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"tsd": "0.18.0",
+		"type-fest": "2.5.1"
+	},
+	"devDependencies": {
+		"@younho9/eslint-plugin": "0.6.1"
+	},
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

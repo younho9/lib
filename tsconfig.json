@@ -1,17 +1,9 @@
 {
-  "extends": "@younho9/tsconfig/tsconfig.json",
-  "compilerOptions": {
-    "allowJs": true
-  },
-  "exclude": [
-    "packages/babel-preset",
-    "packages/prettier-config",
-    "packages/tsconfig"
-  ],
-  "typedocOptions": {
-    "readme": "none",
-    "out": "docs",
-    "entryPointStrategy": "packages",
-    "entryPoints": ["packages/guards", "packages/object", "packages/types"]
-  }
+	"extends": "@younho9/tsconfig/tsconfig.json",
+	"typedocOptions": {
+		"readme": "none",
+		"out": "docs",
+		"entryPointStrategy": "packages",
+		"entryPoints": ["packages/guards", "packages/object", "packages/types"]
+	}
 }

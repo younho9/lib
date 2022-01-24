@@ -3,9 +3,9 @@ import {expectType} from 'tsd';
 import type {Optional} from '../types/optional.js';
 
 type SomeType = {
-  foo: number;
-  bar?: string;
-  baz: number | undefined;
+	foo: number;
+	bar?: string;
+	baz: number | undefined;
 };
 
 declare const partialValue: Partial<SomeType>;

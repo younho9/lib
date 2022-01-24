@@ -4,9 +4,9 @@ import type {AlternativeFunction} from '../types/alternative-function.js';
 import type {AlternativeObject} from '../types/alternative-object.js';
 
 interface Functions {
-  arg0: () => any;
-  arg1: (arg: any) => any;
-  arg2: (arg1: any, arg2: any) => any;
+	arg0: () => any;
+	arg1: (arg: any) => any;
+	arg2: (arg1: any, arg2: any) => any;
 }
 
 declare const alternativeFunctionValue: AlternativeFunction;

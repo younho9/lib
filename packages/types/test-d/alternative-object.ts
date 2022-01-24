@@ -1,35 +1,35 @@
 import {
-  expectAssignable,
-  // ExpectError,
-  expectNotAssignable,
-  expectNotType,
-  expectType,
+	expectAssignable,
+	// ExpectError,
+	expectNotAssignable,
+	expectNotType,
+	expectType,
 } from 'tsd';
 
 import type {AlternativeObject} from '../types/alternative-object.js';
 
 interface SomeInterface {
-  a: string;
-  b: number;
-  c: boolean;
+	a: string;
+	b: number;
+	c: boolean;
 }
 
 type SomeType = {
-  a: string;
-  b: number;
-  c: boolean;
+	a: string;
+	b: number;
+	c: boolean;
 };
 
 class SomeClass implements SomeInterface {
-  a!: string;
-  b!: number;
-  c!: boolean;
+	a!: string;
+	b!: number;
+	c!: boolean;
 
-  constructor({a, b, c}: SomeInterface) {
-    this.a = a;
-    this.b = b;
-    this.c = c;
-  }
+	constructor({a, b, c}: SomeInterface) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
 }
 
 const valueAsLiteral = {a: '123', b: 123, c: false};
@@ -41,7 +41,7 @@ const valueAsType: SomeType = valueAsLiteral;
 const valueAsClassInstance: SomeClass = new SomeClass(valueAsLiteral);
 const valueAsRecordWithStringKey: Record<string, unknown> = valueAsLiteral;
 const valueAsRecordWithPropertyKey: Record<PropertyKey, unknown> =
-  valueAsLiteral;
+	valueAsLiteral;
 
 /**
  * `{}` vs `object` vs `Object` vs `Record<string, unknown>` vs `Record<PropertyKey, unknown>`

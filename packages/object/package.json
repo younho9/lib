@@ -42,7 +42,7 @@
 	},
 	"devDependencies": {
 		"@types/lodash-es": "4.17.5",
-		"@younho9/eslint-plugin": "0.6.0",
+		"@younho9/eslint-plugin": "0.6.1",
 		"expect-type": "0.13.0"
 	},
 	"engines": {

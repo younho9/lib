@@ -8,7 +8,7 @@ import type {InvariantOf} from './invariant-of.js';
  * @category Utilities
  */
 export type InvariantOfDeep<Type> = Type extends Primitive
-  ? InvariantOf<Type>
-  : InvariantOf<{
-      [KeyType in keyof Type]: InvariantOfDeep<Type[KeyType]>;
-    }>;
+	? InvariantOf<Type>
+	: InvariantOf<{
+			[KeyType in keyof Type]: InvariantOfDeep<Type[KeyType]>;
+	  }>;
